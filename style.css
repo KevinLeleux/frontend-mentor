@@ -7,11 +7,82 @@ body {
     margin: 0 auto;
     max-width: 1440px;
     min-width: 375px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
 }
 
 .card {
-    width: 200px;
-    height: 200px;
     background-color: #fff;
-    border: 1px solid black;
+    border: 1px solid rgb(219, 229, 230);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease 0s;
+        border-bottom: 1px solid red;
+}
+img:hover {
+    transform: scale(1.05);
+}
+.card-content {
+    border-top: 1px solid rgb(219, 229, 230);
+    padding: 20px;
+}
+h1 {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.class-wrapper {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+    vertical-align: middle;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.html {
+    color: rgb(106, 190, 205);
+}
+
+.css {
+    color: rgb(62, 84, 163);
+}
+
+.level-btn {
+    border: 1px solid rgb(106, 190, 205);
+    border-radius: 4px;
+}
+
+.level-number-blue {
+    background-color: rgb(106, 190, 205);
+    color: white;
+    padding: 0 5px 0;
+}
+.level-blue {
+    color: rgb(106, 190, 205);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0 10px 0 5px;
 }
