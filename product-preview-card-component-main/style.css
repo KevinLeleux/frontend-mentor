@@ -21,7 +21,6 @@ Very dark blue: hsl(212, 21%, 14%)
 Dark grayish blue: hsl(228, 12%, 48%)
 White: hsl(0, 0%, 100%) 
 */
-
 .fraunces {
     font-family: "Fraunces", serif;
 }
@@ -34,14 +33,13 @@ White: hsl(0, 0%, 100%)
 }
 
 .product-card {
-    margin-top: 35px;
     display: flex;
     flex-direction: row;
     width: 600px;
     height: 450px;
     border-radius: 10px;
     overflow: hidden;
-    margin: 20px;
+    margin: 45px 15px 15px 15px;
 }
 
 .product-img {
@@ -128,4 +126,36 @@ White: hsl(0, 0%, 100%)
 
 .cart-btn:hover {
     background-color: #1a4031;
+}
+
+@media only screen and (max-width: 630px) {
+    .product-card {
+        flex-direction: column;
+        width: 345px;
+        height: 610px;
+    }
+    .product-img {
+    width: 100%;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+}
+.product-content {
+    width: 100%;
+    padding: 25px;
+}
+
+.product-type {
+    margin-bottom: 13px;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+.description {
+    margin-bottom: 20px;
+}
+
+.prices {
+    margin-bottom: 15px;
+}
 }
