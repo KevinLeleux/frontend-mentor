@@ -11,6 +11,10 @@ body {
     margin: 0 auto;
     font-family: "montserrat", sans-serif;
 }
+html,
+body {
+    height: 100%;
+}
 
 .fraunces {
     font-family: "Fraunces", serif;
@@ -20,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .product-card {
