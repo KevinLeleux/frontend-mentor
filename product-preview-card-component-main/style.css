@@ -126,8 +126,8 @@ body {
         height: 610px;
     }
     .product-img {
-        width: 100%;
         background-image: url(images/image-product-mobile.jpg);
+        width: 100%;
         background-size: cover;
     }
     .product-content {
