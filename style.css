@@ -94,6 +94,7 @@ ul {
 }
 
 .level-btn {
+    display: flex;
     border: 1px solid rgb(106, 190, 205);
     border-radius: 4px;
 }
@@ -101,7 +102,7 @@ ul {
 .level-number-blue {
     background-color: rgb(106, 190, 205);
     color: white;
-    padding: 0 5px 0;
+    padding: 0 8px 0;
 }
 
 .level-blue {
@@ -109,5 +110,5 @@ ul {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
-    padding: 0 10px 0 5px;
+    padding: 0 8px;
 }
