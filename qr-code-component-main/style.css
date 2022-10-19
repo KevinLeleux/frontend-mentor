@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     background-color: hsl(212, 45%, 89%);
     font-family: "Outfit", sans-serif;
@@ -28,39 +33,35 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    width: 320px;
-    margin: 20px;
+    border-radius: 2rem;
+    width: 32rem;
+    margin: 2rem;
     background-color: hsl(0, 0%, 100%);
     text-align: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .img {
-    padding: 16px;
-    margin-bottom: 5px;
+    padding: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 .card img {
-    width: 288px;
-    border-radius: 10px;
+    width: 28.8rem;
+    border-radius: 1rem;
 }
 
 .card h1 {
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
     color: hsl(218, 44%, 22%);
-    margin-bottom: 15px;
-    margin-right: 20px;
-    margin-left: 20px;
-    letter-spacing: 0.1px;
+    margin: 0 2rem 1.5rem 2rem;
+    letter-spacing: 0.1;
     line-height: 1.3;
 }
 
 .card p {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 400;
     color: hsl(220, 15%, 55%);
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-bottom: 40px;
-    letter-spacing: 0.2px;
+    margin: 0 3rem 4rem 3rem;
+    letter-spacing: 0.2;
 }
