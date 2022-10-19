@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     max-width: 1440px;
     min-width: 375px;
@@ -18,6 +19,7 @@ body {
     isolation: isolate;
     overflow: hidden;
 }
+
 .link:hover {
     text-decoration: underline;
 }
@@ -38,22 +40,24 @@ body {
     border: 1px solid rgb(219, 229, 230);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    overflow: hidden;
 }
 
 .card-image {
-    height: 220px;
     overflow: hidden;
 }
 
 img {
-    width: 300px;
+    display: block;
+    width: 320px;
+    min-height: 100%;
+    background-size: cover;
     transition: transform 0.3s ease 0s;
 }
 
 img:hover {
     transform: scale(1.15);
 }
+
 .card-content {
     padding: 15px;
 }
