@@ -30,6 +30,7 @@ body {
     align-items: center;
     border-radius: 20px;
     width: 320px;
+    margin: 20px;
     background-color: hsl(0, 0%, 100%);
     text-align: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
