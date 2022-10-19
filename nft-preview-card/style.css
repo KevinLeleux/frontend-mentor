@@ -35,7 +35,13 @@ body {
 
 .image-wrapper {
     position: relative;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 8px;
 }
+
 .nft-image {
     height: 300px;
     width: 300px;
@@ -45,7 +51,9 @@ body {
 }
 
 .nft-image:hover {
+    opacity: 50%;
 }
+
 .nft-image:hover + .eye {
     display: block;
 }
