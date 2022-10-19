@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+}
 html {
     font-size: 62.5%;
 }
@@ -11,7 +16,6 @@ html {
 body {
     background-color: hsl(212, 45%, 89%);
     font-family: "Outfit", sans-serif;
-    margin: 0 auto;
     max-width: 1440px;
     min-width: 375px;
 }
