@@ -15,17 +15,12 @@ body {
     max-width: 1440px;
     min-width: 375px;
 }
-/* @media only screen and (max-width: 375px) {
-    .card {
-        margin-top: 80px !important;
-    }
-} */
 
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .card {
