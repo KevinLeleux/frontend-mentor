@@ -16,14 +16,11 @@ body {
     min-width: 375px;
 }
 
-@-ms-viewport {
-    height: device-height;
-}
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .card {
