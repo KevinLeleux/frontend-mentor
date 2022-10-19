@@ -8,6 +8,7 @@ body {
     min-width: 375px;
     font-family: "Barlow", sans-serif;
     font-weight: 700;
+    margin: 0 auto;
 }
 
 .link {
@@ -26,8 +27,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 30px;
     gap: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .card {
@@ -39,12 +42,12 @@ body {
 }
 
 .card-image {
-    height: 250px;
+    height: 220px;
     overflow: hidden;
 }
 
 img {
-    width: 350px;
+    width: 300px;
     transition: transform 0.3s ease 0s;
 }
 
@@ -52,7 +55,7 @@ img:hover {
     transform: scale(1.15);
 }
 .card-content {
-    padding: 20px;
+    padding: 15px;
 }
 
 h1 {
