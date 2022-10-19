@@ -4,49 +4,64 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0 auto;
     max-width: 1440px;
     min-width: 375px;
     font-family: "Barlow", sans-serif;
     font-weight: 700;
 }
 
-a {
+.link {
     text-decoration: none;
     color: black;
+    display: block;
+    isolation: isolate;
+    overflow: hidden;
 }
+.link:hover {
+    text-decoration: underline;
+}
+
 .main-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
 }
 
 .card {
     background-color: #fff;
     border: 1px solid rgb(219, 229, 230);
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 250px;
+    overflow: hidden;
 }
 
 img {
-    width: 300px;
-    height: auto;
+    width: 350px;
     transition: transform 0.3s ease 0s;
-        border-bottom: 1px solid red;
 }
+
 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 .card-content {
-    border-top: 1px solid rgb(219, 229, 230);
     padding: 20px;
 }
+
 h1 {
     font-size: 24px;
     line-height: normal;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
+
 .class-wrapper {
     align-items: center;
     display: flex;
@@ -56,11 +71,13 @@ h1 {
     vertical-align: middle;
     width: 100%;
 }
+
 ul {
     list-style: none;
     display: flex;
     gap: 10px;
 }
+
 .html {
     color: rgb(106, 190, 205);
 }
@@ -79,6 +96,7 @@ ul {
     color: white;
     padding: 0 5px 0;
 }
+
 .level-blue {
     color: rgb(106, 190, 205);
     font-size: 14px;
