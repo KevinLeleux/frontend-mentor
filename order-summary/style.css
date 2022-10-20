@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --white: hsl(0, 0%, 100%);
+    --hover-button: #766cf1;
+
+    --font-family: "Red Hat Display", sans-serif;
+}
+
+html,
+body {
+    margin: 0 auto;
+    height: 100%;
+    font-size: 62.5%;
+}
+html {
+    background-color: var(--Pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+}
+body {
+    max-width: 1440px;
+    min-width: 375px;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card {
+    background-color: var(--white);
+    font-family: var(--font-family);
+    width: 45rem;
+    margin: 1.5rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px 2px rgba(84, 79, 240, 0.15);
+}
+
+.top-image {
+    display: block;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4.5rem 5rem;
+}
+
+.content h1 {
+    color: var(--Dark-blue);
+    font-size: 2.8rem;
+    letter-spacing: 0.05rem;
+}
+
+.content p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding: 2rem;
+    color: var(--Desaturated-blue);
+}
+
+.box {
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+.billing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-music {
+    width: 4.8rem;
+    margin-right: 2rem;
+}
+.price {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.price span:nth-child(1) {
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+.price span:nth-child(2) {
+    color: var(--Desaturated-blue);
+}
+
+.billing a {
+    margin-left: auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--Bright-blue);
+}
+
+.billing a:hover {
+    text-decoration: none;
+    color: var(--hover-button);
+}
+.proceed {
+    background-color: var(--Bright-blue);
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 3rem 0;
+    box-shadow: 0px 10px 20px 2px rgba(84, 79, 240, 0.3);
+}
+
+.proceed:hover {
+    cursor: pointer;
+    background-color: var(--hover-button);
+}
+.cancel {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+}
+
+.cancel:hover {
+    color: var(--Dark-blue);
+}
+
+@media only screen and (max-width: 480px) {
+    
+}
