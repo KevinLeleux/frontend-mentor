@@ -97,6 +97,7 @@ ul {
     display: flex;
     border: 1px solid rgb(106, 190, 205);
     border-radius: 4px;
+    overflow: hidden;
 }
 
 .level-number-blue {
