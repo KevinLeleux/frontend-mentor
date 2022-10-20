@@ -22,11 +22,13 @@ body {
     height: 100%;
     font-size: 62.5%;
 }
+
 html {
     background-color: var(--Pale-blue);
     background-image: url(images/pattern-background-desktop.svg);
     background-repeat: repeat-x;
 }
+
 body {
     max-width: 1440px;
     min-width: 375px;
@@ -51,6 +53,7 @@ body {
 
 .top-image {
     display: block;
+    width: 45rem;
 }
 
 .content {
@@ -63,6 +66,7 @@ body {
 .content h1 {
     color: var(--Dark-blue);
     font-size: 2.8rem;
+    font-weight: 900;
     letter-spacing: 0.05rem;
 }
 
@@ -84,6 +88,7 @@ body {
     flex-direction: row;
     align-items: center;
 }
+
 .icon-music {
     width: 4.8rem;
     margin-right: 2rem;
@@ -115,6 +120,7 @@ body {
     text-decoration: none;
     color: var(--hover-button);
 }
+
 .proceed {
     background-color: var(--Bright-blue);
     color: var(--white);
@@ -133,6 +139,7 @@ body {
     cursor: pointer;
     background-color: var(--hover-button);
 }
+
 .cancel {
     text-decoration: none;
     font-size: 1.5rem;
@@ -144,6 +151,42 @@ body {
     color: var(--Dark-blue);
 }
 
-@media only screen and (max-width: 480px) {
-    
+@media only screen and (max-width: 11480px) {
+    .card {
+        width: 33rem;
+    }
+
+    .top-image {
+        width: inherit;
+    }
+
+    .content {
+        padding: 3rem 2.5rem;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: 0.05rem;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+    }
+
+    .box {
+        padding: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+
+    .billing a {
+        font-size: 1.3rem;
+    }
+
+    .proceed {
+        margin: 2.5rem 0;
+    }
 }
