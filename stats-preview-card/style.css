@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%); /* (main background) */
+    --Dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background) */
+    --Soft-violet: hsl(277, 64%, 61%); /* (accent) */
+    --White: hsl(0, 0%, 100%); /* (main heading, stats) */
+    --Slightly-transparent-white: hsla(
+        0,
+        0%,
+        100%,
+        0.75
+    ); /* (main paragraph) */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+
+    --lexend: "Lexend Deca", sans-serif;
+    --inter: "Inter", sans-serif;
+}
+
+html,
+body {
+    margin: 0 auto;
+    height: 100%;
+    font-size: 62.5%;
+    min-width: 375px;
+    max-width: 1440px;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    color: var(--White);
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 54rem;
+    background-color: var(--Dark-desaturated-blue);
+    max-height: 45rem;
+    max-width: 110rem;
+    border-radius: 0.8rem;
+    margin: 0 2rem;
+    overflow: hidden;
+}
+
+.content {
+    padding: 7rem;
+}
+
+h1 {
+    font-family: var(--inter);
+    font-size: 3.4rem;
+    line-height: 1.3;
+    letter-spacing: 0.1rem;
+}
+
+p {
+    font-family: var(--inter);
+    color: var(--Slightly-transparent-white);
+    font-size: 1.4rem;
+    line-height: 1.7;
+    letter-spacing: 0.05rem;
+    padding: 2.5rem 0;
+    margin-bottom: 4.5rem;
+    width: 90%;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--inter);
+}
+
+.stats span:nth-child(1) {
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+.stats span:nth-child(2) {
+    text-transform: uppercase;
+    font-family: var(--lexend);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: var(--Slightly-transparent-white);
+}
+picture {
+    background-color: var(--Soft-violet);
+}
+
+picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    opacity: 80%;
+    order: 1;
+    object-fit: cover;
+}
