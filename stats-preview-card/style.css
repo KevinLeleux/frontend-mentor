@@ -48,7 +48,7 @@ body {
     background-color: var(--Dark-desaturated-blue);
     max-width: 110rem;
     border-radius: 0.8rem;
-    margin: 0 2rem;
+    margin: 2rem;
     overflow: hidden;
 }
 
@@ -113,4 +113,42 @@ picture img {
     opacity: 80%;
     order: 1;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        max-width: 33rem;
+    }
+    picture {
+        order: -1;
+    }
+    .content {
+        padding: 3.5rem 3.5rem 1rem 3.5rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        width: 100%;
+    }
+    .stats span:nth-child(2) {
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        font-family: var(--lexend);
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        color: var(--Slightly-transparent-white);
+    }
 }
