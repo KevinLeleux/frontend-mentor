@@ -115,6 +115,18 @@ picture img {
     object-fit: cover;
 }
 
+@media only screen and (max-width: 1000px) {
+    p {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .card {
         display: flex;
