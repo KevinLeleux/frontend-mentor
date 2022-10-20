@@ -44,9 +44,8 @@ body {
 
 .card {
     display: grid;
-    grid-template-columns: 1fr 54rem;
+    grid-template-columns: 1.02fr 0.98fr;
     background-color: var(--Dark-desaturated-blue);
-    max-height: 45rem;
     max-width: 110rem;
     border-radius: 0.8rem;
     margin: 0 2rem;
@@ -92,6 +91,7 @@ p {
     display: inline-block;
     margin-bottom: 1rem;
     font-size: 2.2rem;
+    letter-spacing: 0.07rem;
 }
 .stats span:nth-child(2) {
     text-transform: uppercase;
