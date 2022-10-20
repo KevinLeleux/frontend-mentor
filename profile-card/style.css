@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+html,
+body {
+    margin: 0 auto;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+html {
+    background-color: var(--Dark-cyan);
+}
+
+body {
+    background-image: url(images/bg-pattern-top.svg),
+        url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: right 52vw bottom 36vh, left 48vw top 54vh;
+
+}
+
+.main-container {
+    max-width: 1440px;
+    min-width: 375px;
+}
