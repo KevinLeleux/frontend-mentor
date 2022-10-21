@@ -35,6 +35,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     border-radius: 0.8rem;
     overflow: hidden;
+    margin: 2rem;
 }
 
 .card {
@@ -106,4 +107,28 @@ button:hover {
 .card-container div:nth-child(3) button:hover {
     background-color: var(--Very-dark-cyan);
     color: var(--Transparent-white);
+}
+
+@media only screen and (max-width: 800px) {
+    .main-container {
+        height: auto;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 33rem;
+        min-width: 30rem;
+    }
+
+    h1 {
+        margin: 3.4rem 0 2.6rem 0;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
 }
