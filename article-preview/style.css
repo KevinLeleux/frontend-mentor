@@ -109,7 +109,7 @@ p {
 }
 
 .share-icon:hover {
-    background-color: var(--Very-Dark-Grayish-Blue);
+    background-color: var(--Desaturated-Dark-Blue);
     cursor: pointer;
 }
 .share-icon:hover img {
