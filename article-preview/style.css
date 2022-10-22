@@ -57,6 +57,7 @@ h1 {
     line-height: 1.4;
     letter-spacing: 0.025rem;
 }
+
 p {
     color: var(--Desaturated-Dark-Blue);
     font-size: 1.3rem;
@@ -64,6 +65,7 @@ p {
     line-height: 1.5;
     letter-spacing: 0.01rem;
 }
+
 .footer {
     position: relative;
     display: flex;
@@ -97,18 +99,12 @@ p {
 .share-icon {
     position: relative;
     margin-left: auto;
+    border: none;
     background-color: var(--Light-Grayish-Blue);
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
-}
-
-.icon-img {
-    position: absolute;
-    width: 1.5rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 100;
 }
 
 .share-icon:hover {
@@ -117,6 +113,30 @@ p {
 }
 .share-icon:hover img {
     filter: brightness(400%);
+}
+
+.share-icon.visible {
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+.share-icon.visible img {
+    filter: brightness(400%);
+}
+
+.share-icon.visible:hover img {
+    filter: none;
+}
+
+.share-icon.visible:hover {
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.icon-img {
+    position: absolute;
+    width: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .share-container {
@@ -136,6 +156,10 @@ p {
 
 .share-container.visible {
     visibility: visible;
+}
+
+.share-icon:hover img {
+    filter: brightness(400%);
 }
 
 .share-container::after {
@@ -163,4 +187,56 @@ ul {
 }
 li {
     list-style: none;
+}
+@media only screen and (max-width: 700px) {
+    .card-container {
+        grid-template-columns: none;
+        max-width: 33rem;
+        min-width: 29rem;
+        border-radius: 1rem;
+        margin: 2rem;
+    }
+
+    .image img {
+        width: 100%;
+        max-height: 20rem;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .content-wrapper {
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .content {
+        padding: 3.6rem 3.2rem 0.8rem 3.2rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    p {
+        line-height: 1.6;
+        letter-spacing: 0.02rem;
+    }
+
+    .footer {
+        padding: 1.5rem 3.2rem;
+    }
+
+    .share-container {
+        justify-content: left;
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem 3.5rem;
+        border-radius: 0 0 1rem 1rem;
+        top: 0;
+        right: 0;
+        box-shadow: none;
+    }
+
+    .share-container::after {
+        display: none;
+    }
 }
