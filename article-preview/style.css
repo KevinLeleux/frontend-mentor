@@ -189,7 +189,7 @@ ul {
 li {
     list-style: none;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 730px) {
     .card-container {
         grid-template-columns: none;
         max-width: 33rem;
