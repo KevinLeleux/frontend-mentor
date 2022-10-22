@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.accordion:hover label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+label img {
+    transform: rotate(90°);
+}
+.accordion input {
+    display: none;
+}
+
+.accordion-content {
+    display: none;
+}
+
+.accordion input:checked ~ .accordion-content {
+    display: block;
+}
