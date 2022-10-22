@@ -94,6 +94,10 @@ ul {
     color: rgb(62, 84, 163);
 }
 
+.js {
+    color: rgb(207, 99, 144);;
+}
+
 .level-btn {
     display: flex;
     border: 1px solid rgb(106, 190, 205);
