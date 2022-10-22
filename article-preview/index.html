@@ -21,12 +21,12 @@
         <title>Frontend Mentor | Article preview component</title>
     </head>
     <body>
-        <main class="main-container">
-            <div class="card-container">
-                <picture class="image">
-                    <img src="images/drawers.jpg" alt="drawers" />
-                </picture>
-                <div class="content">
+        <main class="card-container">
+            <picture class="image">
+                <img src="images/drawers.jpg" alt="drawers" />
+            </picture>
+            <div class="content-wrapper">
+                <article class="content">
                     <h1>
                         Shift the overall look and feel by adding these
                         wonderful touches to furniture in your home
@@ -37,22 +37,53 @@
                         some simple tips to help you make any room feel
                         complete.
                     </p>
-                    <div class="footer">
-                        <img
-                            src="images/avatar-michelle.jpg"
-                            alt="avatar"
-                            class="avatar-img"
-                        />
-                        <div class="name">
-                            <span> Michelle Appleton </span>
-                            <span> 28 Jun 2020 </span>
-                        </div>
-                        <div class="share-icon">
-                            <img src="images/icon-share.svg" alt="share" class="icon-img"/>
-                        </div>
+                </article>
+                <footer class="footer">
+                    <img
+                        src="images/avatar-michelle.jpg"
+                        alt="avatar"
+                        class="avatar-img"
+                    />
+                    <div class="name">
+                        <span> Michelle Appleton </span>
+                        <span> 28 Jun 2020 </span>
                     </div>
-                </div>
+                    <picture class="share-icon">
+                        <img
+                            src="images/icon-share.svg"
+                            alt="share"
+                            class="icon-img"
+                        />
+                    </picture>
+                    <div class="share-container">
+                        <h2>Share</h2>
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="images/icon-facebook.svg"
+                                        alt="facebook"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="images/icon-twitter.svg"
+                                        alt="twitter"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="images/icon-pinterest.svg"
+                                        alt="pinterest"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
             </div>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>

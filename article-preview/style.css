@@ -19,34 +19,36 @@ body {
     font-size: 62.5%;
     background-color: var(--Light-Grayish-Blue);
     font-family: var(--font);
-}
-
-.main-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: 28.5rem auto;
+    grid-template-columns: 39% 61%;
     max-width: 73rem;
+    min-height: 28rem;
     border-radius: 1rem;
-    height: 28rem;
-    overflow: hidden;
-    margin: 2rem;
-    box-shadow: 5px 15px 35px 15px rgba(0,0,0,0.05);
+    margin: 8rem;
+    box-shadow: 5px 15px 35px 15px rgba(0, 0, 0, 0.05);
 }
 
 .image img {
     display: block;
-    height: 28rem;
+    width: 123%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.content-wrapper {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 1rem 1rem 0;
 }
 
 .content {
-    background-color: hsl(0, 0%, 100%);
-    padding: 3.2rem 4rem;
+    padding: 3.2rem 4rem 0 4rem;
 }
 
 h1 {
@@ -63,10 +65,11 @@ p {
     letter-spacing: 0.01rem;
 }
 .footer {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 2rem;
+    padding: 0.8rem 4rem;
 }
 
 .name {
@@ -84,9 +87,7 @@ p {
 }
 .name span:nth-child(2) {
     color: var(--Grayish-Blue);
-
 }
-
 
 .avatar-img {
     width: 4rem;
@@ -108,4 +109,58 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.share-icon:hover {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    cursor: pointer;
+}
+.share-icon:hover img {
+    filter: brightness(400%);
+}
+
+.share-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 25rem;
+    padding: 1.6rem 3.5rem;
+    border-radius: 1rem;
+    top: -7.2rem;
+    right: -6.8rem;
+    visibility: hidden;
+    box-shadow: 0px 10px 40px 5px rgba(0, 0, 0, 0.2);
+}
+
+.share-container.visible {
+    visibility: visible;
+}
+
+.share-container::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: -15%;
+    transform: rotate(45deg);
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.share-container h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+}
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-left: 1.8rem;
+}
+li {
+    list-style: none;
 }
