@@ -125,15 +125,7 @@ article h1 {
 .accordion-content {
     display: none;
 }
-
-.accordion input:checked ~ .accordion-content {
-    display: block;
-    height: auto;
-    padding-bottom: 25px;
-    padding-top: 10px;
-}
-
-.accordion input:checked ~ .accordion-content {
+.active ~ .accordion-content {
     display: block;
     height: auto;
     padding-bottom: 25px;
