@@ -101,7 +101,7 @@ article h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--Dark-grayish-blue);
+    color: var(--Very-dark-grayish-blue);
     font-weight: 500;
     padding: 2rem 0;
 }
@@ -191,7 +191,9 @@ article h1 {
     .accordion {
         font-size: 1.4rem;
         width: auto;
+        margin: 0 auto;
         min-width: 28rem;
+        max-width: 45rem;
         border-bottom: 1px solid var(--Light-grayish-blue);
     }
 
@@ -205,7 +207,7 @@ article h1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: var(--Dark-grayish-blue);
+        color: var(--Very-dark-grayish-blue);
         font-weight: 500;
         padding: 2rem 0;
     }
@@ -233,14 +235,7 @@ article h1 {
     .accordion input:checked ~ .accordion-content {
         display: block;
         height: auto;
-        padding-bottom: 25px;
-        padding-top: 10px;
-    }
-
-    .accordion input:checked ~ .accordion-content {
-        display: block;
-        height: auto;
-        padding-bottom: 25px;
-        padding-top: 10px;
+        padding-bottom: 15px;
+        padding-top: 0px;
     }
 }
