@@ -11,108 +11,139 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
         <title>Frontend Mentor | FAQ Accordion Card</title>
     </head>
     <body>
         <main class="main-container">
-            <picture>
-                <!-- before element -->
+            <section>
+                <div class="image-container">
+                    <picture>
+                        <source
+                            media="(max-width: 1000px)"
+                            srcset="images/illustration-woman-online-mobile.svg"
+                        />
+                        <img
+                            src="images/illustration-woman-online-desktop.svg"
+                            alt="illustration of a woman online"
+                            class="desktop-image"
+                        />
+                    </picture>
+                    <picture>
+                        <source
+                            media="(max-width: 1000px )"
+                            srcset="images/bg-pattern-mobile.svg"
+                        />
+                        <img
+                            src="images/bg-pattern-desktop.svg"
+                            alt="box shadow"
+                            class="box-shadow"
+                        />
+                    </picture>
+                </div>
                 <img
-                    src="images/illustration-woman-online-desktop.svg"
-                    alt=""
+                    src="images/illustration-box-desktop.svg"
+                    alt="box"
+                    class="box"
                 />
-            </picture>
-            <article>
-                <h1>FAQ</h1>
-                <div class="accordion">
-                    <input type="checkbox" id="0" />
-                    <label for="0"
-                        >How many team members can I invite?
-                        <img
-                            src="images/icon-arrow-down.svg"
-                            alt="arrow"
-                            aria-hidden="true"
-                        />
-                    </label>
-                    <div class="accordion-content">
-                        <p>
-                            You can invite up to 2 additional users on the Free
-                            plan. There is no limit on team members for the
-                            Premium plan.
-                        </p>
+                <article>
+                    <h1>FAQ</h1>
+                    <div class="accordion">
+                        <input type="checkbox" name="checkbox" id="0" />
+                        <label for="0"
+                            >How many team members can I invite?
+                            <img
+                                src="images/icon-arrow-down.svg"
+                                alt="arrow"
+                                aria-hidden="true"
+                            />
+                        </label>
+                        <div class="accordion-content">
+                            <p>
+                                You can invite up to 2 additional users on the
+                                Free plan. There is no limit on team members for
+                                the Premium plan.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="1" />
-                    <label for="1"
-                        >What is the maximum file upload size?
-                        <img
-                            src="images/icon-arrow-down.svg"
-                            alt="arrow"
-                            aria-hidden="true"
-                        />
-                    </label>
-                    <div class="accordion-content">
-                        <p>
-                            No more than 2GB. All files in your account must fit
-                            your allotted storage space.
-                        </p>
+                    <div class="accordion">
+                        <input type="checkbox" name="checkbox" id="1" />
+                        <label for="1"
+                            >What is the maximum file upload size?
+                            <img
+                                src="images/icon-arrow-down.svg"
+                                alt="arrow"
+                                aria-hidden="true"
+                            />
+                        </label>
+                        <div class="accordion-content">
+                            <p>
+                                No more than 2GB. All files in your account must
+                                fit your allotted storage space.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="2" />
-                    <label for="2"
-                        >How do I reset my password?
-                        <img
-                            src="images/icon-arrow-down.svg"
-                            alt="arrow"
-                            aria-hidden="true"
-                        />
-                    </label>
-                    <div class="accordion-content">
-                        <p>
-                            Click “Forgot password” from the login page or
-                            “Change password” from your profile page. A reset
-                            link will be emailed to you.
-                        </p>
+                    <div class="accordion">
+                        <input type="checkbox" name="checkbox" id="2" />
+                        <label for="2"
+                            >How do I reset my password?
+                            <img
+                                src="images/icon-arrow-down.svg"
+                                alt="arrow"
+                                aria-hidden="true"
+                                class="arrow"
+                            />
+                        </label>
+                        <div class="accordion-content">
+                            <p>
+                                Click “Forgot password” from the login page or
+                                “Change password” from your profile page. A
+                                reset link will be emailed to you.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="3" />
-                    <label for="3">
-                        Can I cancel my subscription?
-                        <img
-                            src="images/icon-arrow-down.svg"
-                            alt="arrow"
-                            aria-hidden="true"
-                        />
-                    </label>
-                    <div class="accordion-content">
-                        <p>
-                            Yes! Send us a message and we’ll process your
-                            request no questions asked.
-                        </p>
+                    <div class="accordion">
+                        <input type="checkbox" name="checkbox" id="3" />
+                        <label for="3">
+                            Can I cancel my subscription?
+                            <img
+                                src="images/icon-arrow-down.svg"
+                                alt="arrow"
+                                aria-hidden="true"
+                            />
+                        </label>
+                        <div class="accordion-content">
+                            <p>
+                                Yes! Send us a message and we’ll process your
+                                request no questions asked.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="4" />
-                    <label for="4">
-                        Do you provide additional support?
-                        <img
-                            src="images/icon-arrow-down.svg"
-                            alt="arrow"
-                            aria-hidden="true"
-                        />
-                    </label>
-                    <div class="accordion-content">
-                        <p>
-                            Chat and email support is available 24/7. Phone
-                            lines are open during normal business hours.
-                        </p>
+                    <div class="accordion">
+                        <input type="checkbox" name="checkbox" id="4" />
+                        <label for="4">
+                            Do you provide additional support?
+                            <img
+                                src="images/icon-arrow-down.svg"
+                                alt="arrow"
+                                aria-hidden="true"
+                            />
+                        </label>
+                        <div class="accordion-content">
+                            <p>
+                                Chat and email support is available 24/7. Phone
+                                lines are open during normal business hours.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </section>
         </main>
     </body>
 </html>
