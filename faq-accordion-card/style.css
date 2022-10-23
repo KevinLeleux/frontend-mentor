@@ -4,6 +4,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 }
+
 :root {
     --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
     --Soft-red: hsl(14, 88%, 65%);
@@ -24,9 +25,11 @@ body {
     max-width: 1440px;
     font-size: 62.5%;
 }
+
 html {
     display: table;
 }
+
 body {
     display: table-cell;
     vertical-align: middle;
@@ -53,6 +56,9 @@ section {
     grid: 1fr / 39rem max-content;
     min-height: 51rem;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .image-container {
@@ -82,7 +88,7 @@ section {
 }
 
 article {
-    padding: 7.5rem;
+    padding: 6.5rem;
     margin-right: 2rem;
 }
 
@@ -93,17 +99,18 @@ article {
 }
 
 article h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--Very-dark-desaturated-blue);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
+
 .accordion label {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--Very-dark-grayish-blue);
     font-weight: 500;
-    padding: 2rem 0;
+    padding: 1.5rem 0 1.5rem 0;
 }
 
 .accordion p {
@@ -116,6 +123,7 @@ article h1 {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: var(--Soft-red);
 }
 
 .accordion input {
@@ -125,109 +133,75 @@ article h1 {
 .accordion-content {
     display: none;
 }
-.active > .accordion-content {
+
+.active .accordion-content {
     display: block;
     height: auto;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.active label {
+    font-weight: 700;
+}
+
+.active img {
+    transform: scaleY(-1);
 }
 
 @media only screen and (max-width: 1000px) {
     section {
-        background-color: white;
         margin: 150px 20px 20px 20px;
         min-width: 32rem;
         max-width: 60rem;
         width: 100%;
-        border-radius: 2rem;
-        display: grid;
         grid: 11rem max-content / auto;
-        grid-auto-columns: 100px;
-        position: relative;
     }
 
     .image-container {
-        position: relative;
         overflow: visible;
     }
 
     .desktop-image {
-        position: absolute;
         top: -10.8rem;
         left: 50%;
-        z-index: 1;
         width: 24rem;
         transform: translateX(-50%);
     }
 
     .box-shadow {
-        position: absolute;
         left: 50%;
         top: 0rem;
         transform: translateX(-50%);
     }
 
     .box {
-        position: absolute;
-        left: -10rem;
-        top: 20.5rem;
-        z-index: 2;
         display: none;
     }
 
     article {
-        padding: 2.25rem;
+        padding: 2.25rem 2.25rem 4.5rem 2.25rem;
         margin-right: 0;
     }
 
     .accordion {
-        font-size: 1.4rem;
         width: auto;
         margin: 0 auto;
         min-width: 28rem;
         max-width: 45rem;
-        border-bottom: 1px solid var(--Light-grayish-blue);
     }
 
     article h1 {
-        font-size: 2.8rem;
         color: var(--Very-dark-desaturated-blue);
         margin-bottom: 1rem;
         text-align: center;
     }
+
     .accordion label {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: var(--Very-dark-grayish-blue);
-        font-weight: 500;
-        padding: 2rem 0;
+        font-size: 1.3rem;
+        padding: 1.7rem 0 1.5rem 0;
     }
 
-    .accordion p {
-        font-size: 1.2rem;
-        color: var(--Dark-grayish-blue);
-    }
-
-    .accordion:hover label {
-        cursor: pointer;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .accordion input {
-        display: none;
-    }
-
-    .accordion-content {
-        display: none;
-    }
-
-    .active ~ .accordion-content {
-        display: block;
-        height: auto;
+    .active .accordion-content {
         padding-bottom: 15px;
-        padding-top: 0px;
     }
 }
