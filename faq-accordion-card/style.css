@@ -125,7 +125,7 @@ article h1 {
 .accordion-content {
     display: none;
 }
-.active ~ .accordion-content {
+.active > .accordion-content {
     display: block;
     height: auto;
     padding-bottom: 25px;

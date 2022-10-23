@@ -1,12 +1,16 @@
-const checkboxNode = document.getElementsByName("checkbox");
-const checkbox = Array.from(checkboxNode);
-console.log(checkbox);
+const checkbox = document.getElementsByName("checkbox");
+const accordion = document.getElementsByClassName("accordion");
 
-for (i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener("change", function () {
-        for (i = 0; i < checkbox.length; i++) {
-            checkbox[i].classList.remove("active")
+for (let i = 0; i < checkbox.length; i++) {
+    const element = checkbox[i];
+    element.addEventListener("change", function () {
+        if (accordion[i].classList.contains("active")) {
+            accordion[i].classList.remove("active");
+        } else {
+            for (let j = 0; j < accordion.length; j++) {
+                accordion[j].classList.remove("active");
+            }
+            accordion[i].classList.add("active");
         }
-        this.classList.toggle("active");
     });
 }
