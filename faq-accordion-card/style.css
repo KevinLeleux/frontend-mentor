@@ -154,6 +154,7 @@ article h1 {
         min-width: 32rem;
         max-width: 60rem;
         width: 100%;
+        min-height: 54rem;
         grid: 11rem max-content / auto;
     }
 
