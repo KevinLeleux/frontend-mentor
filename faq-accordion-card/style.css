@@ -175,6 +175,7 @@ article h1 {
         left: 50%;
         top: 0rem;
         transform: translateX(-50%);
+        width: auto;
     }
 
     .box {
