@@ -131,7 +131,8 @@ header p {
     line-height: 1.4;
     letter-spacing: 0.2px;
 }
-@media only screen and (min-width: 400px) {
+
+@media only screen and (min-width: 700px) {
     body {
         background-image: url(images/bg-pattern-top-desktop.svg),
             url(images/bg-pattern-bottom-desktop.svg);
@@ -140,5 +141,126 @@ header p {
         background-size: auto, 71%;
         width: 100vw;
         min-height: 100vh;
+    }
+
+    .main-container {
+        max-width: 111rem;
+        margin: 8rem 2rem;
+        display: grid;
+        grid-template-areas: "header ratings" "reviews reviews";
+    }
+
+    header {
+        text-align: center;
+        grid-area: header;
+        width: 42rem;
+    }
+    header h1 {
+        color: var(--Very-Dark-Magenta);
+        font-size: 3.6rem;
+        text-align: center;
+        margin: 0 4.5rem;
+        margin-bottom: 2.3rem;
+    }
+
+    header p {
+        color: var(--Dark-Grayish-Magenta);
+        font-size: 1.7rem;
+        line-height: 1.6;
+        margin: 0 0.5rem 3rem 0;
+    }
+
+    .ratings {
+        min-width: 55rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ratings div:nth-child(1) {
+        margin-right: auto;
+    }
+    .ratings div:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ratings div:nth-child(3) {
+        margin-left: auto;
+    }
+
+    .rating {
+        background-color: var(--Light-Grayish-Magenta);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        grid-area: ratings;
+        min-width: 44.5rem;
+    }
+
+    .stars img {
+        width: 80%;
+    }
+
+    .stars {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .stars-review {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--Very-Dark-Magenta);
+    }
+
+    .cards-reviews {
+        margin-top: 4.5rem;
+        grid-area: reviews;
+        display: flex;
+        gap: 3rem;
+    }
+
+    .card-review {
+        background-color: var(--Very-Dark-Magenta);
+        border-radius: 0.8rem;
+        margin: 1.5rem 0;
+        padding: 3.4rem;
+    }
+
+    .card-review img {
+        width: 4rem;
+        border-radius: 50%;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 2.3rem;
+        margin-bottom: 2.7rem;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        gap: 0.5rem;
+    }
+
+    .name span:nth-child(1) {
+        color: var(--White);
+        font-weight: 500;
+    }
+    .name span:nth-child(2) {
+        color: var(--Soft-Pink);
+    }
+
+    .card-review p {
+        color: var(--White);
+        font-size: 1.6rem;
+        line-height: 1.4;
+        letter-spacing: 0.2px;
     }
 }
