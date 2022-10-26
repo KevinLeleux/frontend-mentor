@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --font: "League Spartan", sans-serif;
+}
+
+body,
+html {
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: var(--font);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(images/bg-pattern-top-mobile.svg),
+        url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 100%;
+    display: flex;
+
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 32.5rem;
+    margin: 8rem 2rem;
+}
+
+header {
+    text-align: center;
+}
+header h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 3.6rem;
+    text-align: center;
+    margin: 0 4.5rem;
+    margin-bottom: 2.3rem;
+}
+
+header p {
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin: 0 0.5rem 3rem 0;
+}
+
+.rating {
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+}
+
+.stars img {
+    width: 80%;
+}
+
+.stars {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.stars-review {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+
+.cards-reviews {
+    margin-top: 4.5rem;
+}
+
+.card-review {
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 0.8rem;
+    margin: 1.5rem 0;
+    padding: 3.4rem;
+}
+
+.card-review img {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+    margin-bottom: 2.7rem;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    gap: 0.5rem;
+}
+
+.name span:nth-child(1) {
+    color: var(--White);
+    font-weight: 500;
+}
+.name span:nth-child(2) {
+    color: var(--Soft-Pink);
+}
+
+.card-review p {
+    color: var(--White);
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+}
+@media only screen and (min-width: 400px) {
+    body {
+        background-image: url(images/bg-pattern-top-desktop.svg),
+            url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, bottom right;
+        background-size: auto, 71%;
+        width: 100vw;
+        min-height: 100vh;
+    }
+}
