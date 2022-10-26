@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Frontend Mentor | Interactive rating component</title>
+    </head>
+    <body>
+        <main class="main-container">
+            <div class="image">
+                <img src="images/icon-star.svg" alt="star icon" />
+            </div>
+
+            <h1>How did we do?</h1>
+            <p>
+                Please let us know how we did with your support request. All
+                feedback is appreciated to help us improve our offering!
+            </p>
+            <form class="rating-form">
+                <input type="radio" name="rating" id="1" value="1" />
+                <label for="1">1</label>
+                <input type="radio" name="rating" id="2" value="2" />
+                <label for="2">2</label>
+                <input type="radio" name="rating" id="3" value="3" />
+                <label for="3">3</label>
+                <input type="radio" name="rating" id="4" value="4" />
+                <label for="4">4</label>
+                <input type="radio" name="rating" id="5" value="5" />
+                <label for="5">5</label>
+                <button type="submit" class="button">Submit</button>
+            </form>
+            <div class="modal">
+                <img
+                    src="images/illustration-thank-you.svg"
+                    alt="Thank you image"
+                />
+                <div class="selected">
+                    You selected <span class="rating-number"></span> out of 5
+                </div>
+                <h2>Thank you!</h2>
+                <p>
+                    We appreciate you taking the time to give a rating. If you
+                    ever need more support, don’t hesitate to get in touch!
+                </p>
+            </div>
+
+            <!-- Thank you state end -->
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
