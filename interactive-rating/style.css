@@ -45,8 +45,8 @@ body {
 
 .image {
     background-color: var(--Dark-Blue);
-    width: 45px;
-    height: 45px;
+    width: 4.5rem;
+    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,19 +166,11 @@ button:hover {
         max-width: 32.5rem;
         border-radius: 2rem;
         padding: 2.2rem;
-        font-size: 1.6rem;
-        box-shadow: hsla(228, 11%, 9%, 0.169) 30px -120px 60px 0px inset,
-            hsla(228, 11%, 9%, 0.169) -30px -120px 60px 0px inset;
     }
 
     .image {
-        background-color: var(--Dark-Blue);
         width: 4rem;
         height: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
         margin-bottom: 2rem;
     }
 
@@ -188,100 +180,28 @@ button:hover {
 
     .main-container h1 {
         font-size: 2.4rem;
-        color: var(--White);
-        font-weight: 500;
     }
 
     .main-container p {
-        color: var(--Medium-Grey);
         font-size: 1.4rem;
-        line-height: 1.6;
-        padding: 1rem 0;
-    }
-
-    .rating-form {
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 1.5rem;
     }
 
     .main-container label {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 4rem;
         height: 4rem;
-        border-radius: 50%;
-        background-color: var(--Dark-Blue);
-        color: var(--Medium-Grey);
         font-size: 1.4rem;
     }
 
-    input {
-        display: none;
-    }
-
-    label:hover {
-        background-color: var(--Orange);
-        color: var(--White);
-    }
-    input:checked + label {
-        background-color: var(--Medium-Grey);
-        color: var(--White);
-    }
-
     button {
-        cursor: pointer;
-        width: 100%;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.2rem;
-        color: var(--White);
-        letter-spacing: 3px;
-        border: none;
-        background-color: var(--Orange);
-        padding: 1.5rem;
-        border-radius: 100rem;
         margin-top: 2.2rem;
     }
 
-    button:hover {
-        background-color: var(--White);
-        color: var(--Orange);
-    }
-
     .modal {
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 3.2rem;
-        width: 100%;
-        height: 100%;
-        border-radius: 3rem;
-        text-align: center;
-        box-shadow: hsla(228, 11%, 9%, 0.169) 30px -120px 60px 0px inset,
-            hsla(228, 11%, 9%, 0.169) -30px -120px 60px 0px inset;
-    }
-
-    .modal.visible {
-        visibility: visible;
+        border-radius: 2rem;
     }
 
     .selected {
-        background-color: var(--Dark-Blue);
-        color: var(--Orange);
         font-size: 1.3rem;
-        letter-spacing: 0.3px;
-        padding: 0.7rem 1.8rem;
-        border-radius: 100rem;
         margin: 2.5rem 0;
     }
 
@@ -290,7 +210,6 @@ button:hover {
     }
 
     .modal h2 {
-        color: var(--White);
         font-size: 2.4rem;
     }
 
