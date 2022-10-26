@@ -68,16 +68,18 @@ section {
 
 .desktop-image {
     position: absolute;
-    top: 7rem;
+    top: 50%;
     left: -9rem;
     z-index: 1;
     width: 120%;
+    transform: translateY(-50%);
 }
 
 .box-shadow {
     position: absolute;
-    left: -58rem;
-    top: -29.5rem;
+    left: -102%;
+    top: -34%;
+    width: 200%;
 }
 
 .box {
