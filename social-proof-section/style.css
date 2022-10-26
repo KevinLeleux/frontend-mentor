@@ -25,16 +25,15 @@ html {
 }
 
 body {
-    width: 100vw;
-    min-height: 100vh;
     background-image: url(images/bg-pattern-top-mobile.svg),
         url(images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom right;
     background-size: 100%;
     display: flex;
-
     justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .main-container {
@@ -138,11 +137,7 @@ header p {
     body {
         background-image: url(images/bg-pattern-top-desktop.svg),
             url(images/bg-pattern-bottom-desktop.svg);
-        background-repeat: no-repeat, no-repeat;
-        background-position: top left, bottom right;
         background-size: auto, 71%;
-        width: 100vw;
-        min-height: 100vh;
     }
 
     .main-container {
@@ -159,18 +154,14 @@ header p {
     }
 
     header h1 {
-        color: var(--Very-Dark-Magenta);
         font-size: 5.2rem;
         text-align: left;
-        margin: 0;
-        margin-bottom: 2.3rem;
+        margin: 0 0 2.7rem 0;
     }
 
     header p {
-        color: var(--Dark-Grayish-Magenta);
         font-size: 1.8rem;
         line-height: 1.4;
-        margin: 0 0.5rem 3rem 0;
     }
 
     .ratings {
@@ -178,7 +169,7 @@ header p {
         margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
-                margin-left: 5.5rem;
+        margin-left: 5.5rem;
     }
 
     .right {
@@ -194,11 +185,8 @@ header p {
     }
 
     .rating {
-        background-color: var(--Light-Grayish-Magenta);
         border-radius: 0.6rem;
-        display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: flex-start;
         gap: 0rem;
         margin-top: 0.8rem;
@@ -214,16 +202,12 @@ header p {
     }
 
     .stars {
-        display: flex;
-        gap: 0.8rem;
         padding: 0 1.2rem;
         margin-right: 2rem;
     }
 
     .stars-review {
         font-size: 1.7rem;
-        font-weight: 700;
-        color: var(--Very-Dark-Magenta);
     }
 
     .cards-reviews {
@@ -235,56 +219,29 @@ header p {
         align-items: center;
         min-height: 30rem;
     }
-.top {
-    align-self: flex-start;
-}
-.bottom {
-    align-self: flex-end;
-}
+
+    .top {
+        align-self: flex-start;
+    }
+
+    .bottom {
+        align-self: flex-end;
+    }
+
     .card-review {
-        background-color: var(--Very-Dark-Magenta);
-        border-radius: 0.8rem;
         margin: 1.5rem 0;
         padding: 4rem 3.4rem;
         max-width: 35rem;
         max-height: 25rem;
     }
 
-
-
-    .card-review img {
-        width: 4rem;
-        border-radius: 50%;
-    }
-
     .title {
-        display: flex;
-        align-items: center;
-        gap: 2.3rem;
         margin-bottom: 3rem;
     }
 
     .name {
-        display: flex;
-        flex-direction: column;
         font-size: 1.7rem;
-        gap: 0.5rem;
         letter-spacing: 0.2px;
     }
 
-    .name span:nth-child(1) {
-        color: var(--White);
-        font-weight: 500;
-    }
-
-    .name span:nth-child(2) {
-        color: var(--Soft-Pink);
-    }
-
-    .card-review p {
-        color: var(--White);
-        font-size: 1.6rem;
-        line-height: 1.4;
-        letter-spacing: 0.2px;
-    }
 }
