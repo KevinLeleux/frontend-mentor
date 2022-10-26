@@ -17,6 +17,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 }
+
 html,
 body {
     max-width: 1440px;
@@ -111,6 +112,7 @@ article p {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
+
 .karma {
     border-top-color: var(--Orange);
     grid-column: 2 / 3;
@@ -137,6 +139,7 @@ article p {
         grid-column: 1 / 2;
         grid-row: 2 / 2;
     }
+
     .karma {
         grid-column: 2 / 2;
         grid-row: 1 / 2;
@@ -175,7 +178,6 @@ article p {
     article img {
         width: 23%;
     }
-
 
     .supervisor {
         grid-column: auto;
