@@ -1,0 +1,205 @@
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Light-Cyan: hsl(179, 47%, 52%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --font: 'Karla', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 62.5%;
+    font-family: var(--font);
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--Light-Gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: grid;
+}
+
+.card {
+    width: 31rem;
+    padding: 2.5rem 2.5rem;
+}
+
+.white {
+    background-color: white;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.white h1 {
+    color: var(--Cyan);
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+}
+
+.white h2 {
+    color: var(--Bright-Yellow);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.white p {
+    color: var(--Grayish-Blue);
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.dark-green {
+    background-color: var(--Cyan);
+}
+
+.w {
+    color: hsl(0, 0%, 100%);
+}
+
+.dark-green h2 {
+    font-size: 1.8rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1.5rem;
+}
+
+.dollar {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+    opacity: 1;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+
+}
+
+.price {
+    color: var(--Light-Gray);
+    opacity: 0.6;
+}
+
+.dark-green p {
+    padding: 1.5rem 0;
+}
+
+button {
+    width: 100%;
+    color: white;
+    background-color: var(--Bright-Yellow);
+    border: none;
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--Bright-Yellow);
+    background-color: white;
+}
+
+.light-green {
+    background-color: var(--Light-Cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.light-green h2 {
+    font-size: 1.8rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1.5rem;
+}
+
+.light-green p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    opacity: 0.6;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border-radius: 1rem;
+    }
+
+    .card {
+        width: auto;
+        padding: 4rem 4rem 3.8rem 4rem;
+    }
+
+    .white {
+        border-radius: 1rem 1rem 0 0;
+        grid-column: 1 / span 2;
+        max-width: 63.5rem;
+    }
+
+    .white h1 {
+        font-size: 2.4rem;
+        letter-spacing: 0;
+    }
+
+    .white h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .white p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+
+    .dark-green {
+        border-radius: 0 0 0 1rem;
+        overflow: hidden;
+    }
+
+    .dark-green h2 {
+        margin-bottom: 1.7rem;
+    }
+
+    .dollar {
+        font-size: 3.2rem;
+    }
+
+    .dark-green p {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+    }
+
+    .light-green {
+        border-radius: 0 0 1rem 0;
+    }
+
+    .light-green h2 {
+        margin-bottom: 1.7rem;
+    }
+}
