@@ -15,10 +15,7 @@ form.addEventListener("submit", function (e) {
         errorImg.classList.add("visible");
         email.classList.add("input-error");
         error.innerHTML = "";
-        error.insertAdjacentText(
-            "beforeend",
-            "Email field is empty, please provide an email"
-        );
+        error.insertAdjacentText("beforeend", "Email field is empty");
     } else {
         ValidateEmail(input);
     }
