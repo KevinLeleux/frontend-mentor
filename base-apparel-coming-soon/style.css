@@ -1,0 +1,313 @@
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --Linear1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Linear2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+    --font: 'Josefin Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: var(--font);
+
+}
+
+body {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 23.5rem auto;
+    grid-template-areas:
+        "header hero"
+        "content hero";
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    background-position: top left;
+
+}
+
+header {
+    grid-area: header;
+    margin: 6.5rem auto 0 auto;
+    max-width: 54rem;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.left-container {
+    padding-right: 5rem;
+    padding-left: 2rem;
+    max-width: 54rem;
+    width: 100%;
+    margin: 0 auto;
+    grid-area: content;
+}
+
+.logo {
+    margin-bottom: 13rem;
+}
+
+.left-container h1 {
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    letter-spacing: 16px;
+    line-height: 1.05;
+}
+
+.title {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+}
+
+.left-container p {
+    color: var(--Desaturated-Red);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+    max-width: 43rem;
+}
+
+.right-container {
+    grid-area: hero;
+}
+
+.right-container img {
+    width: auto;
+    height: 100vh;
+    display: block;
+}
+
+form {
+    padding: 1.2rem 0;
+    position: relative;
+    max-width: 44rem;
+}
+
+form input {
+    font-family: var(--font);
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    width: 100%;
+    height: 5.5rem;
+    border-radius: 100rem;
+    border: 1px solid var(--Desaturated-Red);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    padding: 0 3rem;
+    color: var(--Desaturated-Red);
+}
+
+input.input-error {
+    border: 2px solid var(--Soft-Red);
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--Desaturated-Red);
+}
+
+.error-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 11.5rem;
+    visibility: hidden;
+}
+
+.error {
+    font-size: 1.4rem;
+    color: var(--Soft-Red);
+    margin-left: 3rem;
+}
+
+.error-img.visible {
+    visibility: visible;
+}
+
+
+button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 10rem;
+    height: 5.5rem;
+    border-radius: 100rem;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    box-shadow: 0 10px 20px 3px hsl(0deg 80% 90%);
+}
+
+button:hover {
+    background: linear-gradient(135deg, hsl(0, 100%, 100%), hsl(0, 80%, 86%) 0%);
+    box-shadow: 0 10px 20px 3px hsl(0deg 80% 80%);
+}
+
+@media only screen and (max-width: 970px) {
+
+    body {
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+        height: 100vh;
+        min-width: 37.5rem;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8.5rem auto auto;
+        grid-template-areas:
+            "header"
+            "hero"
+            "content";
+        background: none;
+        background-position: none;
+
+    }
+
+    header {
+        grid-area: header;
+        margin: 3rem auto 0 auto;
+        max-width: 37.5rem;
+        width: 100%;
+        padding-left: 2rem;
+    }
+
+    .left-container {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        max-width: 37.5rem;
+        width: 100%;
+        margin: 0 auto;
+        grid-area: content;
+    }
+
+    .logo {
+        width: 10rem;
+    }
+
+    h1,
+    p {
+        text-align: center;
+
+    }
+
+    .left-container h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        line-height: 1.05;
+        margin-top: 7rem;
+    }
+
+    .title {
+        font-weight: 300;
+        color: var(--Desaturated-Red);
+    }
+
+    .left-container p {
+        color: var(--Desaturated-Red);
+        font-size: 1.4rem;
+        line-height: 1.6;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+        max-width: 37.5rem;
+    }
+
+    .right-container {
+        grid-area: hero;
+    }
+
+    .right-container img {
+        width: 37.5rem;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    form {
+        padding: 1rem 0;
+        position: relative;
+        max-width: 37.5rem;
+    }
+
+    form input {
+        font-family: var(--font);
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        width: 100%;
+        height: 4.5rem;
+        border-radius: 100rem;
+        border: 1px solid var(--Desaturated-Red);
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+        padding: 0 3rem;
+        color: var(--Desaturated-Red);
+    }
+
+    input.input-error {
+        border: 2px solid var(--Soft-Red);
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: var(--Desaturated-Red);
+    }
+
+    .error-img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8rem;
+        visibility: hidden;
+    }
+
+    .error {
+        font-size: 1.3rem;
+        color: var(--Soft-Red);
+        margin-left: 3rem;
+    }
+
+    .error-img.visible {
+        visibility: visible;
+    }
+
+
+    button {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 6.5rem;
+        height: 4.5rem;
+        border-radius: 100rem;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+        box-shadow: 0 10px 20px 3px hsl(0deg 80% 90%);
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, hsl(0, 100%, 100%), hsl(0, 80%, 86%) 0%);
+        box-shadow: 0 10px 20px 3px hsl(0deg 80% 80%);
+    }
+}
