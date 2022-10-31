@@ -1,0 +1,129 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+    --headings-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    font-size: 62.5%;
+    background-color: black;
+}
+
+body {
+    max-width: 750px;
+    min-width: 375px;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--Violet);
+    background-size: contain;
+}
+
+.wrapper {
+    padding: 6rem 7.5rem;
+}
+
+.logo {
+    width: 25rem;
+    margin-bottom: 12.5rem;
+}
+
+.main-container {
+    display: grid;
+}
+
+.mockup {
+    width: 100%;
+    margin-bottom: 11.5rem;
+}
+
+section {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--headings-font);
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: 3.2rem;
+    line-height: 1.5;
+    margin-bottom: 4.5rem;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--headings-font);
+    color: var(--Violet);
+    border: none;
+    font-size: 2.4rem;
+    background-color: white;
+    border-radius: 100rem;
+    padding: 2.2rem 15rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons {
+    max-width: 21rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: white;
+}
+
+.insta {
+    height: 90%;
+}
+
+.icon:hover {
+    cursor: pointer;
+    border: 2px solid var(--Soft-Magenta);
+}
+
+.icon:hover > svg {
+    fill: var(--Soft-Magenta);
+}
