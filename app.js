@@ -24,7 +24,7 @@ const createCard = (data) => {
     const cardImage = document.createElement("div");
     cardImage.setAttribute("class", "card-image");
     const urlImage = document.createElement("a");
-    urlImage.setAttribute("href", data.url);
+    urlImage.setAttribute("href", levelName[data.level][0]+"/"+ data.url);
     const img = document.createElement("img");
     img.setAttribute("src", "images/" + data.image);
     img.setAttribute("alt", data.name);
@@ -38,7 +38,10 @@ const createCard = (data) => {
     h1Link.setAttribute("href", data.url);
     h1Link.insertAdjacentText("beforeend", data.name);
     const svgLink = document.createElement("a");
-    svgLink.setAttribute("href", github + data.url);
+    svgLink.setAttribute(
+        "href",
+        github + levelName[data.level][0] + "/" + data.url
+    );
     svgLink.setAttribute("target", "_blank");
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("viewBox", "0 0 496 512");
@@ -77,7 +80,6 @@ const createCard = (data) => {
     number.insertAdjacentText("beforeend", lvl);
     levelType.classList.add(color);
     levelType.insertAdjacentText("beforeend", levelName[lvl][0]);
-
     levelBtn.appendChild(number);
     levelBtn.appendChild(levelType);
 
