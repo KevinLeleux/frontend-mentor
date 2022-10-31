@@ -16,20 +16,27 @@ html {
     display: flex;
     justify-content: center;
     font-size: 62.5%;
-    max-width: 750px;
+    max-width: 1440px;
     min-width: 375px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 100%;
+    background-size: cover;
 }
 
 body {
     background-image: url(images/bg-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: top center;
     background-color: var(--Violet);
+    background-position: top center;
+    background-repeat: no-repeat;
     background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
-    padding: 6rem 7.5rem;
+    margin: 6rem 2rem;
 }
 
 .logo {
@@ -49,6 +56,8 @@ body {
 section {
     color: white;
     text-align: center;
+    max-width: 60rem;
+
 }
 
 h1 {
@@ -73,7 +82,10 @@ button {
     font-size: 2.4rem;
     background-color: white;
     border-radius: 100rem;
-    padding: 2.2rem 15rem;
+    padding: 2.2rem 0;
+    min-width: 20rem;
+    max-width: 40rem;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -127,26 +139,16 @@ svg {
     fill: var(--Soft-Magenta);
 }
 
-@media only screen and (max-width: 550px) {
-    .wrapper {
-        padding: 5rem 2.5rem 3rem 2.5rem;
-    }
-}
-
 @media only screen and (min-width: 751px) {
-    html {
-        max-width: 1440px;
-        min-width: 751px;
-    }
-
     body {
         background-image: url(images/bg-desktop.svg);
-        background-position: left -5px;
-        background-size: auto 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
     }
 
     .wrapper {
-        padding: 5rem 7.5rem 3rem 7.5rem;
+        margin: 5rem 7.5rem 3rem 7.5rem;
     }
 
     .logo {
@@ -182,7 +184,9 @@ svg {
 
     button {
         font-size: 1.8rem;
-        padding: 1.4rem 6.4rem;
+        padding: 1.4rem 0;
+        min-width: 15rem;
+        max-width: 20rem;
     }
 
     footer {
