@@ -57,9 +57,9 @@ const createCard = (data) => {
     const list = document.createElement("div");
     list.setAttribute("class", "list");
     const ul = document.createElement("ul");
-    const classesData = data.classes;
-    for (let index = 0; index < classesData.length; index++) {
-        const classes = classesData[index];
+    const languagesData = data.languages;
+    for (let index = 0; index < languagesData.length; index++) {
+        const classes = languagesData[index];
         const liClass = document.createElement("li");
         liClass.setAttribute("class", classes);
         liClass.insertAdjacentText("beforeend", classes);
