@@ -47,7 +47,7 @@ body {
     width: 320px;
 }
 
-img {
+.card-image img {
     display: block;
     width: 100%;
     height: 100%;
@@ -55,19 +55,49 @@ img {
     transition: transform 0.3s ease 0s;
 }
 
-img:hover {
+.card-image img:hover {
     transform: scale(1.15);
 }
 
 .card-content {
-    padding: 15px;
+    padding: 14px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: normal;
     font-weight: 400;
-    margin-bottom: 25px;
+}
+
+.github {
+    width: 25px;
+    cursor: pointer;
+}
+
+.github:hover.blue {
+    fill: rgb(106, 190, 205);
+}
+
+.github:hover.green {
+    fill: rgb(170, 215, 66)
+}
+
+.github:hover.orange {
+    fill: rgb(241, 182, 4);
+}
+
+.github:hover.dark-orange {
+    fill: rgb(244, 137, 37);
+}
+
+.github:hover.red {
+    fill: rgb(237, 44, 73);
 }
 
 .class-wrapper {
@@ -96,26 +126,87 @@ ul {
 }
 
 .js {
-    color: rgb(207, 99, 144);;
+    color: rgb(207, 99, 144);
+    ;
 }
 
 .level-btn {
     display: flex;
-    border: 1px solid rgb(106, 190, 205);
     border-radius: 4px;
     overflow: hidden;
 }
 
-.level-number-blue {
-    background-color: rgb(106, 190, 205);
+
+.level-number {
     color: white;
     padding: 0 8px 0;
 }
 
-.level-blue {
-    color: rgb(106, 190, 205);
+
+.level {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
     padding: 0 8px;
+}
+
+.level.blue {
+    color: rgb(106, 190, 205);
+}
+
+.level-number.blue {
+    background-color: rgb(106, 190, 205);
+}
+
+.level-btn.blue {
+    border: 1px solid rgb(106, 190, 205);
+}
+
+.level.green {
+    color: rgb(170, 215, 66);
+}
+
+.level-number.green {
+    background-color: rgb(170, 215, 66);
+}
+
+.level-btn.green {
+    border: 1px solid rgb(170, 215, 66);
+}
+
+
+.level.orange {
+    color: rgb(241, 182, 4);
+}
+
+.level-number.orange {
+    background-color: rgb(241, 182, 4);
+}
+
+.level-btn.orange {
+    border: 1px solid rgb(241, 182, 4);
+}
+
+.level.dark-orange {
+    color: rgb(244, 137, 37);
+}
+
+.level-number.dark-orange {
+    background-color: rgb(244, 137, 37);
+}
+
+.level-btn.dark-orange {
+    border: 1px solid rgb(244, 137, 37);
+}
+
+.level.red {
+    color: rgb(237, 44, 73);
+}
+
+.level-number.red {
+    background-color: rgb(237, 44, 73);
+}
+
+.level-btn.red {
+    border: 1px solid rgb(237, 44, 73);
 }

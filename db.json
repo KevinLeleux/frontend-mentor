@@ -13,7 +13,97 @@
             "image": "product-card.webp",
             "level": "1",
             "classes": ["html", "css"]
+        },
+        {
+            "name": "NFT preview card",
+            "url": "nft-preview-card/",
+            "image": "nft-card.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Order summary",
+            "url": "order-summary/",
+            "image": "order-summary.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Profile card",
+            "url": "profile-card/",
+            "image": "profile-card.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Stats preview card",
+            "url": "stats-preview-card/",
+            "image": "stats-preview.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "3 column preview card",
+            "url": "3-column-preview-card/",
+            "image": "3-column.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Article preview",
+            "url": "article-preview/",
+            "image": "article-preview.webp",
+            "level": "1",
+            "classes": ["html", "css", "js"]
+        },
+        {
+            "name": "FAQ accordion card",
+            "url": "faq-accpordion-card/",
+            "image": "accordion-faq.webp",
+            "level": "1",
+            "classes": ["html", "css", "js"]
+        },
+        {
+            "name": "Interactive rating",
+            "url": "interactive-rating/",
+            "image": "interactive-rating.webp",
+            "level": "1",
+            "classes": ["html", "css", "js"]
+        },
+        {
+            "name": "Four card feature section",
+            "url": "four-card-feature-section/",
+            "image": "four-card.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Social proof section",
+            "url": "social-proof-section/",
+            "image": "social-proof.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Base apparel coming soon",
+            "url": "base-apparel-coming-soon/",
+            "image": "base-apparel.webp",
+            "level": "1",
+            "classes": ["html", "css", "js"]
+        },
+        {
+            "name": "Single price grid",
+            "url": "single-price-grid/",
+            "image": "single-price.webp",
+            "level": "1",
+            "classes": ["html", "css"]
+        },
+        {
+            "name": "Huddle landing page",
+            "url": "huddle-landing-page/",
+            "image": "huddle-landing.webp",
+            "level": "1",
+            "classes": ["html", "css"]
         }
     ]
 }
-
