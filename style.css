@@ -127,7 +127,10 @@ ul {
 
 .js {
     color: rgb(207, 99, 144);
-    ;
+}
+
+.api {
+    color: rgb(170, 215, 66);
 }
 
 .level-btn {
