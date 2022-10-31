@@ -1,12 +1,18 @@
 {
     "challenges": [
         {
-            "name": "limber",
-            "url": "https://pokeapi.co/api/v2/ability/7/"
+            "name": "QR code",
+            "url": "qr-code/",
+            "image": "qr-code.webp",
+            "level": "1",
+            "classes": ["html", "css"]
         },
         {
-            "name": "imposter",
-            "url": "https://pokeapi.co/api/v2/ability/150/"
+            "name": "Product preview card",
+            "url": "product-preview-card/",
+            "image": "product-card.webp",
+            "level": "1",
+            "classes": ["html", "css"]
         }
     ]
 }
