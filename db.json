@@ -58,7 +58,7 @@
         },
         {
             "name": "FAQ accordion card",
-            "url": "faq-accpordion-card/",
+            "url": "faq-accordion-card/",
             "image": "accordion-faq.webp",
             "level": "1",
             "classes": ["html", "css", "js"]
