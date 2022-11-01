@@ -104,6 +104,13 @@
             "image": "huddle-landing.webp",
             "level": "1",
             "languages": ["html", "css"]
+        },
+        {
+            "name": "Sign-up form",
+            "url": "intro-component-with-signup-form/",
+            "image": "sign-up.webp",
+            "level": "1",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
