@@ -1,0 +1,70 @@
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    --font: 'Libre Franklin', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+    font-family: var(--font);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 56rem;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.socials {
+    max-width: 21rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--Blue);
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--Blue);
+}
+
+.insta {
+    height: 90%;
+}
+
+.icon:hover {
+    cursor: pointer;
+    border: 1.5px solid var(--Blue);
+    ;
+}
+
+.icon:hover>svg {
+    fill: var(--Blue);
+}
