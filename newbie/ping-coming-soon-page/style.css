@@ -7,8 +7,16 @@
     --font: 'Libre Franklin', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
+    min-width: 375px;
+    max-width: 1440px;
 }
 
 body {
@@ -16,17 +24,127 @@ body {
     font-family: var(--font);
 }
 
+.wrapper {
+    margin: 8rem 2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin: 8rem 0;
+    width: 10rem;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--Gray);
+    font-weight: 300;
+    margin: 1rem 0 0 0;
+}
+
+header h1 span {
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container p {
+    color: var(--Very-Dark-Blue);
+    font-weight: 300;
+    font-size: 2.4rem;
+    margin: 3rem 0 8rem 0;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    max-width: 63rem;
+}
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 56rem;
+    max-width: 54rem;
+    width: 100%;
+    height: 32rem;
+    gap: 1.8rem;
 }
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 8rem;
+    padding-left: 6rem;
+    border-radius: 100rem;
+    border: 2px solid var(--Pale-Blue);
+    color: var(--Very-Dark-Blue);
+    font-family: var(--font);
+    font-size: 2.4rem;
+    position: relative;
+}
+
+input.error {
+    border: 1px solid var(--Light-Red);
+}
+
+.error-msg {
+    color: var(--Light-Red);
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+input::placeholder {
+    color: var(--Pale-Blue);
+    font-family: var(--font);
+    font-size: 2.4rem;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    height: 8rem;
+    border-radius: 100rem;
+    border: none;
+    background-color: var(--Blue);
+    color: white;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--Pale-Blue);
+}
+
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 11rem;
 }
 
 .socials {
@@ -34,14 +152,14 @@ footer {
     display: flex;
     gap: 2rem;
     margin-top: 13rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .icon {
     width: 5.5rem;
     height: 5.5rem;
     border-radius: 50%;
-    border: 1.5px solid var(--Blue);
+    border: 1.5px solid var(--Pale-Blue);
     position: relative;
 }
 
@@ -67,4 +185,190 @@ svg {
 
 .icon:hover>svg {
     fill: var(--Blue);
+}
+
+footer p {
+    color: var(--Gray);
+}
+
+@media only screen and (min-width: 750px) {
+
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 2rem;
+        font-family: var(--font);
+    }
+
+    .wrapper {
+        margin: 8rem 2rem 6rem 2rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0.5rem 0;
+        width: 8.5rem;
+    }
+
+    header h1 {
+        color: var(--Gray);
+        font-size: 4.8rem;
+        font-weight: 300;
+        margin: 4.5rem 0 0 0;
+    }
+
+    header h1 span {
+        color: var(--Very-Dark-Blue);
+        font-weight: 700;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container p {
+        color: var(--Very-Dark-Blue);
+        font-weight: 300;
+        font-size: 2rem;
+        margin: 1.5rem 0 4rem 0;
+    }
+
+    main img {
+        width: 100%;
+        max-width: 63rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        max-width: 64rem;
+        width: 100%;
+        height: 14rem;
+        gap: 1.8rem;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input {
+        height: 5.5rem;
+        padding-left: 3rem;
+        border-radius: 100rem;
+        border: 1px solid var(--Pale-Blue);
+        color: var(--Very-Dark-Blue);
+        font-family: var(--font);
+        font-size: 1.6rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .error-msg {
+        color: var(--Light-Red);
+        font-style: italic;
+        font-size: 1.2rem;
+        text-align: left;
+        margin-top: 1rem;
+        margin-left: 3rem;
+    }
+
+    input::placeholder {
+        color: var(--Pale-Blue);
+        font-family: var(--font);
+        font-size: 1.6rem;
+        font-weight: 300;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        height: 5.5rem;
+        border-radius: 100rem;
+        border: none;
+        background-color: var(--Blue);
+        color: white;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: var(--Pale-Blue);
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 0rem;
+    }
+
+    .socials {
+        max-width: 21rem;
+        display: flex;
+        gap: 1.2rem;
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+    }
+
+    .icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 1.5px solid var(--Pale-Blue);
+        position: relative;
+    }
+
+    svg {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: var(--Blue);
+    }
+
+    .insta {
+        height: 90%;
+    }
+
+    .icon:hover {
+        cursor: pointer;
+        border: 1.5px solid var(--Blue);
+        ;
+    }
+
+    .icon:hover>svg {
+        fill: var(--Blue);
+    }
+
+    footer p {
+        color: var(--Gray);
+        font-size: 1.2rem;
+    }
 }

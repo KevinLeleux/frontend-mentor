@@ -15,7 +15,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <img src="images/logo.svg" alt="ping logo">
+            <img src="images/logo.svg" alt="ping logo" class="logo">
             <h1>
                 We are launching <span>soon!</span>
             </h1>
@@ -25,10 +25,11 @@
                 Subscribe and get notified
             </p>
             <form action="#" novalidate>
-                <input type="email" name="email" id="email" placeholder="Your email address...">
-                <button>
-                    Notify me
-                </button>
+                <div class="input">
+                    <input type="email" name="email" id="email" placeholder="Your email address..." class="email">
+                    <span class="error-msg"></span>
+                </div>
+                <button type="submit">Notify me</button>
             </form>
             <img src="images/illustration-dashboard.png" alt="graphics">
         </main>
@@ -51,6 +52,7 @@
             <p>&copy; Copyright Ping. All rights reserved.</p>
         </footer>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
