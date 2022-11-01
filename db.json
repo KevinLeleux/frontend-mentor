@@ -111,6 +111,13 @@
             "image": "sign-up.webp",
             "level": "1",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Ping coming soon page",
+            "url": "ping-coming-soon-page/",
+            "image": "ping-soon.webp",
+            "level": "1",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
