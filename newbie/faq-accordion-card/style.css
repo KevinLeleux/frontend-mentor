@@ -33,12 +33,9 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
-    background: linear-gradient(
-            180deg,
+    background: linear-gradient(180deg,
             hsl(273, 75%, 66%) 0%,
-            hsl(240, 73%, 65%) 100%
-        )
-        no-repeat center center fixed;
+            hsl(240, 73%, 65%) 100%) no-repeat center center fixed;
     font-family: var(--font);
 }
 
