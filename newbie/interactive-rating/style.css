@@ -19,16 +19,19 @@
 
 html,
 body {
-    min-width: 375px;
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 100%;
     font-size: 62.5%;
     background-color: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: var(--font);
+}
+
+.wrapper {
+    max-width: 1440px;
+    min-width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
 .main-container {
