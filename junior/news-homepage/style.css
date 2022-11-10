@@ -43,7 +43,7 @@ body {
 }
 
 .wrapper {
-    max-width: 110rem;
+    max-width: 111rem;
     width: 100%;
     margin: 9rem 2rem;
 }
@@ -91,7 +91,7 @@ ul a:hover {
 p {
     font-size: 1.5rem;
     color: var(--Dark-grayish-blue);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .content-wrapper {
@@ -126,6 +126,7 @@ main h1 {
     font-size: 5.6rem;
     line-height: 1;
     font-weight: 800;
+    letter-spacing: 0.2px;
 }
 
 .subtitle {
@@ -159,15 +160,20 @@ main h1 {
 aside {
     grid-area: aside;
     background-color: var(--Very-dark-blue);
-    padding: 3rem 2.5rem;
+    padding: 2.8rem 2.5rem;
     color: var(--Off-white);
+}
+
+aside p {
+    color: var(--Grayish-blue);
+    opacity: 0.7;
 }
 
 aside h2 {
     color: var(--Soft-orange);
-    font-size: 3.8rem;
+    font-size: 3.9rem;
     font-weight: 700;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.7rem;
 }
 
 aside a {
