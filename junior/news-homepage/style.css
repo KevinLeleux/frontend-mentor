@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    --font: 'Inter', sans-serif;
+}
+
+html {
+    font-family: var(--font);
+    font-size: 62.5%;
+    height: 100vh;
+}
+
+body {
+    background-color: var(--Off-white);
+}
+
+.wrapper-container {
+    max-width: 1440px;
+    min-width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 110rem;
+    width: 100%;
+    margin-top: 9rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 3.7rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    font-size: 1.6rem;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "main main aside"
+        "main main aside"
+        "article1 article2 article3";
+    column-gap: 3rem;
+    row-gap: 7rem;
+}
+
+picture img {
+    max-width: 73rem;
+    width: 100%;
+}
+
+main {
+    grid-area: main;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+main picture {
+    grid-column: span 2;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 18.5rem;
+    height: 5rem;
+    background-color: var(--Soft-red);
+}
+
+aside {
+    grid-area: aside;
+    background-color: red;
+    padding: 4rem 2.5rem;
+}
+
+article {
+    background-color: blue;
+}
+
+article img {
+    width: 10rem;
+}
+
+.article {
+    display: flex;
+}
+
+.article1 {
+    grid-area: article1;
+}
+
+.article2 {
+    grid-area: article2;
+}
+
+.article3 {
+    grid-area: article3;
+}
