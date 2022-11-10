@@ -124,7 +124,14 @@
             "url": "testimonials-grid/",
             "image": "testimonial.webp",
             "level": "2",
-            "languages": ["html", "css"]
+            "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "News homepage",
+            "url": "news-homepage/",
+            "image": "news-homepage.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
