@@ -22,6 +22,7 @@ html {
     font-family: var(--font);
     font-size: 62.5%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 body {
