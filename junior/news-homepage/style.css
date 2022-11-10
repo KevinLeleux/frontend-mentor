@@ -22,7 +22,6 @@ html {
     font-family: var(--font);
     font-size: 62.5%;
     height: 100vh;
-    overflow-x: hidden;
 }
 
 body {
@@ -35,7 +34,6 @@ body {
 
 .wrapper-container {
     max-width: 1440px;
-    min-width: 375px;
     display: flex;
     justify-content: center;
     align-items: center;
