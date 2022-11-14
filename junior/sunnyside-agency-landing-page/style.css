@@ -272,6 +272,7 @@ p {
 }
 
 .testimonials {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,6 +345,7 @@ p {
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: span 2;
 }
 
 .gallery img {
@@ -542,6 +544,11 @@ footer {
 
     .testimonials {
         margin: 6rem 0 8rem 0;
+        grid-column: span 1;
+    }
+
+    .gallery {
+        grid-column: span 1;
     }
 
     .cards {
