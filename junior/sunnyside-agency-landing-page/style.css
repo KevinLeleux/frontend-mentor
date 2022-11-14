@@ -49,6 +49,7 @@ header {
     background-size: cover;
     position: relative;
     height: 100vh;
+    max-height: 80rem;
 }
 
 .navbar {
