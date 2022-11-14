@@ -12,18 +12,23 @@
 <body>
   <div class="wrapper-container">
     <header>
-      <nav class="navbar">
-        <img class="logo" src="images/logo.svg" alt="Sunnyside logo">
-        <img class="hamburger" src="images/icon-hamburger.svg" alt="">
-          <div class="links">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+      <div class="navbar-container">
+        <nav class="navbar">
+          <img class="logo" src="images/logo.svg" alt="Sunnyside logo">
+          <div class="menu">
+            <img class="hamburger" src="images/icon-hamburger.svg" alt="icon hamburger" aria-hidden="true">
+            <div class="triangle"></div>
+            <div class="links">
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
           </div>
-      </nav>
+        </nav>
+      </div>
       <div class="title">
         <h1>
           We are creatives
@@ -50,7 +55,6 @@
       </picture>
       <picture class="image">
         <source media="(max-width: 645px)" srcset="images/mobile/image-stand-out.jpg">
-
         <img src="images/desktop/image-stand-out.jpg" alt="Glass">
       </picture>
       <div class="article right">
@@ -69,7 +73,7 @@
       <div class="subtitle">
         <picture class="image">
           <source media="(max-width: 645px)" srcset="images/mobile/image-graphic-design.jpg">
-          <img src="images/desktop/image-graphic-design.jpg" alt="">
+          <img src="images/desktop/image-graphic-design.jpg" alt="graphic design">
         </picture>
         <div class="text green">
           <h3>
@@ -85,7 +89,7 @@
       <div class="subtitle">
         <picture class="image">
           <source media="(max-width: 645px)" srcset="images/mobile/image-photography.jpg">
-          <img src="images/desktop/image-photography.jpg" alt="">
+          <img src="images/desktop/image-photography.jpg" alt="illustration of photography">
         </picture>
         <div class="text blue">
           <h3>
@@ -104,7 +108,7 @@
       </h3>
       <div class="cards">
         <div class="card">
-          <img src="images/image-emily.jpg" alt="">
+          <img src="images/image-emily.jpg" alt="Emily profile picture">
           <p>
             We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
             hit.
@@ -119,7 +123,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="images/image-thomas.jpg" alt="">
+          <img src="images/image-thomas.jpg" alt="thomas profile picture">
           <p>
             Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
             enjoyable
@@ -135,7 +139,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="images/image-jennie.jpg" alt="">
+          <img src="images/image-jennie.jpg" alt="jennie profile picture">
           <p>
             Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
           </p>
@@ -149,24 +153,23 @@
           </div>
         </div>
       </div>
-
     </section>
     <section class="gallery">
       <picture>
         <source media="(max-width: 645px)" srcset="images/mobile/image-gallery-milkbottles.jpg">
-        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles">
       </picture>
       <picture>
         <source media="(max-width: 645px)" srcset="images/mobile/image-gallery-orange.jpg">
-        <img src="images/desktop/image-gallery-orange.jpg" alt="">
+        <img src="images/desktop/image-gallery-orange.jpg" alt="orange fruit">
       </picture>
       <picture>
         <source media="(max-width: 645px)" srcset="images/mobile/image-gallery-cone.jpg">
-        <img src="images/desktop/image-gallery-cone.jpg" alt="">
+        <img src="images/desktop/image-gallery-cone.jpg" alt="cone">
       </picture>
       <picture>
         <source media="(max-width: 645px)" srcset="images/mobile/image-gallery-sugar-cubes.jpg">
-        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugar cubes">
       </picture>
     </section>
     <footer>
@@ -179,7 +182,6 @@
         </div>
         <div class="socials">
           <a href="#">
-
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"
@@ -209,12 +211,9 @@
           </a>
         </div>
       </div>
-
     </footer>
   </div>
-
-
-
+  <script src="script.js"></script>
 </body>
 
 </html>
