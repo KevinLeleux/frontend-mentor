@@ -124,12 +124,19 @@
             "url": "testimonials-grid/",
             "image": "testimonial.webp",
             "level": "2",
-            "languages": ["html", "css", "js"]
+            "languages": ["html", "css"]
         },
         {
             "name": "News homepage",
             "url": "news-homepage/",
             "image": "news-homepage.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Sunnyside agency",
+            "url": "sunnyside-agency-landing-page/",
+            "image": "sunnyside.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
         }
