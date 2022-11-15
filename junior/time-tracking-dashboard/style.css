@@ -108,7 +108,7 @@ article {
     opacity: 0.6;
 }
 
-.name-report span:nth-child(2) {
+.name-report h1 {
     font-size: 4rem;
     font-weight: 300;
 }
@@ -195,7 +195,7 @@ article {
     justify-content: space-between;
 }
 
-.activity span {
+.activity h2 {
     font-size: 1.8rem;
     font-weight: 500;
 }
@@ -317,7 +317,7 @@ article {
         height: 7rem;
     }
 
-    .name-report span:nth-child(2) {
+    .name-report h1 {
         font-size: 2.4rem;
     }
 
