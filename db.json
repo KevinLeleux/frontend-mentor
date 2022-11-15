@@ -139,6 +139,13 @@
             "image": "sunnyside.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Time tracking dashboard",
+            "url": "time-tracking-dashboard/",
+            "image": "time-tracking.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
