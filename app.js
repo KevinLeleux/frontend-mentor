@@ -72,7 +72,7 @@ const createCard = (data) => {
 
     const h1Link = document.createElement("a");
     h1Link.setAttribute("class", "link");
-    h1Link.setAttribute("href", data.url);
+    h1Link.setAttribute("href", levelName[data.level][0] + "/" + data.url);
     h1Link.insertAdjacentText("beforeend", data.name);
     h1.appendChild(h1Link);
 
