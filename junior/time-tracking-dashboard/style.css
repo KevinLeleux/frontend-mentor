@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    --font-rubik: 'Rubik', sans-serif;
+}
+
+html {
+    font-family: var(--font);
+    font-size: 62.5%;
+    height: 100vh;
+    background-color: var(--Very-dark-blue);
+    color: var(--Very-dark-desaturated-blue);
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: var(--font-rubik);
+}
+
+.wrapper-container {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 3rem;
+    margin: 0 2rem;
+}
+
+article {
+    max-width: 25.5rem;
+}
+
+.top-round {
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.bottom-round {
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.round {
+    border-radius: 1.5rem;
+}
+
+.report {
+    background-color: var(--Dark-blue);
+    grid-row: span 2;
+}
+
+.report-profile-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Blue);
+    padding: 3.5rem 3rem;
+    gap: 4rem;
+    min-height: 35.5rem;
+}
+
+.report-profile-card img {
+    width: 8.3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.name-report {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: white;
+}
+
+.name-report span:nth-child(1) {
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.name-report span:nth-child(2) {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.time a {
+    text-decoration: none;
+    color: white;
+}
+
+.time a:hover {
+    color: var(--Pale-Blue);
+}
+
+.overlay {
+    height: 6.5rem;
+}
+
+.work .overlay {
+    background-color: var(--Light-orange);
+}
+
+.play .overlay {
+    background-color: var(--Soft-blue);
+}
+
+.study .overlay {
+    background-color: var(--Light-red);
+}
+
+.exercise .overlay {
+    background-color: var(--Lime-green);
+}
+
+.social .overlay {
+    background-color: var(--Violet);
+}
+
+.self-care .overlay {
+    background-color: var(--Soft-orange);
+}
+
+.data {
+    background-color: var(--Dark-blue);
+    min-height: 20rem;
+    padding: 3rem;
+    margin-top: -2rem;
+}
+
+.overlay {
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.overlay img {
+    position: absolute;
+    right: 1.5rem;
+    top: -1rem;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity img {
+    height: 0.5rem;
+    width: 1.8rem;
+}
