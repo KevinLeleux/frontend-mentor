@@ -7,17 +7,15 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-transition: ease 0.3s;
-    transition: ease 0.3s;
 }
 
 html {
+    background-color: #FCFAF9;
     background-image: url(assets/bg-main-desktop.png);
     background-repeat: no-repeat;
-    background-position-x: -112px;
-    background-position-y: -146px;
-    background-size: 1613px 1758px;
-    height: 100%;
+    background-position: center;
+    background-position-y: -280px;
+    z-index: -10;
 }
 
 body {
@@ -178,13 +176,20 @@ header p {
 
 footer {
     display: flex;
-    margin: 0 auto 71px auto;
-    gap: 137px;
     max-width: 1110px;
+    margin: 0 auto 71px auto;
+    justify-content: space-between;
 }
 
 .footer-logo {
     height: 33px;
+    align-self: flex-start;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 137px;
 }
 
 .infos {
@@ -204,8 +209,8 @@ footer {
 
 .social {
     display: flex;
-    margin: auto 0 auto auto;
     gap: 20px;
+    align-self: center;
 }
 
 .social svg:hover {
@@ -218,10 +223,10 @@ footer {
     html {
         background-image: url(assets/bg-main-tablet.png);
         background-repeat: no-repeat;
-        background-position-x: -254px;
-        background-position-y: -112px;
+        background-position: center;
+        background-position-y: -280px;
+        z-index: -10;
         background-size: 983px 808px;
-        height: 100%;
     }
 
     body {
@@ -232,17 +237,17 @@ footer {
         max-width: 1440px;
         min-height: 100vh;
         margin: 0 auto;
-        padding: 33px;
+        padding: 0 39px 0 33px;
     }
 
     header {
         max-width: 1110px;
-        margin: 41px auto 0 auto;
+        margin: 61px auto 0 auto;
     }
 
     .header-logo {
         height: 33px;
-        margin-bottom: 123px;
+        margin-bottom: 95px;
         margin-left: 1px;
     }
 
@@ -312,7 +317,7 @@ footer {
         height: 546px;
         position: absolute;
         top: 150px;
-        right: 8%;
+        right: 8.5%;
         padding: 48px 49px 48px 48px;
         color: #FCFAF9;
         z-index: 1;
@@ -336,7 +341,7 @@ footer {
         display: flex;
         align-items: center;
         gap: 16px;
-        margin-bottom: 46px;
+        margin-bottom: 32px;
         margin-left: 6px;
     }
 
@@ -362,7 +367,7 @@ footer {
         text-decoration: none;
         border-radius: 12px;
         height: 61px;
-        width: 100%;
+        width: 296px;
         font-weight: 700;
         font-size: 18px;
         line-height: 32px;
@@ -392,10 +397,9 @@ footer {
 
     footer {
         display: flex;
-        flex-direction: column;
-        margin: 0 auto 65px auto;
+        flex-direction: row;
+        margin: 0 auto 81px auto;
         gap: 32px;
-        max-width: 1110px;
     }
 
     .footer-logo {
@@ -405,7 +409,9 @@ footer {
 
     .footer-info {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
     }
 
     .infos {
@@ -425,7 +431,7 @@ footer {
 
     .social {
         display: flex;
-        margin: auto 0 auto auto;
+        margin: 94px 0 auto auto;
         gap: 20px;
     }
 
@@ -434,6 +440,34 @@ footer {
         fill: #FA7453;
     }
 
+}
+
+@media screen and (max-width: 555px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: hsla(12, 94%, 65%, 1);
+        border-radius: 12px;
+        width: 399px;
+        height: 546px;
+        position: absolute;
+        top: 150px;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 48px 49px 48px 48px;
+        color: #FCFAF9;
+        z-index: 1;
+    }
+
+    .card-background {
+        position: absolute;
+        left: auto;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 229px;
+        width: 280px;
+        height: 420px;
+    }
 }
 
 @media screen and (max-width: 510px) {
@@ -545,6 +579,7 @@ footer {
         padding: 48px 37px 48px 36px;
         color: #FCFAF9;
         z-index: 1;
+        transform: none;
     }
 
     .card h2 {
