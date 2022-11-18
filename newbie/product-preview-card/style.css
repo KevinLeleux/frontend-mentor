@@ -11,6 +11,7 @@ body {
     margin: 0 auto;
     font-family: "montserrat", sans-serif;
 }
+
 html,
 body {
     height: 100%;
@@ -37,11 +38,9 @@ body {
     margin: 15px 15px 15px 15px;
 }
 
-.product-img {
+.product-img img {
+    width: 300px;
     height: 100%;
-    width: 50%;
-    background-image: url(images/image-product-desktop.jpg);
-    background-size: cover;
 }
 
 .product-content {
@@ -129,11 +128,13 @@ body {
         width: 345px;
         height: 610px;
     }
+
     .product-img {
         background-image: url(images/image-product-mobile.jpg);
         width: 100%;
         background-size: cover;
     }
+
     .product-content {
         width: 100%;
         padding: 25px;
@@ -146,6 +147,7 @@ body {
     .title {
         margin-bottom: 15px;
     }
+
     .description {
         margin-bottom: 20px;
     }
