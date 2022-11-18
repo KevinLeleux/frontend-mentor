@@ -120,6 +120,13 @@
             "languages": ["html", "css", "js"]
         },
         {
+            "name": "Equalizer landing page",
+            "url": "equalizer-landing-page/",
+            "image": "equalizer.webp",
+            "level": "1",
+            "languages": ["html", "css"]
+        },
+        {
             "name": "Testimonial grid section",
             "url": "testimonials-grid/",
             "image": "testimonial.webp",
