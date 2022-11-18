@@ -88,6 +88,7 @@ header p {
     position: absolute;
     left: 336px;
     bottom: 172px;
+    z-index: 0;
 }
 
 .card {
@@ -102,6 +103,7 @@ header p {
     right: 95px;
     padding: 58px 59px 48px 54px;
     color: #FCFAF9;
+    z-index: 2;
 }
 
 .card h2 {
@@ -221,43 +223,26 @@ footer {
 @media screen and (max-width: 768px) {
 
     html {
-        background-image: url(assets/bg-main-tablet.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-position-y: -280px;
-        z-index: -10;
         background-size: 983px 808px;
     }
 
-    body {
-        font-family: 'IBM Plex Sans', sans-serif;
-    }
-
     .wrapper-container {
-        max-width: 1440px;
-        min-height: 100vh;
-        margin: 0 auto;
+        max-width: 768px;
         padding: 0 39px 0 33px;
     }
 
     header {
-        max-width: 1110px;
         margin: 61px auto 0 auto;
     }
 
     .header-logo {
-        height: 33px;
         margin-bottom: 95px;
-        margin-left: 1px;
     }
 
     .header-background {
-        position: absolute;
         top: -31px;
         right: -40px;
         width: 267px;
-        height: auto;
-        z-index: -1;
     }
 
     .title {
@@ -265,7 +250,6 @@ footer {
     }
 
     header h1 {
-        font-weight: 700;
         font-size: 64px;
         line-height: 64px;
         letter-spacing: -0.727273px;
@@ -274,7 +258,6 @@ footer {
     }
 
     header p {
-        font-weight: 400;
         font-size: 18px;
         line-height: 28px;
         max-width: none;
@@ -282,25 +265,17 @@ footer {
     }
 
     .card-container {
-        background-color: hsla(242, 22%, 12%, 1);
-        max-width: 1110px;
-        height: 600px;
-        border-radius: 12px;
-        position: relative;
         margin: 0 auto 183px auto;
     }
 
     .illustration {
-        position: absolute;
         left: 64px;
         bottom: 182px;
         width: 270px;
         max-height: 556px;
-        z-index: 1;
     }
 
     .card-background {
-        position: absolute;
         left: auto;
         right: 30%;
         bottom: 229px;
@@ -309,137 +284,55 @@ footer {
     }
 
     .card {
-        display: flex;
-        flex-direction: column;
-        background-color: hsla(12, 94%, 65%, 1);
-        border-radius: 12px;
         width: 399px;
         height: 546px;
-        position: absolute;
         top: 150px;
         right: 8.5%;
         padding: 48px 49px 48px 48px;
-        color: #FCFAF9;
-        z-index: 1;
     }
 
     .card h2 {
-        font-weight: 700;
         font-size: 32px;
         line-height: 40px;
         margin-bottom: 12px;
     }
 
     .card p {
-        font-weight: 400;
         font-size: 18px;
         line-height: 28px;
         margin-bottom: 36px;
     }
 
     .price {
-        display: flex;
-        align-items: center;
-        gap: 16px;
         margin-bottom: 32px;
         margin-left: 6px;
     }
 
-    .price span:nth-child(1) {
-        font-weight: 700;
-        font-size: 65px;
-        line-height: 52px;
-    }
-
-    .price span:nth-child(2) {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.2px;
-    }
-
     .btn {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 7.92px;
-        text-decoration: none;
-        border-radius: 12px;
-        height: 61px;
         width: 296px;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 32px;
-        text-align: center;
-        letter-spacing: -0.18px;
         margin-left: 6px;
     }
 
-    .ios {
-        color: #FCFAF9;
-        background-color: #191826;
-        margin-bottom: 16px;
-    }
-
-    .ios:hover {
-        background-color: #66E2DC;
-    }
-
-    .android {
-        background-color: #FCFAF9;
-        color: #191826;
-    }
-
-    .android:hover {
-        background: hsla(33, 100%, 70%, 1);
-    }
-
     footer {
-        display: flex;
         flex-direction: row;
         margin: 0 auto 81px auto;
         gap: 32px;
     }
 
     .footer-logo {
-        height: 33px;
         width: 146px;
     }
 
     .footer-info {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 32px;
     }
 
-    .infos {
-        max-width: 366px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .infos a {
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 26px;
-        color: hsla(244, 23%, 12%, 1);
-    }
-
     .social {
         display: flex;
         margin: 94px 0 auto auto;
-        gap: 20px;
     }
-
-    .social svg:hover {
-        cursor: pointer;
-        fill: #FA7453;
-    }
-
 }
 
 @media screen and (max-width: 555px) {
@@ -481,9 +374,6 @@ footer {
         height: 100%;
     }
 
-    body {
-        font-family: 'IBM Plex Sans', sans-serif;
-    }
 
     .wrapper-container {
         max-width: 1440px;
