@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: ease 0.3s;
+    transition: ease 0.3s;
+}
+
+html {
+    background-image: url(assets/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-position-x: -112px;
+    background-position-y: -146px;
+    background-size: 1613px 1758px;
+    height: 100%;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.wrapper-container {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    max-width: 1110px;
+    margin: 41px auto 0 auto;
+}
+
+.header-logo {
+    height: 33px;
+    margin-bottom: 123px;
+    margin-left: 1px;
+}
+
+.header-background {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 312px;
+    height: auto;
+    z-index: -1;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+    max-width: 1015px;
+}
+
+header p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    max-width: 825px;
+    margin-bottom: 321px;
+}
+
+.card-container {
+    background-color: hsla(242, 22%, 12%, 1);
+    max-width: 1110px;
+    height: 600px;
+    border-radius: 12px;
+    position: relative;
+    margin: 0 auto 202px auto;
+}
+
+.illustration {
+    position: absolute;
+    left: 102px;
+    bottom: 171px;
+    width: 312px;
+    max-height: 642px;
+    z-index: 1;
+}
+
+.card-background {
+    position: absolute;
+    left: 336px;
+    bottom: 172px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(12, 94%, 65%, 1);
+    border-radius: 12px;
+    width: 446px;
+    height: 625px;
+    position: absolute;
+    top: 90px;
+    right: 95px;
+    padding: 58px 59px 48px 54px;
+    color: #FCFAF9;
+}
+
+.card h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 22px;
+}
+
+.card p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 39px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 46px;
+}
+
+.price span:nth-child(1) {
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 52px;
+}
+
+.price span:nth-child(2) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.92px;
+    text-decoration: none;
+    border-radius: 12px;
+    height: 61px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -0.18px;
+}
+
+.ios {
+    color: #FCFAF9;
+    background-color: #191826;
+    margin-bottom: 16px;
+}
+
+.ios:hover {
+    background-color: #66E2DC;
+}
+
+.android {
+    background-color: #FCFAF9;
+    color: #191826;
+}
+
+.android:hover {
+    background: hsla(33, 100%, 70%, 1);
+}
+
+footer {
+    display: flex;
+    margin: 0 auto 71px auto;
+    gap: 137px;
+    max-width: 1110px;
+}
+
+.footer-logo {
+    height: 33px;
+}
+
+.infos {
+    max-width: 366px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.infos a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: hsla(244, 23%, 12%, 1);
+}
+
+.social {
+    display: flex;
+    margin: auto 0 auto auto;
+    gap: 20px;
+}
+
+.social svg:hover {
+    cursor: pointer;
+    fill: #FA7453;
+}
+
+@media screen and (max-width: 768px) {
+
+    html {
+        background-image: url(assets/bg-main-tablet.png);
+        background-repeat: no-repeat;
+        background-position-x: -254px;
+        background-position-y: -112px;
+        background-size: 983px 808px;
+        height: 100%;
+    }
+
+    body {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .wrapper-container {
+        max-width: 1440px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 33px;
+    }
+
+    header {
+        max-width: 1110px;
+        margin: 41px auto 0 auto;
+    }
+
+    .header-logo {
+        height: 33px;
+        margin-bottom: 123px;
+        margin-left: 1px;
+    }
+
+    .header-background {
+        position: absolute;
+        top: -31px;
+        right: -40px;
+        width: 267px;
+        height: auto;
+        z-index: -1;
+    }
+
+    .title {
+        max-width: 520px;
+    }
+
+    header h1 {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: -0.727273px;
+        margin-bottom: 28px;
+        max-width: none;
+    }
+
+    header p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        max-width: none;
+        margin-bottom: 249px;
+    }
+
+    .card-container {
+        background-color: hsla(242, 22%, 12%, 1);
+        max-width: 1110px;
+        height: 600px;
+        border-radius: 12px;
+        position: relative;
+        margin: 0 auto 183px auto;
+    }
+
+    .illustration {
+        position: absolute;
+        left: 64px;
+        bottom: 182px;
+        width: 270px;
+        max-height: 556px;
+        z-index: 1;
+    }
+
+    .card-background {
+        position: absolute;
+        left: auto;
+        right: 30%;
+        bottom: 229px;
+        width: 280px;
+        height: 420px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: hsla(12, 94%, 65%, 1);
+        border-radius: 12px;
+        width: 399px;
+        height: 546px;
+        position: absolute;
+        top: 150px;
+        right: 8%;
+        padding: 48px 49px 48px 48px;
+        color: #FCFAF9;
+        z-index: 1;
+    }
+
+    .card h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 36px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 46px;
+        margin-left: 6px;
+    }
+
+    .price span:nth-child(1) {
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 52px;
+    }
+
+    .price span:nth-child(2) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+    }
+
+    .btn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7.92px;
+        text-decoration: none;
+        border-radius: 12px;
+        height: 61px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -0.18px;
+        margin-left: 6px;
+    }
+
+    .ios {
+        color: #FCFAF9;
+        background-color: #191826;
+        margin-bottom: 16px;
+    }
+
+    .ios:hover {
+        background-color: #66E2DC;
+    }
+
+    .android {
+        background-color: #FCFAF9;
+        color: #191826;
+    }
+
+    .android:hover {
+        background: hsla(33, 100%, 70%, 1);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 65px auto;
+        gap: 32px;
+        max-width: 1110px;
+    }
+
+    .footer-logo {
+        height: 33px;
+        width: 146px;
+    }
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .infos {
+        max-width: 366px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .infos a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: hsla(244, 23%, 12%, 1);
+    }
+
+    .social {
+        display: flex;
+        margin: auto 0 auto auto;
+        gap: 20px;
+    }
+
+    .social svg:hover {
+        cursor: pointer;
+        fill: #FA7453;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+
+    html {
+        background-image: url(assets/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-position-x: -254px;
+        background-position-y: -112px;
+        background-size: 983px 808px;
+        height: 100%;
+    }
+
+    body {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .wrapper-container {
+        max-width: 1440px;
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    header {
+        max-width: 1110px;
+        margin: 39px 24px 0 24px;
+    }
+
+    .header-logo {
+        height: 33px;
+        margin-bottom: 64px;
+        margin-left: 1px;
+    }
+
+    .header-background {
+        position: absolute;
+        top: -31px;
+        right: auto;
+        left: 537px;
+        width: 267px;
+        height: auto;
+        z-index: -1;
+        display: none;
+    }
+
+    .title {
+        max-width: 520px;
+    }
+
+    header h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.454545px;
+        margin-bottom: 28px;
+        max-width: none;
+    }
+
+    header p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        max-width: none;
+        margin-bottom: 166px;
+    }
+
+    .card-container {
+        background-color: hsla(242, 22%, 12%, 1);
+        max-width: 1110px;
+        height: 600px;
+        border-radius: 12px;
+        position: relative;
+        margin: 0 auto 390px auto;
+    }
+
+    .illustration {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 268px;
+        width: 208px;
+        max-height: 430px;
+        z-index: 1;
+    }
+
+    .card-background {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        bottom: auto;
+        top: 0;
+        width: 280px;
+        height: 420px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: hsla(12, 94%, 65%, 1);
+        border-radius: 12px;
+        width: 100%;
+        height: 546px;
+        position: absolute;
+        top: 380px;
+        right: 0px;
+        padding: 48px 37px 48px 36px;
+        color: #FCFAF9;
+        z-index: 1;
+    }
+
+    .card h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 36px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 46px;
+        margin-left: 6px;
+    }
+
+    .price span:nth-child(1) {
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 52px;
+    }
+
+    .price span:nth-child(2) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+    }
+
+    .btn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7.92px;
+        text-decoration: none;
+        border-radius: 12px;
+        height: 61px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -0.18px;
+        margin-left: 6px;
+    }
+
+    .ios {
+        color: #FCFAF9;
+        background-color: #191826;
+        margin-bottom: 16px;
+    }
+
+    .ios:hover {
+        background-color: #66E2DC;
+    }
+
+    .android {
+        background-color: #FCFAF9;
+        color: #191826;
+    }
+
+    .android:hover {
+        background: hsla(33, 100%, 70%, 1);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 80px auto;
+        gap: 32px;
+        max-width: 1110px;
+        padding: 0 24px 80px 24px;
+    }
+
+    .footer-logo {
+        height: 33px;
+        width: 146px;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 64px;
+    }
+
+    .infos {
+        max-width: 366px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .infos a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: hsla(244, 23%, 12%, 1);
+    }
+
+    .social {
+        display: flex;
+        margin: auto auto auto 0;
+        gap: 20px;
+    }
+
+    .social svg:hover {
+        cursor: pointer;
+        fill: #FA7453;
+    }
+
+}
