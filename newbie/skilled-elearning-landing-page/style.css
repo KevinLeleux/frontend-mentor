@@ -16,12 +16,14 @@
 html {
     font-size: 62.5%;
     font-family: var(--font-family);
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -64,6 +66,10 @@ nav a {
 
 nav a:hover {
     background-color: hsla(234, 25%, 52%, 1);
+}
+
+.hero {
+    position: relative;
 }
 
 .hero-content {
