@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-    max-width: 111rem;
+    max-width: 115rem;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -113,11 +113,12 @@ nav a:hover {
 }
 
 picture img {
-    width: 99.2rem;
+    width: 106rem;
     height: auto;
     position: absolute;
-    top: 0;
-    right: -600px;
+    top: -40rem;
+    right: -51rem;
+    z-index: -1;
 }
 
 main {
