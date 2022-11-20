@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 111rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+header {
+    margin-top: 2.4rem;
+    padding: 0 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17.2rem;
+}
+
+nav img {
+    align-self: center;
+}
+
+nav a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: hsla(234, 53%, 16%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    border-radius: 2.8rem;
+    height: 5.6rem;
+    width: 16.7rem;
+}
+
+nav a:hover {
+    background-color: hsla(234, 25%, 52%, 1);
+}
+
+.hero-content {
+    max-width: 45.7rem;
+    margin-bottom: 25rem;
+}
+
+.hero-content h1 {
+    font-weight: 800;
+    font-size: 5.6rem;
+    line-height: 7.1rem;
+    color: hsla(234, 53%, 16%, 1);
+    margin-bottom: 2.9rem;
+}
+
+.hero-content p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: hsla(233, 10%, 56%, 1);
+    margin-bottom: 4rem;
+    max-width: 44.5rem;
+}
+
+.hero-content a {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 1);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    border-radius: 3.15rem;
+    padding: 1.9rem 3.1rem 1.6rem 3.2rem;
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+.hero-content a:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+picture img {
+    width: 99.2rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: -600px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    padding: 0 2rem;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 8rem;
+    margin-bottom: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 110rem;
+}
+
+article {
+    max-width: 35rem;
+    min-height: 32.2rem;
+    height: 100%;
+    border-radius: 1.5rem;
+    padding: 6.4rem 3.2rem 4rem 3.2rem;
+    position: relative;
+    box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+article h2 {
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: hsla(0, 0%, 100%, 1);
+}
+
+article h3 {
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: hsla(234, 53%, 16%, 1);
+    margin-bottom: 2.4rem;
+}
+
+article p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: hsla(233, 10%, 56%, 1);
+    margin-bottom: 2.4rem;
+
+}
+
+article a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: hsla(341, 92%, 62%, 1);
+    position: absolute;
+    bottom: 4rem;
+
+}
+
+article a:hover {
+    color: hsla(341, 100%, 83%, 1);
+}
+
+article img {
+    position: absolute;
+    top: -2.4rem;
+}
+
+article:nth-child(1) {
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    ;
+}
+
+footer {
+    background-color: hsla(234, 53%, 16%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12rem;
+    width: 100%;
+}
+
+footer a {
+    cursor: pointer;
+    padding: 1.4rem 3.1rem 1.4rem 3.2rem;
+    border-radius: 2.8rem;
+    background: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+    color: hsla(0, 0%, 100%, 1);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+footer a:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%)
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
