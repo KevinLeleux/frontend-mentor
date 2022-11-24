@@ -73,7 +73,6 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 45.7rem;
     margin-bottom: 25rem;
 }
 
@@ -83,6 +82,8 @@ nav a:hover {
     line-height: 7.1rem;
     color: hsla(234, 53%, 16%, 1);
     margin-bottom: 2.9rem;
+    max-width: 45.7rem;
+    width: calc(100% - 43.5rem);
 }
 
 .hero-content p {
@@ -92,6 +93,7 @@ nav a:hover {
     color: hsla(233, 10%, 56%, 1);
     margin-bottom: 4rem;
     max-width: 44.5rem;
+    width: calc(100% - 53.5rem);
 }
 
 .hero-content a {
@@ -295,7 +297,7 @@ footer .container {
     }
 
     .hero-content {
-        max-width: 39.8rem;
+        max-width: none;
         margin-bottom: 21rem;
     }
 
@@ -305,6 +307,7 @@ footer .container {
         line-height: 5.04rem;
         color: hsla(234, 53%, 16%, 1);
         margin-bottom: 2.5rem;
+        width: calc(100% - 29rem);
     }
 
     .hero-content p {
@@ -314,6 +317,7 @@ footer .container {
         color: hsla(233, 10%, 56%, 1);
         margin-bottom: 2.4rem;
         max-width: 39.8rem;
+        width: calc(100% - 31rem);
     }
 
     .hero-content a {
@@ -460,11 +464,12 @@ footer .container {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 525px) {
     html {
         font-size: 62.5%;
         font-family: var(--font-family);
         overflow-x: hidden;
+        min-width: 27rem;
     }
 
     body {
@@ -534,6 +539,7 @@ footer .container {
         line-height: 5.04rem;
         color: hsla(234, 53%, 16%, 1);
         margin-bottom: 2.5rem;
+        width: 100%;
     }
 
     .hero-content p {
@@ -543,6 +549,7 @@ footer .container {
         color: hsla(233, 10%, 56%, 1);
         margin-bottom: 2.4rem;
         max-width: 39.8rem;
+        width: 100%;
     }
 
     .hero-content a {
@@ -570,7 +577,8 @@ footer .container {
     }
 
     picture img {
-        max-width: 32.5rem;
+        max-width: 32.7rem;
+        max-height: 30.1rem;
         height: auto;
         width: -webkit-fill-available;
         position: inherit;
@@ -592,21 +600,22 @@ footer .container {
         grid-template-columns: 1fr;
         column-gap: normal;
         row-gap: 4rem;
-        margin-bottom: 8.6rem;
+        margin-bottom: 8rem;
         margin-left: auto;
         margin-right: auto;
         max-width: 111rem;
     }
 
     article {
-        max-width: 34rem;
-        min-height: 25.9rem;
+        max-width: 34.3rem;
+        min-height: 12rem;
         height: 100%;
         border-radius: 1rem;
-        padding: 5.6rem 2.2rem 3.2rem 3.2rem;
+        padding: 2.4rem 2.9rem 3.2rem 2.8rem;
         position: relative;
         box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
         background-color: hsla(0, 0%, 100%, 1);
+        margin: 0 auto;
     }
 
     article h2 {
@@ -618,6 +627,7 @@ footer .container {
 
     article h3 {
         font-weight: 800;
+        margin-top: 3.2rem;
         font-size: 2rem;
         line-height: 2.5rem;
         color: hsla(234, 53%, 16%, 1);
@@ -640,8 +650,8 @@ footer .container {
         font-size: 1.8rem;
         line-height: 2.8rem;
         color: hsla(341, 92%, 62%, 1);
-        position: absolute;
-        bottom: 3.2rem;
+        position: inherit;
+        bottom: 0rem;
 
     }
 
@@ -671,6 +681,7 @@ footer .container {
     footer a {
         cursor: pointer;
         padding: 0.9rem 2.4rem 1.1rem 2.4rem;
+        width: 14rem;
         border-radius: 2.8rem;
         background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
         color: hsla(0, 0%, 100%, 1);
@@ -689,7 +700,7 @@ footer .container {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 3.6rem 4rem;
+        padding: 3.6rem 1.6rem;
     }
 
     footer img {
