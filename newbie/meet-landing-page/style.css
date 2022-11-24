@@ -8,6 +8,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -20,7 +23,11 @@ html {
 
 header {
     min-height: 16.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .hero {
     display: flex;
@@ -31,17 +38,19 @@ header {
 
 .hero-left,
 .hero-right {
-    min-width: 38rem;
+    min-width: 37rem;
 }
 
 .hero-left img {
     position: absolute;
     left: -32px;
+    z-index: -1;
 }
 
 .hero-right img {
     position: absolute;
     right: -32px;
+    z-index: -1;
 }
 
 
@@ -50,6 +59,8 @@ header {
     max-width: 54rem;
     width: 100%;
     text-align: center;
+    background-color: white;
+    padding: 0 2rem;
 }
 
 .hero-center h1 {
@@ -68,19 +79,58 @@ header {
     color: hsla(239, 10%, 57%, 1);
 }
 
-.hero-center a {
+.btns {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+}
+
+.btns a {
+    cursor: pointer;
     text-decoration: none;
     color: hsla(0, 0%, 100%, 1);
     font-weight: 900;
     font-size: 1.6rem;
     line-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.9rem;
 }
 
-.hero-center a span:nth-child(1) {
+.btns a:nth-child(1) {
+    background-color: hsla(192, 37%, 48%, 1);
+    width: 19.3rem;
+    height: 5.8rem;
+}
+
+.btns a:nth-child(2) {
+    background-color: hsla(267, 34%, 53%, 1);
+    width: 13.9rem;
+    height: 5.8rem;
+}
+
+.btns a span:nth-child(1) {
     color: hsla(192, 90%, 77%, 1)
 }
 
+.btns a:nth-child(1):hover {
+    background-color: hsla(192, 54%, 64%, 1);
+}
+
+.btns a:nth-child(2):hover {
+    background-color: hsla(267, 54%, 71%, 1);
+}
+
+
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-line {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,6 +146,85 @@ main {
 main span {
     border: 1px solid rgba(135, 135, 157, 0.25);
     ;
-    padding: 10px;
     border-radius: 50%;
+    width: 5.6rem;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsla(240, 10%, 57%, 1);
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    background-color: white;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    margin: 6.4rem 2rem 8rem 2rem;
+}
+
+.gallery-container img {
+    max-width: 25.5rem;
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h2 {
+    text-transform: uppercase;
+    color: hsla(192, 37%, 48%, 1);
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 4px;
+    margin-bottom: 1.6rem;
+}
+
+.content h3 {
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    color: #28283D;
+    max-width: 44.5rem;
+    margin-bottom: 3.2rem;
+}
+
+.content p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: hsla(239, 10%, 57%, 1);
+    max-width: 54rem;
+}
+
+.space {
+    height: 18.4rem;
+    position: relative;
+}
+
+.bottom-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -2.8rem;
+}
+
+footer {
+    height: 30.8rem;
+    background-color: hsla(192, 37%, 48%, 1);
 }
