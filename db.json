@@ -127,6 +127,13 @@
             "languages": ["html", "css"]
         },
         {
+            "name": "Skilled elearning landing page",
+            "url": "skilled-elearning-landing-page/",
+            "image": "skilled.webp",
+            "level": "1",
+            "languages": ["html", "css"]
+        },
+        {
             "name": "Testimonial grid section",
             "url": "testimonials-grid/",
             "image": "testimonial.webp",
