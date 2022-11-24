@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+:root {
+    --font-family: 'Red Hat Display', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 62.5%;
+    font-family: var(--font-family);
+}
+
+
+header {
+    min-height: 16.9rem;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    min-height: 35.8rem;
+}
+
+.hero-left,
+.hero-right {
+    min-width: 38rem;
+}
+
+.hero-left img {
+    position: absolute;
+    left: -32px;
+}
+
+.hero-right img {
+    position: absolute;
+    right: -32px;
+}
+
+
+.hero-center {
+    margin-bottom: 11rem;
+    max-width: 54rem;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-center h1 {
+    font-weight: 900;
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    margin-bottom: 3.4rem;
+    color: hsla(239, 21%, 20%, 1);
+}
+
+.hero-center p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 3.2rem;
+    color: hsla(239, 10%, 57%, 1);
+}
+
+.hero-center a {
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 1);
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+.hero-center a span:nth-child(1) {
+    color: hsla(192, 90%, 77%, 1)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 1px;
+    height: 84px;
+    background-color: rgba(135, 135, 157, 0.25);
+}
+
+main span {
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    ;
+    padding: 10px;
+    border-radius: 50%;
+}
