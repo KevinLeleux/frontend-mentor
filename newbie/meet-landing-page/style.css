@@ -222,9 +222,17 @@ main span {
     justify-content: center;
     position: absolute;
     bottom: -2.8rem;
+    z-index: 1;
 }
 
 footer {
     height: 30.8rem;
+    background-image: url(assets/desktop/image-footer.jpg);
+}
+
+.overlay {
     background-color: hsla(192, 37%, 48%, 1);
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
 }
