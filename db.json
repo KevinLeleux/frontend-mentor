@@ -134,6 +134,13 @@
             "languages": ["html", "css"]
         },
         {
+            "name": "Meet landing page",
+            "url": "meet-landing-page/",
+            "image": "meet.webp",
+            "level": "1",
+            "languages": ["html", "css"]
+        },
+        {
             "name": "Testimonial grid section",
             "url": "testimonials-grid/",
             "image": "testimonial.webp",
