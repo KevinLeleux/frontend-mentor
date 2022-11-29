@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Notifications page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Notifications 3
-
-  Mark all as read
-
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
-
-  Angela Gray followed you
-  5m ago
-
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
-
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
-
-  Kimberly Smith commented on your picture
-  1 week ago
-
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <div class="notifications">
+      <span>
+        Notifications <span class="notifications-number">3</span>
+      </span>
+      <a href="#" class="read-all">Mark all as read</a>
+    </div>
+    <article class="unread">
+      <img src="assets/images/avatar-mark-webber.webp" alt="mark weber avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Mark Webber</a> reacted to your recent post <a href="#" class="grey">My first tournament
+            today!</a>
+        </div>
+        <span>1m ago</span>
+      </div>
+    </article>
+    <article class="unread">
+      <img src="assets/images/avatar-angela-gray.webp" alt="angela gray avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Angela Gray</a> followed you
+        </div>
+        <span>5m ago</span>
+      </div>
+    </article>
+    <article class="unread">
+      <img src="assets/images/avatar-jacob-thompson.webp" alt="jacob thompson avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Jacob Thompson</a> has joined your group <a href="#" class="blue">Chess Club</a>
+        </div>
+        <span>1 day ago</span>
+      </div>
+    </article>
+    <article>
+      <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="rizky avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Rizky Hasanuddin</a> sent you a private message
+        </div>
+        <span>5 days ago</span>
+        <p>
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+          I'm already having lots of fun and improving my game.
+        </p>
+      </div>
+    </article>
+    <article>
+      <img src="assets/images/avatar-kimberly-smith.webp" alt="kimberley avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Kimberly Smith</a> commented on your picture
+        </div>
+        <span>1 week ago</span>
+      </div>
+      <img src="assets/images/image-chess.webp" alt="image of chess game" class="chess">
+    </article>
+    <article>
+      <img src="assets/images/avatar-nathan-peterson.webp" alt="nathan avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Nathan Peterson</a> reacted to your recent post<a href="#" class="grey">5 end-game strategies to
+            increase your win rate</a>
+        </div>
+        <span>2 weeks ago</span>
+      </div>
+    </article>
+    <article>
+      <img src="assets/images/avatar-anna-kim.webp" alt="anna kim avatar">
+      <div class="article-contents">
+        <div class="content">
+          <a href="#">Anna Kim</a> left the group<a href="#" class="blue">Chess Club</a>
+        </div>
+        <span>2 weeks ago</span>
+      </div>
+    </article>
+  </main>
+  <script src="script.js"></script>
 </body>
+
 </html>
