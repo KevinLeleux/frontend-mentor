@@ -19,12 +19,13 @@ html {
     font-size: 62.5%;
     font-family: var(--font-family);
     background-color: hsla(0, 0%, 98%, 1);
+    max-width: 144rem;
+    overflow-x: hidden;
 }
 
 body {
     overflow-x: hidden;
 }
-
 
 header {
     display: flex;
@@ -41,20 +42,20 @@ header img {
     grid-template-columns: auto auto auto;
     column-gap: 2.5rem;
     min-height: 35.8rem;
-    overflow-x: hidden;
-    margin-bottom: 11rem;
+    max-width: 144rem;
+    margin: 0 auto 11rem auto;
 }
 
 .hero-left {
-    margin-left: -3.2rem;
     margin-right: auto;
     margin-bottom: auto;
+    margin-left: -3.2rem;
 }
 
 .hero-right {
     margin-left: auto;
-    margin-right: -3.2rem;
     margin-top: auto;
+    margin-right: -3.2rem;
 }
 
 .hero-left img {
