@@ -181,6 +181,13 @@
             "image": "notifications.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Interactive card details",
+            "url": "interactive-card-details-form/",
+            "image": "card-details.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
