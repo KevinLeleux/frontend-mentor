@@ -127,7 +127,7 @@ form.addEventListener("submit", function (e) {
             if (!inputCardNumber.match(/^.{19}$/gm)) {
                 errorNumber.insertAdjacentText(
                     "beforeend",
-                    "16 digits are needed"
+                    "16 numbers are needed"
                 );
             } else {
                 errorNumber.insertAdjacentText(
