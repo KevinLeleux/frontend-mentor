@@ -298,7 +298,7 @@ form button.notmg {
     width: 100%;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 980px) {
     html {
         font-size: 62.5%;
         margin: 0 auto;
