@@ -435,6 +435,7 @@ form button.notmg {
         min-width: 30rem;
         width: 100%;
         margin-top: 14.2rem;
+        margin-right: 0;
     }
 
     form {
