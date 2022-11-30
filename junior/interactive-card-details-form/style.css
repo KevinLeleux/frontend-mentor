@@ -151,6 +151,7 @@ input {
     line-height: 2.3rem;
     color: #21092F;
     mix-blend-mode: normal;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 input::placeholder {
@@ -160,6 +161,7 @@ input::placeholder {
     color: #21092F;
     mix-blend-mode: normal;
     opacity: 0.25;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 label {
@@ -213,8 +215,9 @@ form button {
 
 .thanks {
     display: none;
-/*     display: flex;
- */    flex-direction: column;
+    /*     display: flex;
+ */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
