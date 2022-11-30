@@ -151,7 +151,7 @@ form.addEventListener("submit", function (e) {
                 if (!inputCardMonth) {
                     errorDate.insertAdjacentText("beforeend", "Can't be blank");
                 } else {
-                    errorDate.insertAdjacentText("beforeend", "Only digits");
+                    errorDate.insertAdjacentText("beforeend", "Numbers only");
                 }
             }
         }
@@ -165,7 +165,7 @@ form.addEventListener("submit", function (e) {
                 if (!inputCardYear) {
                     errorDate.insertAdjacentText("beforeend", "Can't be blank");
                 } else {
-                    errorDate.insertAdjacentText("beforeend", "Only digits");
+                    errorDate.insertAdjacentText("beforeend", "Numbers only");
                 }
             }
         }
@@ -178,7 +178,7 @@ form.addEventListener("submit", function (e) {
                 if (!inputCardCcv) {
                     errorCcv.insertAdjacentText("beforeend", "Can't be blank");
                 } else {
-                    errorCcv.insertAdjacentText("beforeend", "Only digits");
+                    errorCcv.insertAdjacentText("beforeend", "Numbers only");
                 }
             }
         }
