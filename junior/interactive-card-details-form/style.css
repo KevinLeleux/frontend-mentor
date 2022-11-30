@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+
+body {
+    max-width: 144rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body::after {
+    content: "";
+    background-image: url(images/bg-main-desktop.png);
+    background-size: cover;
+    width: 48.3rem;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+main {
+    display: flex;
+    gap: 11.33%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.7rem;
+    max-width: 54.1rem;
+    width: 100%;
+    color: hsla(0, 0%, 100%, 1);
+}
+
+.card {
+    width: 44.7rem;
+    height: 24.5rem;
+}
+
+.card-front {
+    background-image: url(images/bg-card-front.png);
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 2.8rem;
+    left: 3.2rem;
+    width: 4.7rem;
+    height: 4.7rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.empty-circle {
+    position: absolute;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    left: 9.5rem;
+    top: 4.1rem;
+}
+
+.cardfront-number {
+    position: absolute;
+    left: 3.2rem;
+    bottom: 7rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    letter-spacing: 3.42222px;
+}
+
+.cardfront-name {
+    position: absolute;
+    left: 3.2rem;
+    bottom: 2.65rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cardfront-date {
+    position: absolute;
+    right: 3.2rem;
+    bottom: 2.65rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card-back {
+    background-image: url(images/bg-card-back.png);
+    margin-left: auto;
+    position: relative;
+}
+
+.cardfront-ccv {
+    position: absolute;
+    right: 5.7rem;
+    bottom: 11.6rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.right-content {
+    max-width: 38.1rem;
+    min-width: 30rem;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+
+}
+
+input {
+    height: 4.5rem;
+    border-radius: 0.8rem;
+    border: 1px solid hsla(278, 3%, 87%, 1);
+    padding: 0 0 0 1.6rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #21092F;
+    mix-blend-mode: normal;
+}
+
+input::placeholder {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #21092F;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+label {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsla(278, 68%, 11%, 1);
+    margin-bottom: 0.9rem;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-form {
+    display: flex;
+    gap: 2rem;
+}
+
+.date-input {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.9rem;
+}
+
+.date-input input {
+    max-width: 8rem;
+}
+
+.ccv {
+    max-width: 19.1rem;
+    min-width: 11rem;
+    width: 100%;
+}
+
+form button {
+    cursor: pointer;
+    background-color: hsla(278, 68%, 11%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    border-radius: 0.8rem;
+    border: none;
+    height: 5.3rem;
+    margin-top: 1.4rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+}
+
+.thanks {
+    display: none;
+/*     display: flex;
+ */    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thanks img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 3.5rem;
+}
+
+.thanks h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    letter-spacing: 3.42222px;
+    text-transform: uppercase;
+}
+
+.thanks p {
+    color: hsla(278, 6%, 55%, 1);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-bottom: 4.8rem;
+}
+
+.thanks button {
+    cursor: pointer;
+    background-color: hsla(278, 68%, 11%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    border-radius: 0.8rem;
+    border: none;
+    height: 5.3rem;
+    margin-top: 1.4rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    width: 100%;
+}
