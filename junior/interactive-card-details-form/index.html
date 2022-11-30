@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive card details form</title>
@@ -38,11 +36,13 @@
         <div class="form-flex">
           <label for="cardholdername">Cardholder Name</label>
           <input type="text" name="cardholdername" id="1" placeholder="e.g. Jane Appleseed" class="cardholdername">
+          <span class="msg name-msg">Please enter a valid name</span>
         </div>
         <div class="form-flex">
           <label for="cardnumber">Card Number</label>
           <input type="text" name="cardnumber" id="2" placeholder="e.g. 1234 5678 9123 0000" maxlength="19"
             class="cardnumber">
+          <span class="msg number-msg"></span>
         </div>
         <div class="bottom-form">
           <div class="date">
@@ -51,13 +51,15 @@
               <input type="text" name="mm" id="3" placeholder="MM" maxlength="2" class="month">
               <input type="text" name="yy" id="4" placeholder="YY" maxlength="2" class="year">
             </div>
+            <span class="msg date-msg"></span>
           </div>
           <div class="ccv form-flex">
-            <label for="cvc">CVC</label>
-            <input type="text" name="cvc" id="5" placeholder="e.g. 123" maxlength="3" class="ccv-input">
+            <label for="ccv">CVC</label>
+            <input type="text" name="ccv" id="5" placeholder="e.g. 123" maxlength="3" class="ccv-input">
+            <span class="msg ccv-msg"></span>
           </div>
         </div>
-        <button type="submit">Confirm</button>
+        <button type="submit" class="confirm-btn">Confirm</button>
       </form>
       <div class="thanks">
         <img src="images/icon-complete.svg" alt="complete icon">
@@ -67,9 +69,9 @@
         <p>
           We've added your card details
         </p>
-        <button>
+        <a href="index.html" class="continue">
           Continue
-        </button>
+        </a>
       </div>
     </div>
   </main>

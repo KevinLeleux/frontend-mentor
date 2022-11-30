@@ -52,6 +52,8 @@ main {
 .card {
     width: 44.7rem;
     height: 24.5rem;
+    box-shadow: 0px 39px 60px 0px hsla(0, 0%, 0%, 0.14);
+    border-radius: 1rem;
 }
 
 .card-front {
@@ -138,7 +140,10 @@ form {
     display: flex;
     flex-direction: column;
     gap: 2.6rem;
+}
 
+form.notvisible {
+    display: none;
 }
 
 input {
@@ -152,6 +157,7 @@ input {
     color: #21092F;
     mix-blend-mode: normal;
     font-family: 'Space Grotesk', sans-serif;
+    text-transform: capitalize;
 }
 
 input::placeholder {
@@ -162,6 +168,30 @@ input::placeholder {
     mix-blend-mode: normal;
     opacity: 0.25;
     font-family: 'Space Grotesk', sans-serif;
+    text-transform: none;
+}
+
+input:focus {
+    outline: none;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%) border-box;
+    border: 1px solid transparent;
+}
+
+input.error {
+    border: 1px solid hsla(0, 100%, 66%, 1);
+}
+
+.msg {
+    margin-top: 0.8rem;
+    color: hsla(0, 100%, 66%, 1);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    display: none;
+}
+
+.msg.error {
+    display: inline-block;
 }
 
 label {
@@ -207,19 +237,25 @@ form button {
     border-radius: 0.8rem;
     border: none;
     height: 5.3rem;
-    margin-top: 1.4rem;
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 2.3rem;
+    margin-top: 1.4rem;
+}
+
+form button.notmg {
+    margin-top: 0;
 }
 
 .thanks {
     display: none;
-    /*     display: flex;
- */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.thanks.visible {
+    display: flex;
 }
 
 .thanks img {
@@ -244,16 +280,321 @@ form button {
     margin-bottom: 4.8rem;
 }
 
-.thanks button {
+.continue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    text-decoration: none;
     background-color: hsla(278, 68%, 11%, 1);
     color: hsla(0, 0%, 100%, 1);
     border-radius: 0.8rem;
-    border: none;
     height: 5.3rem;
     margin-top: 1.4rem;
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 2.3rem;
     width: 100%;
+}
+
+@media screen and (max-width: 880px) {
+    html {
+        font-size: 62.5%;
+        margin: 0 auto;
+        min-width: 31.8rem;
+    }
+
+    body {
+        max-width: 144rem;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    body::after {
+        content: "";
+        background-image: url(images/bg-main-mobile.png);
+        background-size: cover;
+        width: 100vw;
+        height: 24rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 11.33%;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: start;
+        margin: 3.2rem 1.6rem;
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        gap: 3.7rem;
+        max-width: 38.1rem;
+        width: 100%;
+        color: hsla(0, 0%, 100%, 1);
+    }
+
+    .card {
+        width: 28.6rem;
+        height: 15.7rem;
+        box-shadow: 0px 39px 60px 0px hsla(0, 0%, 0%, 0.14);
+        border-radius: 1rem;
+    }
+
+    .card-front {
+        background-image: url(images/bg-card-front.png);
+        background-size: cover;
+        position: absolute;
+        order: 2;
+        z-index: 1;
+        top: 12.6rem;
+    }
+
+    .circle {
+        position: absolute;
+        top: 1.76rem;
+        left: 1.9rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .empty-circle {
+        position: absolute;
+        width: 1.35rem;
+        height: 1.35rem;
+        border: 1px solid white;
+        border-radius: 50%;
+        left: 5.94rem;
+        top: 2.58rem;
+    }
+
+    .cardfront-number {
+        position: absolute;
+        left: 1.9rem;
+        bottom: 4.86rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        letter-spacing: 2.2px;
+    }
+
+    .cardfront-name {
+        position: absolute;
+        left: 1.9rem;
+        bottom: 2.06rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+    }
+
+    .cardfront-date {
+        position: absolute;
+        right: 2.089rem;
+        bottom: 2.06rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+    }
+
+    .card-back {
+        background-image: url(images/bg-card-back.png);
+        background-size: cover;
+        margin-left: auto;
+        position: relative;
+        background-position-y: 5px;
+        background-repeat: no-repeat;
+        background-color: hsla(0, 0%, 100%, 1);
+    }
+
+    .cardfront-ccv {
+        position: absolute;
+        right: 3.7rem;
+        bottom: 6.9rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+    }
+
+    .right-content {
+        max-width: 38.1rem;
+        min-width: 30rem;
+        width: 100%;
+        margin-top: 14.2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    form.notvisible {
+        display: none;
+    }
+
+    input {
+        height: 4.5rem;
+        border-radius: 0.8rem;
+        border: 1px solid hsla(278, 3%, 87%, 1);
+        padding: 0 0 0 1.6rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: #21092F;
+        mix-blend-mode: normal;
+        font-family: 'Space Grotesk', sans-serif;
+        text-transform: capitalize;
+    }
+
+    input::placeholder {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: #21092F;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+        font-family: 'Space Grotesk', sans-serif;
+        text-transform: none;
+    }
+
+    input:focus {
+        outline: none;
+        background: linear-gradient(white, white) padding-box,
+            linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%) border-box;
+        border: 1px solid transparent;
+    }
+
+    input.error {
+        border: 1px solid hsla(0, 100%, 66%, 1);
+    }
+
+    .msg {
+        margin-top: 0.8rem;
+        color: hsla(0, 100%, 66%, 1);
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        display: none;
+    }
+
+    .msg.error {
+        display: inline-block;
+    }
+
+    label {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: hsla(278, 68%, 11%, 1);
+        margin-bottom: 0.9rem;
+    }
+
+    .form-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom-form {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .date-input {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.9rem;
+    }
+
+    .date-input input {
+        max-width: 8rem;
+    }
+
+    .ccv {
+        max-width: 19.1rem;
+        min-width: 11rem;
+        width: 100%;
+    }
+
+    form button {
+        cursor: pointer;
+        background-color: hsla(278, 68%, 11%, 1);
+        color: hsla(0, 0%, 100%, 1);
+        border-radius: 0.8rem;
+        border: none;
+        height: 5.3rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        margin-top: 0.8rem;
+    }
+
+    form button.notmg {
+        margin-top: 0;
+    }
+
+    .thanks {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thanks.visible {
+        display: flex;
+    }
+
+    .thanks img {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .thanks h1 {
+        font-weight: 500;
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+        letter-spacing: 3.42222px;
+        text-transform: uppercase;
+    }
+
+    .thanks p {
+        color: hsla(278, 6%, 55%, 1);
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.8rem;
+    }
+
+    .continue {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: hsla(278, 68%, 11%, 1);
+        color: hsla(0, 0%, 100%, 1);
+        border-radius: 0.8rem;
+        height: 5.3rem;
+        margin-top: 1.4rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        width: 100%;
+    }
+
 }
