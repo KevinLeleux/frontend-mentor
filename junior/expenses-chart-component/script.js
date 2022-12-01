@@ -21,7 +21,7 @@ async function getData() {
 
         const bar = document.createElement("div");
         bar.classList.add("bar");
-        bar.setAttribute("price-data", "$" + amount);
+        bar.setAttribute("data-price", "$" + amount);
         if (day == week[dayDate]) {
             bar.classList.add("blue");
         } else {

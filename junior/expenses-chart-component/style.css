@@ -115,7 +115,7 @@ main h1 {
 }
 
 .bar:hover::after {
-    content: attr(price-data);
+    content: attr(data-price);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,7 +306,7 @@ footer span {
     }
 
     .bar:hover::after {
-        content: attr(price-data);
+        content: attr(data-price);
         display: flex;
         justify-content: center;
         align-items: center;
