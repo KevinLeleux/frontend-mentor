@@ -199,8 +199,8 @@ footer span {
 .last-month span:nth-child(1) {
     text-align: right;
     font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
     color: hsla(25, 47%, 15%, 1);
 }
 
