@@ -98,12 +98,12 @@ main {
 @keyframes wiggle {
 
     50% {
-        transform: translateX(100%);
+        transform: translateX(100%) rotate(70deg);
     }
 
     0%,
     100% {
-        transform: translateX(0);
+        transform: translateX(0) rotate(0);
     }
 }
 

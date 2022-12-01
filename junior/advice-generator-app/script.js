@@ -5,11 +5,11 @@ tempQuoteContainer.setAttribute("style", "z-index: -1;");
 
 dice.addEventListener("click", function () {
     const tempQuoteContainer = document.querySelector(".temp-quote-container");
-    tempQuoteContainer.classList.remove("translate"); // reset animation
     tempQuoteContainer.setAttribute("style", "z-index: 1;");
+    tempQuoteContainer.classList.remove("translate"); // reset animation
     void tempQuoteContainer.offsetWidth;
     tempQuoteContainer.classList.add("translate");
-    fetchData();
+    setTimeout(fetchData(), 100)
     setTimeout(function () {
         tempQuoteContainer.setAttribute("style", "z-index: -1;");
     }, 500);
@@ -31,7 +31,6 @@ async function fetchData() {
     const tempQuote = document.querySelector(".temp-quote");
     tempQuote.innerHTML = "";
     tempQuote.insertAdjacentText("beforeend", temp.advice);
-
     temp = {
         id: quotesApi.slip.id,
         advice: quotesApi.slip.advice,
