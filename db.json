@@ -188,6 +188,13 @@
             "image": "card-details.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Expenses chart",
+            "url": "expenses-chart-component/",
+            "image": "expenses.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
