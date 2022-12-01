@@ -26,18 +26,18 @@ async function fetchData() {
     quote.innerHTML = "";
     quote.insertAdjacentText("beforeend", quotesApi.slip.advice);
 
-    const tempH1 = document.querySelector(".temp-title");
-    tempH1.innerHTML = "";
-    tempH1.insertAdjacentText("beforeend", "Advice #" + temp.id);
-    const tempQuote = document.querySelector(".temp-quote");
-    tempQuote.innerHTML = "";
-    tempQuote.insertAdjacentText("beforeend", temp.advice);
     setTimeout(function () {
-        temp = {
-            id: quotesApi.slip.id,
-            advice: quotesApi.slip.advice,
-        };
-    }, 1000);
+        const tempH1 = document.querySelector(".temp-title");
+        tempH1.innerHTML = "";
+        tempH1.insertAdjacentText("beforeend", "Advice #" + temp.id);
+        const tempQuote = document.querySelector(".temp-quote");
+        tempQuote.innerHTML = "";
+        tempQuote.insertAdjacentText("beforeend", temp.advice);
+    }, 800);
+    temp = {
+        id: quotesApi.slip.id,
+        advice: quotesApi.slip.advice,
+    };
 }
 
 fetchData();
