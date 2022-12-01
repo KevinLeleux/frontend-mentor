@@ -91,12 +91,11 @@ main {
 }
 
 .translate {
-    animation: wiggle 1s;
+    animation: rotate 1s;
 }
 
 /* Keyframes */
-@keyframes wiggle {
-
+@keyframes rotate {
     50% {
         transform: translateX(100%) rotate(70deg);
     }
@@ -148,4 +147,294 @@ main {
     height: 2.4rem;
     width: 2.4rem;
     z-index: inherit;
+}
+
+
+body,
+html {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: hsla(219, 22%, 16%, 1);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 54rem;
+    min-height: 33.2rem;
+    background-color: hsla(217, 19%, 24%, 1);
+    border-radius: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2rem;
+    padding: 4.8rem 4.8rem 7.2rem 4.8rem;
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+}
+
+.title {
+    color: hsla(150, 100%, 66%, 1);
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 4.08571px;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+    text-align: center;
+}
+
+.quote {
+    color: hsla(193, 38%, 86%, 1);
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.3px;
+    min-height: 11.4rem;
+    background-color: hsla(217, 19%, 24%, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.temp-title {
+    color: hsla(150, 100%, 66%, 1);
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 4.08571px;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+    text-align: center;
+}
+
+.temp-quote {
+    color: hsla(193, 38%, 86%, 1);
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.3px;
+    text-align: center;
+    min-height: 11.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.translate {
+    animation: rotate 1s;
+}
+
+/* Keyframes */
+@keyframes rotate {
+    50% {
+        transform: translateX(100%) rotate(70deg);
+    }
+
+    0%,
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+}
+
+.temp-quote-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4.8rem 4.8rem 7.2rem 4.8rem;
+    border-radius: 1.5rem;
+    background-color: hsla(217, 19%, 24%, 1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+}
+
+.divider {
+    margin-top: auto;
+}
+
+.dice {
+    background-color: hsla(150, 100%, 66%, 1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3.2rem;
+    height: 6.4rem;
+    width: 6.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.dice img {
+    height: 2.4rem;
+    width: 2.4rem;
+    z-index: inherit;
+}
+
+@media screen and (max-width: 580px) {
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    html {
+        font-size: 62.5%;
+        background-color: hsla(219, 22%, 16%, 1);
+        min-width: 37.2rem;
+    }
+
+    body {
+        font-family: 'Manrope', sans-serif;
+        font-size: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        max-width: 54rem;
+        min-width: 34rem;
+        min-height: 33.2rem;
+        background-color: hsla(217, 19%, 24%, 1);
+        border-radius: 1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 1.6rem;
+        padding: 4rem 2.4rem 6.4rem 2.4rem;
+        -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+        box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+    }
+
+    .title {
+        color: hsla(150, 100%, 66%, 1);
+        font-weight: 800;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        letter-spacing: 4.3.45714px;
+        text-transform: uppercase;
+        margin-bottom: 2.4rem;
+        text-align: center;
+    }
+
+    .quote {
+        color: hsla(193, 38%, 86%, 1);
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        letter-spacing: -0.257143pxx;
+        min-height: 11.4rem;
+        background-color: hsla(217, 19%, 24%, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .temp-title {
+        color: hsla(150, 100%, 66%, 1);
+        font-weight: 800;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        letter-spacing: 4.3.45714px;
+        text-transform: uppercase;
+        margin-bottom: 2.4rem;
+        text-align: center;
+    }
+
+    .temp-quote {
+        color: hsla(193, 38%, 86%, 1);
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        letter-spacing: -0.257143px;
+        text-align: center;
+        min-height: 11.4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .translate {
+        animation: rotate 1s;
+    }
+
+    /* Keyframes */
+    @keyframes rotate {
+        50% {
+            transform: translateX(100%) rotate(70deg);
+        }
+
+        0%,
+        100% {
+            transform: translateX(0) rotate(0);
+        }
+    }
+
+    .temp-quote-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2.4rem 6.4rem 2.4rem;
+        border-radius: 1.5rem;
+        background-color: hsla(217, 19%, 24%, 1);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+        box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+    }
+
+    picture {
+        margin: auto;
+    }
+
+    .divider {
+        margin-top: auto;
+    }
+
+    .dice {
+        background-color: hsla(150, 100%, 66%, 1);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3.2rem;
+        height: 6.4rem;
+        width: 6.4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .dice img {
+        height: 2.4rem;
+        width: 2.4rem;
+        z-index: inherit;
+    }
 }
