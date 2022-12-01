@@ -6,10 +6,12 @@ tempQuoteContainer.setAttribute("style", "z-index: -1;");
 dice.addEventListener("click", function () {
     const tempQuoteContainer = document.querySelector(".temp-quote-container");
     tempQuoteContainer.setAttribute("style", "z-index: 1;");
+    fetchData();
     tempQuoteContainer.classList.remove("translate"); // reset animation
     void tempQuoteContainer.offsetWidth;
-    tempQuoteContainer.classList.add("translate");
-    fetchData();
+    setTimeout(function () {
+        tempQuoteContainer.classList.add("translate");
+    }, 50);
     setTimeout(function () {
         tempQuoteContainer.setAttribute("style", "z-index: -1;");
     }, 500);
