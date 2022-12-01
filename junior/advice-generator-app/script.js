@@ -9,7 +9,7 @@ dice.addEventListener("click", function () {
     tempQuoteContainer.classList.remove("translate"); // reset animation
     void tempQuoteContainer.offsetWidth;
     tempQuoteContainer.classList.add("translate");
-    setTimeout(fetchData(), 100)
+    fetchData();
     setTimeout(function () {
         tempQuoteContainer.setAttribute("style", "z-index: -1;");
     }, 500);
@@ -25,16 +25,19 @@ async function fetchData() {
     const quote = document.querySelector(".quote");
     quote.innerHTML = "";
     quote.insertAdjacentText("beforeend", quotesApi.slip.advice);
+
     const tempH1 = document.querySelector(".temp-title");
     tempH1.innerHTML = "";
     tempH1.insertAdjacentText("beforeend", "Advice #" + temp.id);
     const tempQuote = document.querySelector(".temp-quote");
     tempQuote.innerHTML = "";
     tempQuote.insertAdjacentText("beforeend", temp.advice);
-    temp = {
-        id: quotesApi.slip.id,
-        advice: quotesApi.slip.advice,
-    };
+    setTimeout(function () {
+        temp = {
+            id: quotesApi.slip.id,
+            advice: quotesApi.slip.advice,
+        };
+    }, 1000);
 }
 
 fetchData();
