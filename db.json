@@ -201,7 +201,7 @@
             "url": "advice-generator-app/",
             "image": "advice.webp",
             "level": "2",
-            "languages": ["html", "css", "js"]
+            "languages": ["html", "css", "js", "api"]
         }
     ]
 }
