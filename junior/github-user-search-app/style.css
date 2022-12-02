@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,4 +7,172 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+:root,
+:root.light {
+    --bg-color: hsla(226, 100%, 98%, 1);
+    --title-color: hsla(217, 21%, 21%, 1);
+    --text-color: hsla(217, 35%, 45%, 1);
+    --input-bg: hsla(0, 0%, 100%, 1);
+    --bg-button: hsla(212, 100%, 50%, 1);
+    --gray: hsla(217, 20%, 51%, 1);
+    --light-gray: hsla(227, 100%, 98%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+}
+
+:root.dark {
+    --bg-color: hsla(220, 41%, 13%, 1);
+    --text-color: hsla(0, 0%, 100%, 1);
+    --title-color: hsla(0, 0%, 100%, 1);
+    --input-bg: hsla(222, 41%, 20%, 1);
+    --bg-button: hsla(212, 100%, 50%, 1);
+}
+
+
+html {
+    font-size: 62.5%;
+    background-color: var(--bg-color);
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-container {
+    max-width: 73rem;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.9rem;
+    margin-bottom: 3.6rem;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+    color: var(--title-color);
+}
+
+.toggle-container {
+    display: flex;
+    cursor: pointer;
+}
+
+.theme {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.theme.hidden {
+    display: none;
+}
+
+.theme span {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    text-align: right;
+    letter-spacing: 2.5px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.toggle-container img {
+    width: 2rem;
+    height: 2rem;
+}
+
+html.light .theme-light {
+    display: none;
+}
+
+
+html.dark .theme-dark {
+    display: none;
+}
+
+form {
+    position: relative;
+    margin-bottom: 2.4rem;
+}
+
+input {
+    height: 6.9rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0 0 0 8rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--title-color);
+    background-color: var(--input-bg);
+    caret-color: hsla(212, 100%, 50%, 1);
+}
+
+html.light input {
+    box-shadow: 0px 16px 30px -10px hsla(227, 46%, 51%, 0.2);
+}
+
+html.light .content {
+    box-shadow: 0px 16px 30px -10px hsla(227, 46%, 51%, 0.2);
+}
+
+input::placeholder {
+    color: var(--text-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+form img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3.2rem;
+}
+
+form button {
+    cursor: pointer;
+    position: absolute;
+    height: 5rem;
+    width: 10.6rem;
+    background-color: var(--bg-button);
+    border: none;
+    border-radius: 1rem;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #FFFFFF;
+}
+
+.content {
+    background-color: var(--input-bg);
+    border-radius: 1.5rem;
 }

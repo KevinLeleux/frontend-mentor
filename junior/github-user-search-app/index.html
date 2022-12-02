@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,50 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | GitHub user search app</title>
 </head>
+
 <body>
+  <div class="main-container">
+    <header>
+      <nav>
+        <span class="title">devfinder</span>
+        <div class="toggle-container">
+          <div class="theme theme-light" value="light">
+            <span>Light</span>
+            <img src="assets/icon-sun.svg" alt="icon of sun">
+          </div>
+          <div class="theme theme-dark" value="dark">
+            <span>Dark</span>
+            <img src="assets/icon-moon.svg" alt="icon of moon">
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form action="">
+        <input type="text" placeholder="Search GitHub username...">
+        <img src="assets/icon-search.svg" alt="magnifing glass icon">
+        <button>Search</button>
+      </form>
+      <div class="content">
+        devfinder
+      
+        Light
+        Dark
+      
+        Search GitHub username...
+        Search
+      
+        Joined
+      
+        Repos
+        Followers
+        Following
+      </div>
+    </main>
+  </div>
 
-  devfinder
 
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
