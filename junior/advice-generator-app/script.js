@@ -7,7 +7,9 @@ const tempQuoteContainer = document.querySelector(".temp-quote-container");
 dice.addEventListener("click", function () {
     tempQuoteContainer.classList.remove("translate");
     tempQuoteContainer.setAttribute("style", "z-index: 1;");
+
     createCard();
+
     setTimeout(() => {
         tempQuoteContainer.classList.add("translate");
     }, 0);
