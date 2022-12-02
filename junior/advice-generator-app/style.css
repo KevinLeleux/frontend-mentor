@@ -39,8 +39,8 @@ main {
     position: relative;
     margin: 2rem;
     padding: 4.8rem 4.8rem 7.2rem 4.8rem;
-    -webkit-box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
-    box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
 }
 
 .title {
@@ -120,8 +120,8 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    -webkit-box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
-    box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+    box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
     z-index: -1;
 }
 
@@ -185,8 +185,8 @@ picture {
         position: relative;
         margin: 1.6rem;
         padding: 4rem 2.4rem 6.4rem 2.4rem;
-        -webkit-box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
-        box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
+        -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+        box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
     }
 
     .title {
@@ -266,8 +266,8 @@ picture {
         bottom: 0;
         left: 0;
         right: 0;
-        -webkit-box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
-        box-shadow: 0px 0px 20px 20px rgba(32, 39, 51, 0.6);
+        -webkit-box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
+        box-shadow: 0px 0px 10px 10px rgba(32, 39, 51, 0.6);
     }
 
     picture {
