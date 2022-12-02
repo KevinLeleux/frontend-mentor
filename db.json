@@ -202,6 +202,13 @@
             "image": "advice.webp",
             "level": "2",
             "languages": ["html", "css", "js", "api"]
+        },
+        {
+            "name": "Github user search",
+            "url": "github-user-search-app/",
+            "image": "github.webp",
+            "level": "2",
+            "languages": ["html", "css", "js", "api"]
         }
     ]
 }
