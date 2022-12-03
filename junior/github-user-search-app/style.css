@@ -11,17 +11,6 @@
 
 
 :root,
-:root.dark {
-    --bg-color: hsla(220, 41%, 13%, 1);
-    --text-color: hsla(0, 0%, 100%, 1);
-    --title-color: hsla(0, 0%, 100%, 1);
-    --input-bg: hsla(222, 41%, 20%, 1);
-    --blue: hsla(212, 100%, 50%, 1);
-    --infos-bg: hsla(220, 40%, 13%, 1);
-    --infos-text: hsla(0, 0%, 100%, 1);
-    --icon-bg: brightness(1000%);
-}
-
 :root.light {
     --bg-color: hsla(226, 100%, 98%, 1);
     --title-color: hsla(217, 21%, 21%, 1);
@@ -31,6 +20,17 @@
     --infos-bg: hsla(227, 100%, 98%, 1);
     --infos-text: hsla(217, 21%, 21%, 1);
     --icon-bg: brightness(100%);
+}
+
+:root.dark {
+    --bg-color: hsla(220, 41%, 13%, 1);
+    --text-color: hsla(0, 0%, 100%, 1);
+    --title-color: hsla(0, 0%, 100%, 1);
+    --input-bg: hsla(222, 41%, 20%, 1);
+    --blue: hsla(212, 100%, 50%, 1);
+    --infos-bg: hsla(220, 40%, 13%, 1);
+    --infos-text: hsla(0, 0%, 100%, 1);
+    --icon-bg: brightness(1000%);
 }
 
 html {
