@@ -14,7 +14,7 @@
   <div class="main-container">
     <header>
       <nav>
-        <span class="title">devfinder</span>
+        <h1 class="title">devfinder</h1>
         <div class="toggle-container">
           <div class="theme theme-light" value="light">
             <span>Light</span>
@@ -28,25 +28,83 @@
       </nav>
     </header>
     <main>
-      <form action="">
-        <input type="text" placeholder="Search GitHub username...">
+      <form action="" spellcheck="false">
+        <input type="text" placeholder="Search GitHub username..." class="input">
         <img src="assets/icon-search.svg" alt="magnifing glass icon">
-        <button>Search</button>
+        <span class="error-msg">
+          No results
+        </span>
+        <button type="submit" class="submit">Search</button>
       </form>
-      <div class="content">
-        devfinder
-      
-        Light
-        Dark
-      
-        Search GitHub username...
-        Search
-      
-        Joined
-      
-        Repos
-        Followers
-        Following
+      <div class="content-container">
+        <div class="left-content">
+          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="profile avatar" class="avatar-img">
+        </div>
+        <div class="right-content">
+          <div class="username-infos">
+            <h2 class="title username">
+              The Octocat
+            </h2>
+            <span class="joined">
+              Joined 25 Jan 2011
+            </span>
+          </div>
+          <a href="https://github.com/octocat" class="username-link" target="_blank">@octocat</a>
+          <p class="bio empty-p">
+            This profile has no bio
+          </p>
+          <div class="infos">
+            <div class="subinfos">
+              <span>Repos</span>
+              <span class="repos-nb">8</span>
+            </div>
+            <div class="subinfos">
+              <span>Followers</span>
+              <span class="followers-nb">7681</span>
+            </div>
+            <div class="subinfos">
+              <span>
+                Following
+              </span>
+              <span class="following-nb">
+                9
+              </span>
+            </div>
+          </div>
+          <footer>
+            <div class="left-footer col">
+              <div class="location">
+                <div class="img">
+                  <img src="assets/icon-location.svg" alt="location icon">
+                </div>
+                <span class="loc">
+                  San Francisco
+                </span>
+              </div>
+              <div class="website">
+                <div class="img">
+                  <img src="assets/icon-website.svg" alt="website icon">
+                </div>
+                <a href="https://github.blog" class="web" target="_blank">https://github.blog</a>
+              </div>
+            </div>
+            <div class="right-footer col">
+              <div class="twitter empty">
+                <div class="img">
+                  <img src="assets/icon-twitter.svg" alt="twitter icon">
+                </div>
+                <a href="#" class="twit" target="_blank">Not available</a>
+              </div>
+              <div class="github">
+                <div class="img">
+                  <img src="assets/icon-company.svg" alt="building icon">
+                </div>
+                <a href="#" class="git">@github</a>
+              </div>
+            </div>
+          </footer>
+
+        </div>
       </div>
     </main>
   </div>

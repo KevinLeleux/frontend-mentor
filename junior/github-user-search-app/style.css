@@ -9,16 +9,17 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 :root,
 :root.light {
     --bg-color: hsla(226, 100%, 98%, 1);
     --title-color: hsla(217, 21%, 21%, 1);
     --text-color: hsla(217, 35%, 45%, 1);
     --input-bg: hsla(0, 0%, 100%, 1);
-    --bg-button: hsla(212, 100%, 50%, 1);
-    --gray: hsla(217, 20%, 51%, 1);
-    --light-gray: hsla(227, 100%, 98%, 1);
-    --white: hsla(0, 0%, 100%, 1);
+    --blue: hsla(212, 100%, 50%, 1);
+    --infos-bg: hsla(227, 100%, 98%, 1);
+    --infos-text: hsla(217, 21%, 21%, 1);
+    --icon-bg: brightness(100%);
 }
 
 :root.dark {
@@ -26,9 +27,11 @@
     --text-color: hsla(0, 0%, 100%, 1);
     --title-color: hsla(0, 0%, 100%, 1);
     --input-bg: hsla(222, 41%, 20%, 1);
-    --bg-button: hsla(212, 100%, 50%, 1);
+    --blue: hsla(212, 100%, 50%, 1);
+    --infos-bg: hsla(220, 40%, 13%, 1);
+    --infos-text: hsla(0, 0%, 100%, 1);
+    --icon-bg: brightness(1000%);
 }
-
 
 html {
     font-size: 62.5%;
@@ -46,14 +49,14 @@ body {
     min-height: 100vh;
 }
 
-div {
+/* div {
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-
+ */
 .main-container {
     max-width: 73rem;
     width: 100%;
@@ -148,6 +151,10 @@ input:focus {
     outline: none;
 }
 
+input:hover {
+    cursor: pointer;
+}
+
 form img {
     position: absolute;
     top: 50%;
@@ -155,12 +162,28 @@ form img {
     left: 3.2rem;
 }
 
-form button {
+.error-msg {
+    position: absolute;
+    right: 14rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: hsla(0, 91%, 62%, 1);
+    display: none;
+}
+
+.error-msg.visible {
+    display: block;
+}
+
+.submit {
     cursor: pointer;
     position: absolute;
     height: 5rem;
     width: 10.6rem;
-    background-color: var(--bg-button);
+    background-color: var(--blue);
     border: none;
     border-radius: 1rem;
     right: 1rem;
@@ -170,9 +193,137 @@ form button {
     font-size: 1.6rem;
     line-height: 2.4rem;
     color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.content {
+.submit:hover {
+    background-color: hsla(212, 100%, 69%, 1);
+    text-decoration: none;
+}
+
+.content-container {
     background-color: var(--input-bg);
     border-radius: 1.5rem;
+    padding: 4.8rem;
+    display: flex;
+}
+
+.left-content img {
+    margin-right: 3.7rem;
+    width: 11.7rem;
+    height: 11.7rem;
+    border-radius: 50%;
+}
+
+.right-content {
+    width: 100%;
+}
+
+.username-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--blue)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.username-link {
+    display: inline-block;
+    margin: 0.2rem 0 2rem 0;
+}
+
+.right-content p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.infos {
+    background-color: var(--infos-bg);
+    padding: 1.5rem 8.3rem 1.7rem 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 3.2rem 0 3.7rem 0;
+}
+
+.subinfos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.01rem;
+}
+
+.subinfos span:nth-child(1) {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+}
+
+.subinfos span:nth-child(2) {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    text-transform: uppercase;
+    color: var(--infos-text)
+}
+
+footer {
+    display: flex;
+
+}
+
+footer a {
+    color: var(--text-color);
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+}
+
+.left-footer {
+    width: 57%;
+}
+
+.right-footer {
+    width: 43%;
+}
+
+.location,
+.website,
+.twitter,
+.github {
+    display: flex;
+    align-items: center;
+}
+
+.empty-p {
+    opacity: 0.75;
+}
+
+.empty {
+    opacity: 0.5;
+    filter: var(--icon-bg)
+}
+
+.empty a:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+.img {
+    display: flex;
+    width: 3.2rem;
 }
