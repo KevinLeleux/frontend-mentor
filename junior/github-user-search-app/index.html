@@ -13,46 +13,46 @@
 <body>
   <div class="main-container">
     <header>
-      <nav>
-        <h1 class="title">devfinder</h1>
-        <div class="toggle-container">
-          <div class="theme theme-light" value="light">
-            <span>Light</span>
-            <img src="assets/icon-sun.svg" alt="icon of sun">
-          </div>
-          <div class="theme theme-dark" value="dark">
-            <span>Dark</span>
-            <img src="assets/icon-moon.svg" alt="icon of moon">
-          </div>
+      <h1 class="title">devfinder</h1>
+      <div class="toggle-container">
+        <div class="theme theme-light" value="light">
+          <span>Light</span>
+          <img src="assets/icon-sun.svg" alt="icon of sun">
         </div>
-      </nav>
+        <div class="theme theme-dark" value="dark">
+          <span>Dark</span>
+          <img src="assets/icon-moon.svg" alt="icon of moon">
+        </div>
+      </div>
     </header>
     <main>
       <form action="" spellcheck="false">
-        <input type="text" placeholder="Search GitHub username..." class="input">
+        <input type="text" placeholder="Search GitHub username" class="input">
         <img src="assets/icon-search.svg" alt="magnifing glass icon">
         <span class="error-msg">
           No results
         </span>
         <button type="submit" class="submit">Search</button>
       </form>
-      <div class="content-container">
-        <div class="left-content">
+      <section class="content-container">
+        <div class="top-content">
           <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="profile avatar" class="avatar-img">
-        </div>
-        <div class="right-content">
           <div class="username-infos">
-            <h2 class="title username">
-              The Octocat
-            </h2>
+            <div class="user-infos">
+              <h2 class="username">
+                The Octocat
+              </h2>
+              <a href="https://github.com/octocat" class="username-link" target="_blank">@octocat</a>
+            </div>
             <span class="joined">
               Joined 25 Jan 2011
             </span>
           </div>
-          <a href="https://github.com/octocat" class="username-link" target="_blank">@octocat</a>
           <p class="bio empty-p">
             This profile has no bio
           </p>
+        </div>
+        <div class="bottom-content">
           <div class="infos">
             <div class="subinfos">
               <span>Repos</span>
@@ -71,7 +71,7 @@
               </span>
             </div>
           </div>
-          <footer>
+          <div class="footer">
             <div class="left-footer col">
               <div class="location">
                 <div class="img">
@@ -102,10 +102,10 @@
                 <a href="#" class="git">@github</a>
               </div>
             </div>
-          </footer>
+          </div>
 
         </div>
-      </div>
+      </section>
     </main>
   </div>
 

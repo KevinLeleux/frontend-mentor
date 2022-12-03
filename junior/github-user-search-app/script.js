@@ -17,6 +17,7 @@ if (darkScheme.matches) {
 darkScheme.addEventListener("change", function (e) {
     const colorScheme = e.matches ? "dark" : "light";
     setTheme(colorScheme);
+    window.localStorage.setItem("color", colorScheme);
 });
 
 const theme = document.querySelectorAll(".theme");
