@@ -814,11 +814,12 @@ a:hover {
 
     .error-msg {
         position: absolute;
-        right: 14rem;
-        top: 50%;
-        transform: translateY(-50%);
+        right: auto;
+        left: 4.5rem;
+        top: 100%;
+        transform: translateY(-110%);
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 2.2rem;
         color: hsla(0, 91%, 62%, 1);
         display: none;
