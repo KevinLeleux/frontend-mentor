@@ -1,21 +1,28 @@
 let temp = {};
 let quotes = {};
 let quotesArray = [];
+let wait = "";
 const dice = document.querySelector(".dice");
 const tempQuoteContainer = document.querySelector(".temp-quote-container");
 
 dice.addEventListener("click", function () {
-    tempQuoteContainer.classList.remove("translate");
-    tempQuoteContainer.setAttribute("style", "z-index: 1;");
+    if (!wait) {
+        wait = "animation";
+        tempQuoteContainer.classList.remove("translate");
+        tempQuoteContainer.setAttribute("style", "z-index: 1;");
 
-    createCard();
+        createCard();
 
-    setTimeout(() => {
-        tempQuoteContainer.classList.add("translate");
-    }, 0);
-    setTimeout(() => {
-        tempQuoteContainer.setAttribute("style", "z-index: -1;");
-    }, 500);
+        setTimeout(() => {
+            tempQuoteContainer.classList.add("translate");
+        }, 0);
+        setTimeout(() => {
+            tempQuoteContainer.setAttribute("style", "z-index: -1;");
+        }, 500);
+        setTimeout(() => {
+            wait = "";
+        }, 1000);
+    }
 });
 
 const initialize = async () => {
