@@ -50,14 +50,6 @@ body {
     padding: 2rem;
 }
 
-/* div {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
- */
 .main-container {
     max-width: 73rem;
     width: 100%;
@@ -86,6 +78,11 @@ header {
 .theme {
     display: flex;
     gap: 1.6rem;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .theme.hidden {
