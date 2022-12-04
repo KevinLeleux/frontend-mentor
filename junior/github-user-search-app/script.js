@@ -81,7 +81,7 @@ const website = document.querySelector(".web");
 const twitter = document.querySelector(".twit");
 const company = document.querySelector(".git");
 
-const createProfileCard = () => {
+const createProfileCard = (data) => {
     avatar.setAttribute("src", data.avatar_url);
     username.innerText = "";
     if (!data.name) {
