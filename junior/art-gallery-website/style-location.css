@@ -24,7 +24,8 @@ html {
 }
 
 body {
-    color: var(--almost-black);
+    background-color: var(--almost-black);
+    position: relative;
 }
 
 .h-xl {
@@ -73,72 +74,24 @@ body {
     line-height: 2.8rem;
 }
 
-body {
-    max-width: 144rem;
+.map {
+    height: 60rem;
     margin: 0 auto;
 }
 
-header {
-    position: relative;
-    display: flex;
+.leaflet-tile {
+    filter: grayscale(1) !important;
 }
 
-
-.black-content {
-    background-color: var(--almost-black);
-    max-width: 45rem;
-    min-width: 0;
-    width: 100%;
-}
-
-.white-content {
-    width: 100%;
-    min-width: 22.8rem;
-}
-
-h1 {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.illustration {
-    min-width: 54rem;
-    width: 100%;
-    height: auto;
-}
-
-
-.header-content {
-    max-width: 115rem;
-    width: 100%;
-    position: absolute;
-    top: 18.9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-}
-
-.header-left-content {
-    max-width: 51.4rem;
-    min-width: 33.9rem;
-    position: relative;
-}
-
-.header-right-content {
-    max-width: 35rem;
-}
-
-.header-content p {
-    color: hsla(0, 0%, 27%, 1);
-    margin-bottom: 6.4rem;
-}
 
 .link-container {
+    pointer-events: auto;
     display: flex;
+    max-width: 26.4rem;
+}
+
+.leaflet-left {
+    margin-left: 15.6rem;
 }
 
 .link {
@@ -150,28 +103,29 @@ h1 {
     line-height: 2.4rem;
     letter-spacing: 3.63636px;
     text-transform: uppercase;
-    background-color: var(--almost-black);
+    background-color: var(--gold);
     height: 7.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 26rem;
+    width: 26.4rem;
     padding-left: 3.2rem;
     position: relative;
+    pointer-events: auto;
 }
 
 .link-container:hover .link {
-    background-color: var(--gold);
-}
-
-.link-container:hover .link-img {
     background-color: var(--almost-black);
 }
 
-.link-img {
+.link-container:hover .link-img {
     background-color: var(--gold);
+}
+
+.link-img {
+    background-color: var(--almost-black);
     height: 7.2rem;
-    width: 5.6rem;
+    min-width: 5.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,66 +137,65 @@ h1 {
 }
 
 main {
-    max-width: 115rem;
-    margin: 18rem auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: minmax(31rem, 44.5rem) auto minmax(31rem, 44.5rem);
-    grid-template-rows: 40rem 31.3rem 37.7rem;
-    gap: 3rem;
-}
-
-.top-content {
-    max-height: 28rem;
-    max-width: 35rem;
-    height: 100%;
-    margin: auto 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.image1 {
-    grid-column: span 2;
-}
-
-.image2 {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-main img {
-    width: 100%;
-    height: 100%;
-    max-width: 63.5rem;
-    object-fit: cover;
-}
-
-.bottom-container {
     background-color: var(--almost-black);
     color: var(--white);
-    height: 100%;
-    grid-row: span 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 54.8rem;
+    height: 100%;
 }
 
-.bottom-content {
-    max-width: 35rem;
-    max-height: 24.8rem;
+.content-container {
+    max-width: 115rem;
+    width: 100%;
+    margin: 2rem 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-    margin: 1rem;
+    gap: 2rem;
 }
 
+.content-container h1 {
+    max-width: 35rem;
+}
 
+.content-container h2 {
+    color: var(--gold);
+    margin-bottom: 2.4rem;
+}
 
+.content-container p {
+    max-width: 54rem;
+}
+
+.right-content {
+    margin-left: auto;
+}
+
+.space {
+    margin-bottom: 3.2rem;
+}
+
+.location-footer {
+    background-color: var(--gold);
+}
+
+.location-footer .footer-container h3,
+.location-footer .footer-container p {
+    color: var(--almost-black);
+}
+
+.location-footer .footer-container img {
+    cursor: pointer;
+    filter: brightness(0);
+}
+
+.location-footer .footer-container img:hover {
+    filter: brightness(1000);
+}
 
 footer {
-    background-color: var(--almost-black);
-    color: var(--white);
+    background-color: var(--gold);
+    color: var(--almost-black);
     width: 100%;
     min-height: 24.4rem;
     display: flex;
@@ -272,6 +225,10 @@ footer {
     max-width: 43rem;
     color: var(--white);
     margin-right: 25.22%;
+    font-family: 'Outfit';
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
 }
 
 .socials {
