@@ -283,3 +283,8 @@ footer {
     height: 2rem;
     width: 2rem;
 }
+
+.socials img:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(48%) saturate(387%) hue-rotate(339deg) brightness(87%) contrast(90%);
+}
