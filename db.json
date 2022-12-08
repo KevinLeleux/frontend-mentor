@@ -209,6 +209,13 @@
             "image": "github.webp",
             "level": "2",
             "languages": ["html", "css", "js", "api"]
+        },
+        {
+            "name": "Art gallery website",
+            "url": "art-gallery-website/",
+            "image": "art-gallery.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
