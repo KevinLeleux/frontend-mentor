@@ -288,3 +288,286 @@ footer {
     cursor: pointer;
     filter: brightness(0) saturate(100%) invert(67%) sepia(48%) saturate(387%) hue-rotate(339deg) brightness(87%) contrast(90%);
 }
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        color: var(--almost-black);
+    }
+
+    .h-xl {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 7rem;
+        line-height: 6.5rem;
+        text-transform: uppercase;
+    }
+
+    .h-l {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 7rem;
+        line-height: 7rem;
+        text-transform: uppercase;
+    }
+
+    .h-m {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 5rem;
+        line-height: 4.5rem;
+        text-transform: uppercase;
+    }
+
+    .h-s {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+        text-transform: uppercase;
+    }
+
+    .b-m {
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .b-s {
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    body {
+        max-width: 144rem;
+        margin: 0 auto;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+    }
+
+
+    .black-content {
+        background-color: var(--almost-black);
+        max-width: 45rem;
+        min-width: 0;
+        width: 0;
+    }
+
+    .white-content {
+        width: 100%;
+        min-width: 0rem;
+    }
+
+    h1 {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .illustration {
+        min-width: 43.7rem;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .header-content {
+        max-width: 37.9rem;
+        width: 100%;
+        position: absolute;
+        top: 14.5rem;
+        left: auto;
+        right: 4rem;
+        transform: none;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4.8rem;
+    }
+
+    .header-left-content {
+        max-width: 37.9rem;
+        min-width: 37.9rem;
+        position: relative;
+    }
+
+    .header-right-content {
+        max-width: 37.9rem;
+    }
+
+    .header-content p {
+        color: hsla(0, 0%, 27%, 1);
+        margin-bottom: 4.8rem;
+    }
+
+    .link-container {
+        display: flex;
+    }
+
+    .link {
+        color: var(--white);
+        text-decoration: none;
+        font-family: 'Big Shoulders Display';
+        font-weight: 800;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: 3.63636px;
+        text-transform: uppercase;
+        background-color: var(--almost-black);
+        height: 7.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 26rem;
+        padding-left: 3.2rem;
+        position: relative;
+    }
+
+    .link-container:hover .link {
+        background-color: var(--gold);
+    }
+
+    .link-container:hover .link-img {
+        background-color: var(--almost-black);
+    }
+
+    .link-img {
+        background-color: var(--gold);
+        height: 7.2rem;
+        width: 5.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link img {
+        width: 0.8rem;
+        height: 2.4rem;
+    }
+
+    main {
+        max-width: 76.9rem;
+        margin: 12rem auto;
+        padding: 0 4rem;
+        display: grid;
+        grid-template-columns: minmax(20rem, 28rem) auto minmax(20rem, 28rem);
+        grid-template-rows: 40rem 31.3rem 37.7rem;
+        gap: 1.1rem;
+    }
+
+    .top-content {
+        max-height: 29.9rem;
+        max-width: 22.3rem;
+        height: 100%;
+        margin: auto auto auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .image1 {
+        grid-column: span 2;
+    }
+
+    .image2 {
+        grid-column: span 2;
+        grid-row: span 2;
+        max-height: 72rem;
+    }
+
+    .image3 {
+        max-height: 31.3rem;
+    }
+
+    main img {
+        width: 100%;
+        height: 100%;
+        max-width: 39.8rem;
+        object-fit: cover;
+    }
+
+    .bottom-container {
+        background-color: var(--almost-black);
+        color: var(--white);
+        height: 100%;
+        grid-row: span 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        max-height: 39.6rem;
+        max-width: 28rem;
+        width: 100%;
+    }
+
+    .bottom-content {
+        max-width: 22.3rem;
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        margin: auto 3rem;
+    }
+
+
+
+
+    footer {
+        background-color: var(--almost-black);
+        color: var(--white);
+        width: 100%;
+        min-height: 21.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-container {
+        max-width: 115rem;
+        width: 100%;
+        margin: 2rem 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-container h3 {
+        max-width: 11rem;
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        margin-right: 6.4rem;
+    }
+
+    .footer-container p {
+        max-width: 28.1rem;
+        color: var(--white);
+        margin-right: 13.3rem;
+        width: 100%;
+    }
+
+    .socials {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .socials img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .socials img:hover {
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(67%) sepia(48%) saturate(387%) hue-rotate(339deg) brightness(87%) contrast(90%);
+    }
+}

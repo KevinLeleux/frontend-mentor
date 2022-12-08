@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,10 @@
   <header>
     <div class="black-content">
     </div>
-    <img src="assets/desktop/image-hero@2x.jpg" alt="art gallery issustration" class="illustration">
+    <picture>
+      <source media="(max-width: 768px)" srcset="assets/tablet/image-hero@2x.jpg">
+      <img src="assets/desktop/image-hero@2x.jpg" alt="art gallery issustration" class="illustration">
+    </picture>
     <div class="white-content">
     </div>
     <div class="header-content">
@@ -48,9 +52,18 @@
         our artists. Dive into the details of their creative process.
       </p>
     </div>
-    <img src="assets/desktop/image-grid-1@2x.jpg" alt="" class="image1">
-    <img src="assets/desktop/image-grid-2@2x.jpg" alt="" class="image2">
-    <img src="assets/desktop/image-grid-3@2x.jpg" alt="" class="image3">
+    <picture class="image1">
+      <source media="(max-width: 768px)" srcset="assets/tablet/image-grid-1@2x.jpg">
+      <img src="assets/desktop/image-grid-1@2x.jpg" alt="">
+    </picture>
+    <picture class="image2">
+      <source media="(max-width: 768px)" srcset="assets/tablet/image-grid-2@2x.jpg">
+      <img src="assets/desktop/image-grid-2@2x.jpg" alt="" class="image2">
+    </picture>
+    <picture class="image3">
+      <source media="(max-width: 768px)" srcset="assets/tablet/image-grid-3@2x.jpg">
+      <img src="assets/desktop/image-grid-3@2x.jpg" alt="" class="image3">
+    </picture>
     <div class="bottom-container">
       <div class="bottom-content">
         <h2 class="h-m">
