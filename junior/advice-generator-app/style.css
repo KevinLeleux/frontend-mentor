@@ -150,6 +150,10 @@ picture {
     user-select: none;
 }
 
+.dice:hover {
+    box-shadow: 0px 0px 40px 0px hsla(150, 100%, 66%, 1);
+}
+
 .dice img {
     height: 2.4rem;
     width: 2.4rem;
