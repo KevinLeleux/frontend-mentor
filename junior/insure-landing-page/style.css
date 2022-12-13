@@ -303,7 +303,8 @@ footer {
     background-image: url(images/bg-pattern-footer-mobile.svg);
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 100%;
+    background-size: 100% 17.4rem;
+    position: relative;
 }
 
 .footer-top {
@@ -335,4 +336,40 @@ footer {
     width: 100%;
     background-color: hsla(0, 0%, 86%, 1);
     margin: 4rem 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    font-family: var(--font-Karla);
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-links-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.footer-links-menu span {
+    margin-bottom: 2rem;
+    color: hsla(271, 5%, 51%, 1);
+}
+
+.footer-links-menu a {
+    text-decoration: none;
+    color: hsla(256, 26%, 20%, 1);
+}
+
+.footer-links-menu a:hover {
+    text-decoration: underline;
 }
