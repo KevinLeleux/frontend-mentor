@@ -103,7 +103,7 @@ body {
     line-height: 2.4rem;
     letter-spacing: 3.63636px;
     text-transform: uppercase;
-    background-color: var(--gold);
+    background-color: var(--almost-black);
     height: 7.2rem;
     display: flex;
     justify-content: space-between;
@@ -115,15 +115,15 @@ body {
 }
 
 .link-container:hover .link {
-    background-color: var(--almost-black);
-}
-
-.link-container:hover .link-img {
     background-color: var(--gold);
 }
 
-.link-img {
+.link-container:hover .link-img {
     background-color: var(--almost-black);
+}
+
+.link-img {
+    background-color: var(--gold);
     height: 7.2rem;
     min-width: 5.6rem;
     display: flex;
@@ -326,7 +326,7 @@ footer {
         line-height: 2.4rem;
         letter-spacing: 3.63636px;
         text-transform: uppercase;
-        background-color: var(--gold);
+        background-color: var(--almost-black);
         height: 7.2rem;
         display: flex;
         justify-content: space-between;
@@ -338,15 +338,15 @@ footer {
     }
 
     .link-container:hover .link {
-        background-color: var(--almost-black);
-    }
-
-    .link-container:hover .link-img {
         background-color: var(--gold);
     }
 
-    .link-img {
+    .link-container:hover .link-img {
         background-color: var(--almost-black);
+    }
+
+    .link-img {
+        background-color: var(--gold);
         height: 7.2rem;
         min-width: 5.6rem;
         display: flex;
@@ -553,7 +553,7 @@ footer {
         line-height: 2.4rem;
         letter-spacing: 3.63636px;
         text-transform: uppercase;
-        background-color: var(--gold);
+        background-color: var(--almost-black);
         height: 7.2rem;
         display: flex;
         justify-content: space-between;
@@ -565,15 +565,15 @@ footer {
     }
 
     .link-container:hover .link {
-        background-color: var(--almost-black);
-    }
-
-    .link-container:hover .link-img {
         background-color: var(--gold);
     }
 
-    .link-img {
+    .link-container:hover .link-img {
         background-color: var(--almost-black);
+    }
+
+    .link-img {
+        background-color: var(--gold);
         height: 7.2rem;
         min-width: 5.6rem;
         display: flex;
