@@ -240,3 +240,458 @@ footer {
     height: 2rem;
     width: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        background-color: var(--almost-black);
+        position: relative;
+    }
+
+    .h-xl {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 9.6rem;
+        line-height: 8.8rem;
+        text-transform: uppercase;
+    }
+
+    .h-l {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 5.5rem;
+        line-height: 5rem;
+        text-transform: uppercase;
+    }
+
+    .h-m {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 6rem;
+        line-height: 6rem;
+        text-transform: uppercase;
+    }
+
+    .h-s {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        text-transform: uppercase;
+    }
+
+    .b-m {
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .b-s {
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .map {
+        height: 60rem;
+        margin: 0 auto;
+    }
+
+    .leaflet-tile {
+        filter: grayscale(1) !important;
+    }
+
+
+    .link-container {
+        pointer-events: auto;
+        display: flex;
+        max-width: 26.4rem;
+    }
+
+    .leaflet-left {
+        margin-left: 4rem;
+    }
+
+    .link {
+        color: var(--white);
+        text-decoration: none;
+        font-family: 'Big Shoulders Display';
+        font-weight: 800;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: 3.63636px;
+        text-transform: uppercase;
+        background-color: var(--gold);
+        height: 7.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 26.4rem;
+        padding-left: 3.2rem;
+        position: relative;
+        pointer-events: auto;
+    }
+
+    .link-container:hover .link {
+        background-color: var(--almost-black);
+    }
+
+    .link-container:hover .link-img {
+        background-color: var(--gold);
+    }
+
+    .link-img {
+        background-color: var(--almost-black);
+        height: 7.2rem;
+        min-width: 5.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link img {
+        width: 0.8rem;
+        height: 2.4rem;
+    }
+
+    main {
+        background-color: var(--almost-black);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 43.6rem;
+        height: 100%;
+    }
+
+    .content-container {
+        max-width: 115rem;
+        width: 100%;
+        margin: 2rem 4rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .content-container h1 {
+        max-width: 22.3rem;
+    }
+
+    .content-container h2 {
+        color: var(--gold);
+        margin-bottom: 2rem;
+    }
+
+    .content-container p {
+        max-width: 39.8rem;
+    }
+
+    .right-content {
+        margin-left: auto;
+    }
+
+    .space {
+        margin-bottom: 2rem;
+    }
+
+    .location-footer {
+        background-color: var(--gold);
+    }
+
+    .location-footer .footer-container h3,
+    .location-footer .footer-container p {
+        color: var(--almost-black);
+    }
+
+    .location-footer .footer-container img {
+        cursor: pointer;
+        filter: brightness(0);
+    }
+
+    .location-footer .footer-container img:hover {
+        filter: brightness(1000);
+    }
+
+    footer {
+        background-color: var(--gold);
+        color: var(--almost-black);
+        width: 100%;
+        min-height: 21.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-container {
+        max-width: 115rem;
+        width: 100%;
+        margin: 2rem 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-container h3 {
+        max-width: 11rem;
+        width: 100%;
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 2.2rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        margin-right: 12%;
+    }
+
+    .footer-container p {
+        max-width: 28.1rem;
+        color: var(--white);
+        margin-right: 25.22%;
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        margin-right: 4rem;
+    }
+
+    .socials {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .socials img {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 62.5%;
+        min-width: 32rem;
+    }
+
+    body {
+        background-color: var(--almost-black);
+        position: relative;
+    }
+
+    .h-xl {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 9.6rem;
+        line-height: 8.8rem;
+        text-transform: uppercase;
+    }
+
+    .h-l {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 5rem;
+        line-height: 4.5rem;
+        text-transform: uppercase;
+    }
+
+    .h-m {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 6rem;
+        line-height: 6rem;
+        text-transform: uppercase;
+    }
+
+    .h-s {
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        text-transform: uppercase;
+    }
+
+    .b-m {
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .b-s {
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    .map {
+        height: 60rem;
+        margin: 0 auto;
+    }
+
+    .leaflet-tile {
+        filter: grayscale(1) !important;
+    }
+
+
+    .link-container {
+        pointer-events: auto;
+        display: flex;
+        max-width: 26.4rem;
+    }
+
+    .leaflet-left {
+        margin-left: 0;
+    }
+
+    .link {
+        color: var(--white);
+        text-decoration: none;
+        font-family: 'Big Shoulders Display';
+        font-weight: 800;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: 3.63636px;
+        text-transform: uppercase;
+        background-color: var(--gold);
+        height: 7.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 26.4rem;
+        padding-left: 3.2rem;
+        position: relative;
+        pointer-events: auto;
+    }
+
+    .link-container:hover .link {
+        background-color: var(--almost-black);
+    }
+
+    .link-container:hover .link-img {
+        background-color: var(--gold);
+    }
+
+    .link-img {
+        background-color: var(--almost-black);
+        height: 7.2rem;
+        min-width: 5.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link img {
+        width: 0.8rem;
+        height: 2.4rem;
+    }
+
+    main {
+        background-color: var(--almost-black);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 43.6rem;
+        height: 100%;
+    }
+
+    .content-container {
+        max-width: 115rem;
+        width: 100%;
+        margin: 4.8rem 1.6rem 5.6rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    .content-container h1 {
+        max-width: 22.3rem;
+    }
+
+    .content-container h2 {
+        color: var(--gold);
+        margin-bottom: 2rem;
+    }
+
+    .content-container p {
+        max-width: 39.8rem;
+    }
+
+    .right-content {
+        margin-left: auto;
+    }
+
+    .space {
+        margin-bottom: 2rem;
+    }
+
+    .location-footer {
+        background-color: var(--gold);
+    }
+
+    .location-footer .footer-container h3,
+    .location-footer .footer-container p {
+        color: var(--almost-black);
+    }
+
+    .location-footer .footer-container img {
+        cursor: pointer;
+        filter: brightness(0);
+    }
+
+    .location-footer .footer-container img:hover {
+        filter: brightness(1000);
+    }
+
+    footer {
+        background-color: var(--gold);
+        color: var(--almost-black);
+        width: 100%;
+        min-height: 33.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-container {
+        max-width: 115rem;
+        width: 100%;
+        margin: 2rem 3.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3.8rem;
+    }
+
+    .footer-container h3 {
+        max-width: 11rem;
+        width: 100%;
+        font-family: 'Big Shoulders Display';
+        font-weight: 900;
+        font-size: 2.2rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        margin-right: 12%;
+    }
+
+    .footer-container p {
+        max-width: 28.1rem;
+        color: var(--white);
+        margin-right: 25.22%;
+        font-family: 'Outfit';
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    .socials {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .socials img {
+        height: 2rem;
+        width: 2rem;
+    }
+}
