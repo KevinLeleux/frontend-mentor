@@ -432,6 +432,7 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: flex-end;
         background-color: initial;
         width: 100%;
         left: 0;
