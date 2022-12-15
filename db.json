@@ -216,6 +216,13 @@
             "image": "art-gallery.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Insure landing page",
+            "url": "insure-landing-page/",
+            "image": "insure-landing-page.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
