@@ -549,13 +549,22 @@ footer {
         height: auto;
         margin-bottom: -15.5rem;
         margin-top: 10.5rem;
-        padding-right: 4rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 3rem;
+        position: relative;
+        max-width: 111rem;
+        margin: 0 4rem;
     }
 
     .hero-content {
         background-color: var(--Dark-Violet);
         text-align: left;
-        padding: 10.5rem 0rem 10.5rem 4rem;
+        padding: 10.5rem 0rem 10.5rem 0rem;
         color: hsla(0, 0%, 100%, 1);
         background-image: none;
         background-repeat: no-repeat;
