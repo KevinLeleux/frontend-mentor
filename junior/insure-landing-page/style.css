@@ -426,7 +426,7 @@ footer {
     }
 
     .links {
-        max-width: 45rem;
+        max-width: 47rem;
         width: 100%;
         position: relative;
         display: flex;
@@ -464,7 +464,7 @@ footer {
 
     .plans {
         cursor: pointer;
-        border: 1px solid hsla(271, 9%, 17%, 1);
+        border: 1.5px solid hsla(271, 9%, 17%, 1);
         color: hsla(271, 9%, 17%, 1);
         width: 100%;
         display: flex;
@@ -472,6 +472,7 @@ footer {
         justify-content: center;
         height: 4rem;
         min-width: 14.6rem;
+        margin-left: 0.7rem;
     }
 
     .plans:hover {
@@ -525,7 +526,7 @@ footer {
         background-repeat: no-repeat;
         content: '';
         width: 200%;
-        height: 200%;
+        height: 190%;
         right: 0;
         top: 0;
         z-index: 2;
@@ -581,9 +582,9 @@ footer {
         font-family: var(--font-DM);
         font-weight: 400;
         font-size: 7.2rem;
-        line-height: 6.2rem;
+        line-height: 6.4rem;
         letter-spacing: -1px;
-        margin-bottom: 1.6rem;
+        margin-bottom: 2.7rem;
     }
 
     .hero-content p {
@@ -591,7 +592,7 @@ footer {
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 2.6rem;
-        margin-bottom: 2.4rem;
+        margin-bottom: 3.2rem;
     }
 
     .hero-content a {
@@ -607,7 +608,7 @@ footer {
         color: hsla(0, 0%, 100%, 1);
         text-decoration: none;
         text-transform: uppercase;
-        border: 1px solid white;
+        border: 1.5px solid white;
         height: 4rem;
         max-width: 14.6rem;
         width: 100%;
