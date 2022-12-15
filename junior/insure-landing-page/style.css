@@ -470,6 +470,7 @@ footer {
         align-items: center;
         justify-content: center;
         height: 4rem;
+        min-width: 14.6rem;
     }
 
     .plans:hover {
