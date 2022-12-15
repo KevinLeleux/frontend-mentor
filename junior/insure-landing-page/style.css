@@ -411,6 +411,7 @@ footer {
         margin: 0 auto;
         padding: 0 4rem;
         max-width: 119rem;
+        height: 8rem;
     }
 
     .logo {
@@ -420,7 +421,7 @@ footer {
 
     li {
         list-style: none;
-        width: 100%;
+        width: auto;
         text-align: center;
     }
 
@@ -456,19 +457,24 @@ footer {
         text-transform: uppercase;
     }
 
+    .links a:hover {
+        color: hsla(271, 9%, 17%, 1);
+    }
+
     .plans {
         cursor: pointer;
-        border: 1px solid white;
+        border: 1px solid hsla(271, 9%, 17%, 1);
+        color: hsla(271, 9%, 17%, 1);
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 5.6rem;
+        height: 4rem;
     }
 
     .plans:hover {
-        background-color: var(--Very-Light-Gray);
-        color: var(--Dark-Violet);
+        background-color: hsla(271, 9%, 17%, 1);
+        color: white;
     }
 
 
