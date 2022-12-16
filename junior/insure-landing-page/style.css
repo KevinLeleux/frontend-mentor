@@ -375,7 +375,7 @@ footer {
     gap: 1.6rem;
 }
 
-.footer-links-menu span {
+.footer-links-menu li:nth-child(1) {
     margin-bottom: 2rem;
     color: hsla(271, 5%, 51%, 1);
 }
