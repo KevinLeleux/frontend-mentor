@@ -10,61 +10,83 @@
 </head>
 
 <body>
+  <div class="overlay hidden"></div>
   <nav>
     <img src="images/logo.svg" alt="logo" class="logo">
-    <div class="nav-links">
-      <div class="nav">
-        <div class="nav-container">
-          <span class="nav-dropdown">
-            Features
-            <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow">
-          </span>
-          <ul class="links features hidden">
-            <li>
-              <div class="img-list"><img src="images/icon-todo.svg" alt="icon for todo list"></div><a href="#">Todo
-                List</a>
-            </li>
-            <li>
-              <div class="img-list"><img src="images/icon-calendar.svg" alt="icon for calendar"></div><a
-                href="#">Calendars</a>
-            </li>
-            <li>
-              <div class="img-list"><img src="images/icon-reminders.svg" alt="icon for reminders"></div><a
-                href="#">Reminders</a>
-            </li>
-            <li>
-              <div class="img-list"><img src="images/icon-planning.svg" alt="icon for planning"></div><a
-                href="#">Planning</a>
-            </li>
-          </ul>
+    <div class="nav-menu">
+      <div class="nav-links">
+        <div class="nav left-nav">
+          <div class="nav-container">
+            <span class="nav-dropdown">
+              Features
+              <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow">
+            </span>
+            <ul class="links features hidden">
+              <li>
+                <div class="img-list"><img src="images/icon-todo.svg" alt="icon for todo list"></div><a href="#">Todo
+                  List</a>
+              </li>
+              <li>
+                <div class="img-list"><img src="images/icon-calendar.svg" alt="icon for calendar"></div><a
+                  href="#">Calendars</a>
+              </li>
+              <li>
+                <div class="img-list"><img src="images/icon-reminders.svg" alt="icon for reminders"></div><a
+                  href="#">Reminders</a>
+              </li>
+              <li>
+                <div class="img-list"><img src="images/icon-planning.svg" alt="icon for planning"></div><a
+                  href="#">Planning</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-container">
+            <span class="nav-dropdown">
+              Company
+              <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow">
+            </span>
+            <ul class="links company hidden">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <a href="#">Careers</a>
+          <a href="#">About</a>
         </div>
-        <div class="nav-container">
-          <span class="nav-dropdown">
-            Company
-            <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow">
-          </span>
-          <ul class="links company hidden">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
+        <div class="nav right-nav">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
         </div>
-        <a href="#">Careers</a>
-        <a href="#">About</a>
-      </div>
-      <div class="nav right-nav">
-        <a href="#">Login</a>
-        <a href="#">Register</a>
       </div>
     </div>
+    <img src="images/icon-menu.svg" alt="menu icon" class="menu-icon icon">
+    <img src="images/icon-close-menu.svg" alt="menu icon" class="menu-close-icon icon hidden">
+
   </nav>
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes,
-  create team rituals, and watch productivity soar.
-
-  Learn more
+  <main>
+    <div class="content">
+      <h1>
+        Make
+        remote work
+      </h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+        productivity soar.
+      </p>
+      <a href="#">Learn more</a>
+      <div class="partners">
+        <img src="images/client-databiz.svg" alt="databiz icon">
+        <img src="images/client-audiophile.svg" alt="audiophile icon">
+        <img src="images/client-meet.svg" alt="meet icon">
+        <img src="images/client-maker.svg" alt="maker icon">
+      </div>
+    </div>
+    <picture>
+      <source media="(max-width: 830px)" srcset="images/image-hero-mobile.png">
+      <img src="images/image-hero-desktop.png" alt="hero image">
+    </picture>
+  </main>
   <script src="script.js"></script>
 </body>
 

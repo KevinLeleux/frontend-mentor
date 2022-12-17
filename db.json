@@ -223,6 +223,13 @@
             "image": "insure-landing-page.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Intro section dropdown",
+            "url": "intro-section-with-dropdown-navigation/",
+            "image": "intro-section-dropdown.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
