@@ -13,7 +13,7 @@ html {
     font-size: 62.5%;
     font-family: 'Epilogue', sans-serif;
     min-width: 32rem;
-    background-color: #F2F2F2;
+    background-color: #FAFAFA;
 }
 
 body {
@@ -203,7 +203,7 @@ main a {
 
 main a:hover {
     border: 1.5px solid black;
-    background-color: #F2F2F2;
+    background-color: #FAFAFA;
     color: hsla(0, 0%, 8%, 1);
 }
 
