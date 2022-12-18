@@ -230,6 +230,13 @@
             "image": "intro-section-dropdown.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Tip calculator app",
+            "url": "tip-calculator-app/",
+            "image": "tip-calculator.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
