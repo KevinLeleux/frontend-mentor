@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: hsla(185, 41%, 84%, 1);
+}
+
+body {
+    font-size: 2.4rem;
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background-color: hsla(0, 0%, 100%, 1);
+    border-radius: 2.5rem;
+    max-width: 92rem;
+    width: 100%;
+    min-height: 48.1rem;
+    padding: 3.2rem 3.2rem 3.2rem 0;
+    display: flex;
+}
+
+.left-content {
+    padding: 1.6rem 4.8rem 4.8rem 4.8rem;
+    color: hsla(186, 14%, 43%, 1);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.bill,
+.people {
+    display: flex;
+    flex-direction: column;
+}
+
+.people {
+    position: relative;
+}
+
+label {
+    margin-bottom: 0.6rem;
+}
+
+input {
+    background-color: hsla(185, 38%, 97%, 1);
+    border: none;
+    border-radius: 0.5rem;
+    height: 4.8rem;
+    text-align: right;
+    color: hsla(183, 100%, 15%, 1);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    font-family: 'Space Mono', monospace;
+    padding: 0 1.7rem 0 1.7rem;
+    width: 100%;
+}
+
+.input-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.icon-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.7rem;
+}
+
+input::placeholder {
+    color: hsla(183, 100%, 15%, 1);
+}
+
+input:focus {
+    outline-color: hsla(172, 67%, 45%, 1);
+    outline-width: 2px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tip-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.4rem;
+    row-gap: 1.6rem;
+}
+
+.tip-btn button {
+    cursor: pointer;
+    min-height: 4.8rem;
+    background-color: hsla(183, 100%, 15%, 1);
+    border-radius: 0.5rem;
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: white;
+}
+
+.tip-btn button:hover {
+    background-color: hsla(173, 61%, 77%, 1);
+    color: hsla(183, 100%, 15%, 1);
+}
+
+.tip-btn button.active {
+    background-color: hsla(172, 67%, 45%, 1);
+    color: hsla(183, 100%, 15%, 1);
+}
+
+
+
+.right-content {
+    background-color: hsla(183, 100%, 15%, 1);
+    border-radius: 1.5rem;
+    padding: 4rem;
+    max-width: 41.3rem;
+    max-height: 41.7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-container {
+    min-width: 27rem;
+}
+
+.tip-amount,
+.tip-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-tip-amount,
+.left-tip-total {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-tip-amount span:nth-child(1),
+.left-tip-total span:nth-child(1) {
+    color: hsla(0, 0%, 100%, 1);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.left-tip-amount span:nth-child(2),
+.left-tip-total span:nth-child(2) {
+    color: hsla(183, 15%, 56%, 1);
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+}
+
+.right-tip-amount,
+.right-tip-total {
+    color: hsla(172, 67%, 45%, 1);
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 7.1rem;
+    letter-spacing: -1px;
+    min-height: 7.1rem;
+}
+
+.tip-amount {
+    margin-bottom: 4.1rem;
+}
+
+.reset-btn {
+    cursor: pointer;
+    background-color: hsla(172, 67%, 46%, 1);
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: hsla(183, 100%, 15%, 1);
+    height: 4.8rem;
+}
+
+.reset-btn:hover {
+    background-color: hsla(172, 61%, 77%, 1);
+}
+
+.error-msg {
+    position: absolute;
+    right: 0;
+    color: hsla(13, 70%, 61%, 1);
+}
+
+.hidden {
+    display: none;
+}
