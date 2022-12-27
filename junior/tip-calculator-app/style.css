@@ -211,6 +211,7 @@ input:hover {
     line-height: 3rem;
     color: hsla(183, 100%, 15%, 1);
     height: 4.8rem;
+    margin-top: 3.2rem;
 }
 
 .reset-btn:hover {
