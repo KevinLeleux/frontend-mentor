@@ -136,4 +136,5 @@ function checkReset() {
     }
 }
 
-checkReset();
+resetBtn.classList.add("hidden-btn");
+resetBtn.disabled = true;
