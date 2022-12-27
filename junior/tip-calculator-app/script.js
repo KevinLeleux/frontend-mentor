@@ -1,11 +1,11 @@
 const billInput = document.querySelector(".bill-input");
 const peopleInput = document.querySelector(".people-input");
 const customInput = document.querySelector(".custom-input");
-const btn = document.querySelectorAll(".btn");
 const tipAmount = document.querySelector(".tip-amount-span");
 const totalAmount = document.querySelector(".total-amount-span");
 const resetBtn = document.querySelector(".reset-btn");
 const errorMsg = document.querySelector(".error-msg");
+const btn = document.querySelectorAll(".btn");
 
 billInput.addEventListener("focus", function () {
     billInput.setAttribute("placeholder", "");
@@ -42,6 +42,7 @@ resetBtn.addEventListener("click", function () {
     for (let i = 0; i < btn.length; i++) {
         btn[i].classList.remove("active");
     }
+    checkReset();
 });
 
 customInput.addEventListener("click", function () {
@@ -63,11 +64,13 @@ for (let i = 0; i < btn.length; i++) {
 }
 
 customInput.addEventListener("input", function () {
+    checkReset();
     let data = customInput.value;
     calc(data);
 });
 
 billInput.addEventListener("input", function () {
+    checkReset();
     for (let i = 0; i < btn.length; i++) {
         if (btn[i].classList.contains("active")) {
             let data = btn[i].value;
@@ -82,18 +85,15 @@ billInput.addEventListener("input", function () {
 
 peopleInput.addEventListener("input", function () {
     for (let i = 0; i < btn.length; i++) {
-        if (btn[i].classList.contains("active")) {
-            let data = btn[i].value;
-            calc(data);
-        } else {
-            let data = customInput.value;
-            calc(data);
-        }
+        btn[i].classList.remove("active");
     }
+    let data = customInput.value;
+    calc(data);
 });
 
 function calc(data) {
     checkPeople();
+    checkReset();
     const tipTotal = (billInput.value * data) / 100;
     let tipPerPerson = tipTotal / parseInt(peopleInput.value);
     const totalPerPerson = billInput.value / peopleInput.value + tipPerPerson;
@@ -118,12 +118,20 @@ function calc(data) {
 }
 
 function checkPeople() {
-    reset();
+    errorMsg.classList.add("hidden");
     if (!peopleInput.value || peopleInput.value == "0") {
         errorMsg.classList.remove("hidden");
     }
 }
 
-function reset() {
-    errorMsg.classList.add("hidden");
+function checkReset() {
+    if (peopleInput.value == 0 || billInput.value == 0) {
+        resetBtn.classList.add("hidden-btn");
+        resetBtn.disabled = true;
+    } else {
+        resetBtn.classList.remove("hidden-btn");
+        resetBtn.disabled = false;
+    }
 }
+
+checkReset();
