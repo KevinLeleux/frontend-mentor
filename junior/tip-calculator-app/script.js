@@ -135,3 +135,5 @@ function checkReset() {
         resetBtn.disabled = false;
     }
 }
+
+checkReset();
