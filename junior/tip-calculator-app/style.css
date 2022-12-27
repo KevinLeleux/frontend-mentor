@@ -84,6 +84,10 @@ input {
     width: 100%;
 }
 
+.custom-input {
+    padding: 0 1.5rem 0 1.5rem;
+}
+
 .input-wrapper {
     display: inline-block;
     position: relative;
