@@ -22,8 +22,12 @@ body {
     gap: 8.768rem;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: 0 2rem;
+    height: 100%;
+    padding: 16.3rem 2rem;
+}
+
+header {
+    display: flex;
 }
 
 main {
