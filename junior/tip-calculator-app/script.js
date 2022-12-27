@@ -125,13 +125,13 @@ function checkPeople() {
 }
 
 function checkReset() {
-    if (peopleInput.value == 0 || billInput.value == 0) {
+    if (peopleInput.value == 0) {
         resetBtn.classList.add("hidden-btn");
+        peopleInput.classList.add("error");
         resetBtn.disabled = true;
     } else {
         resetBtn.classList.remove("hidden-btn");
+        peopleInput.classList.remove("error");
         resetBtn.disabled = false;
     }
 }
-
-checkReset();

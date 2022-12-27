@@ -235,6 +235,12 @@ input:hover {
     cursor: default;
 }
 
+.people-input.error {
+    outline-color: hsla(13, 70%, 61%, 1);
+    outline-width: 2px;
+    border: 2px solid hsla(13, 70%, 61%, 1);
+}
+
 .error-msg {
     position: absolute;
     right: 0;
