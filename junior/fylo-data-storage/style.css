@@ -59,12 +59,6 @@ main {
     width: 13.5rem;
 }
 
-.icons {
-    display: flex;
-    flex-direction: row;
-    gap: 1.6rem;
-}
-
 ul {
     list-style: none;
     display: flex;
@@ -262,12 +256,6 @@ p {
 
     .logo {
         width: 13.5rem;
-    }
-
-    .icons {
-        display: flex;
-        flex-direction: row;
-        gap: 1.6rem;
     }
 
     ul {
