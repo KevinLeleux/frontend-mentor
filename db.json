@@ -237,6 +237,13 @@
             "image": "tip-calculator.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Fylo data storage",
+            "url": "fylo-data-storage/",
+            "image": "fylo-data.webp",
+            "level": "2",
+            "languages": ["html", "css"]
         }
     ]
 }
