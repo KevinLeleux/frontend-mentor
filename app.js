@@ -10,6 +10,27 @@ const levelName = {
     5: ["guru", "red"],
 };
 
+const checkboxTest = document.getElementsByName("level");
+const levels = [];
+
+for (let i = 0; i < checkboxTest.length; i++) {
+    checkboxTest[i].addEventListener("change", function () {
+        const index = levels.indexOf(checkboxTest[i].id);
+        if (checkboxTest[i].checked) {
+            levels.push(checkboxTest[i].id);
+        }
+        if (!checkboxTest[i].checked) {
+            levels.splice(index, 1);
+        }
+        updateData(levels);
+    });
+    if (levels.length <= 0) {
+        console.log("no filter");
+    } else {
+        console.log("filter is" + levels);
+    }
+}
+
 function grabCheckboxValues() {
     const display = [];
     for (let i = 0; i < checkbox.length; i++) {
@@ -30,6 +51,23 @@ function grabCheckboxValues() {
     }
     return display;
 }
+
+const updateData = async (levels) => {
+    levels = levels.sort();
+    const card = document.querySelectorAll(".card");
+    for (let index = 0; index < card.length; index++) {
+        main.removeChild(card[index]);
+    }
+    const data = await (await fetch("db.json")).json();
+    const challenges = data.challenges;
+
+    for (let index = 0; index < challenges.length; index++) {
+        const data = challenges[index];
+        if (levels.includes(data.level)) {
+            createCard(data);
+        }
+    }
+};
 
 const getData = async () => {
     const data = await (await fetch("db.json")).json();
