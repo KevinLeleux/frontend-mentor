@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -11,6 +14,47 @@ body {
     font-weight: 700;
     margin: 0 auto;
     background-color: rgb(250, 250, 250);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 2rem 0 2rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.level-filter {
+    display: block;
+    cursor: pointer;
+}
+
+.level-filter input,
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sort-by {
+    display: flex;
+    gap: 1rem;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24;
+    color: rgb(181, 181, 181);
+    cursor: pointer;
+}
+
+.material-symbols-outlined.active {
+    color: black;
 }
 
 .link {

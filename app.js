@@ -1,6 +1,7 @@
 const github = "https://github.com/BeholderGit/frontend-mentor/tree/master/";
 const main = document.getElementById("main");
-const checkbox = document.getElementById("level");
+const checkbox = document.getElementsByName("level");
+const arrows = document.querySelectorAll(".arrow");
 
 const levelName = {
     1: ["newbie", "blue"],
@@ -10,61 +11,62 @@ const levelName = {
     5: ["guru", "red"],
 };
 
-const checkboxTest = document.getElementsByName("level");
 const levels = [];
+for (let index = 0; index < checkbox.length; index++) {
+    levels.push(checkbox[index].id);
+}
 
-for (let i = 0; i < checkboxTest.length; i++) {
-    checkboxTest[i].addEventListener("change", function () {
-        const index = levels.indexOf(checkboxTest[i].id);
-        if (checkboxTest[i].checked) {
-            levels.push(checkboxTest[i].id);
+let order = "asc";
+
+for (let index = 0; index < arrows.length; index++) {
+    arrows[index].addEventListener("click", function () {
+        for (let index = 0; index < arrows.length; index++) {
+            arrows[index].classList.remove("active");
         }
-        if (!checkboxTest[i].checked) {
+        arrows[index].classList.add("active");
+        if (arrows[index].innerText === "arrow_upward") {
+            order = "dsc";
+        } else {
+            order = "asc";
+        }
+        console.log(levels);
+        updateData(levels);
+    });
+}
+
+for (let i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener("change", function () {
+        const index = levels.indexOf(checkbox[i].id);
+        if (checkbox[i].checked) {
+            levels.push(checkbox[i].id);
+        }
+        if (!checkbox[i].checked) {
             levels.splice(index, 1);
         }
         updateData(levels);
     });
-    if (levels.length <= 0) {
-        console.log("no filter");
-    } else {
-        console.log("filter is" + levels);
-    }
-}
-
-function grabCheckboxValues() {
-    const display = [];
-    for (let i = 0; i < checkbox.length; i++) {
-        const check = checkbox[i];
-        check.addEventListener("change", function () {
-            const index = display.indexOf(check.id);
-            if (check.checked) {
-                display.push(check.id);
-                console.log(display.includes(check.id, 0));
-                return display;
-            }
-            if (!check.checked) {
-                display.splice(index, 1);
-                console.log(display);
-                return display;
-            }
-        });
-    }
-    return display;
 }
 
 const updateData = async (levels) => {
-    levels = levels.sort();
     const card = document.querySelectorAll(".card");
     for (let index = 0; index < card.length; index++) {
         main.removeChild(card[index]);
     }
     const data = await (await fetch("db.json")).json();
     const challenges = data.challenges;
-
-    for (let index = 0; index < challenges.length; index++) {
-        const data = challenges[index];
-        if (levels.includes(data.level)) {
-            createCard(data);
+    if (order === "asc") {
+        for (let index = 0; index < challenges.length; index++) {
+            const data = challenges[index];
+            if (levels.includes(data.level)) {
+                createCard(data);
+            }
+        }
+    } else {
+        for (let index = challenges.length - 1; index >= 0; index--) {
+            const data = challenges[index];
+            if (levels.includes(data.level)) {
+                createCard(data);
+            }
         }
     }
 };
