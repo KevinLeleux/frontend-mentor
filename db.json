@@ -244,6 +244,13 @@
             "image": "fylo-data.webp",
             "level": "2",
             "languages": ["html", "css"]
+        },
+        {
+            "name": "Crowdfunding product",
+            "url": "crowdfunding-product-page/",
+            "image": "crowdfunding.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
