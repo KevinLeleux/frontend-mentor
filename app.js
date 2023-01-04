@@ -3,19 +3,13 @@ const main = document.getElementById("main");
 const checkbox = document.getElementsByName("level");
 const arrows = document.querySelectorAll(".arrow");
 
-const levelName = {
-    1: ["newbie", "blue"],
-    2: ["junior", "green"],
-    3: ["intermediate", "orange"],
-    4: ["advanced", "dark-orange"],
-    5: ["guru", "red"],
-};
-
+/* Set default levels array */
 const levels = [];
 for (let index = 0; index < checkbox.length; index++) {
     levels.push(checkbox[index].id);
 }
 
+/* Check if order change */
 let order = "asc";
 
 for (let index = 0; index < arrows.length; index++) {
@@ -34,6 +28,7 @@ for (let index = 0; index < arrows.length; index++) {
     });
 }
 
+/* Check if level filter is activated */
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener("change", function () {
         const index = levels.indexOf(checkbox[i].id);
@@ -46,6 +41,15 @@ for (let i = 0; i < checkbox.length; i++) {
         updateData(levels);
     });
 }
+const getData = async () => {
+    const data = await (await fetch("db.json")).json();
+    const challenges = data.challenges;
+
+    for (let index = 0; index < challenges.length; index++) {
+        const data = challenges[index];
+        createCard(data);
+    }
+};
 
 const updateData = async (levels) => {
     const card = document.querySelectorAll(".card");
@@ -71,14 +75,13 @@ const updateData = async (levels) => {
     }
 };
 
-const getData = async () => {
-    const data = await (await fetch("db.json")).json();
-    const challenges = data.challenges;
-
-    for (let index = 0; index < challenges.length; index++) {
-        const data = challenges[index];
-        createCard(data);
-    }
+/* Set the color for CSS class */
+const levelName = {
+    1: ["newbie", "blue"],
+    2: ["junior", "green"],
+    3: ["intermediate", "orange"],
+    4: ["advanced", "dark-orange"],
+    5: ["guru", "red"],
 };
 
 const createCard = (data) => {
