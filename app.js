@@ -41,6 +41,7 @@ for (let i = 0; i < checkbox.length; i++) {
         updateData(levels);
     });
 }
+
 const getData = async () => {
     const data = await (await fetch("db.json")).json();
     const challenges = data.challenges;
