@@ -257,3 +257,10 @@ ul {
 .level-btn.red {
     border: 1px solid rgb(237, 44, 73);
 }
+
+@media screen and (max-width: 730px) {
+    .filters {
+        flex-direction: column;
+    }
+
+}
