@@ -125,11 +125,32 @@ main {
 .bookmark-btn {
     background-color: hsla(0, 0%, 98%, 1);
     color: hsla(0, 0%, 48%, 1);
-    width: 17.4rem;
+    min-width: 17.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 2.4rem;
+}
+
+.bookmark-btn span {
+    margin-left: 1.5rem;
+}
+
+.bookmark-btn.bookmarked {
+    background-color: hsla(176, 72%, 28%, 0.05);
+    color: hsla(176, 72%, 28%, 1);
+}
+
+.bookmark-btn.bookmarked .circle {
+    fill: hsla(176, 72%, 28%, 1);
+}
+
+.bookmark-btn.bookmarked .book {
+    fill: hsla(0, 0%, 100%, 1);
+}
+
+.bookmark-btn.bookmarked:hover .circle {
+    fill: hsla(176, 72%, 28%, 1);
 }
 
 .circle {
@@ -313,7 +334,6 @@ main {
     right: 0;
 }
 
-
 .modal {
     position: absolute;
     top: 50%;
@@ -348,6 +368,20 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: -11rem;
+    right: -1.6rem;
+    cursor: pointer;
+    fill: #000;
+    opacity: 0.4;
+}
+
+.close-modal:hover {
+    opacity: 1;
 }
 
 .modal-pledge {

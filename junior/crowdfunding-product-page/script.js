@@ -9,15 +9,38 @@ const rewardBtns = document.querySelectorAll(".reward");
 const continueBtn = document.querySelectorAll(".continue");
 const gotItBtn = document.querySelector(".got-it");
 const amount = document.querySelectorAll(".amount");
+const closeModal = document.querySelector(".close-modal");
 
 backBtn.addEventListener("click", function () {
     overlay.classList.remove("hidden");
     projectModal.classList.remove("hidden");
+    for (let j = 0; j < enterPledge.length; j++) {
+        enterPledge[j].classList.add("hidden");
+        pledges[j].classList.remove("active");
+    }
+    radio[0].setAttribute("checked", "checked");
+    enterPledge[0].classList.remove("hidden");
+    pledges[0].classList.add("active");
 });
 
 overlay.addEventListener("click", function () {
     overlay.classList.add("hidden");
     projectModal.classList.add("hidden");
+    for (let j = 0; j < enterPledge.length; j++) {
+        enterPledge[j].classList.add("hidden");
+        pledges[j].classList.remove("active");
+        radio[j].removeAttribute("checked", "checked");
+    }
+});
+
+closeModal.addEventListener("click", function () {
+    overlay.classList.add("hidden");
+    projectModal.classList.add("hidden");
+    for (let j = 0; j < enterPledge.length; j++) {
+        enterPledge[j].classList.add("hidden");
+        pledges[j].classList.remove("active");
+        radio[j].removeAttribute("checked", "checked");
+    }
 });
 
 for (let index = 0; index < radio.length; index++) {
@@ -68,6 +91,7 @@ for (let index = 0; index < continueBtn.length; index++) {
         }
     });
 }
+
 gotItBtn.addEventListener("click", function () {
     overlay.classList.add("hidden");
     thanksModal.classList.add("hidden");
@@ -86,3 +110,24 @@ for (let index = 0; index < amount.length; index++) {
         }
     });
 }
+
+/* Local storage */
+
+const bookmarkBtn = document.querySelector(".bookmark-btn");
+const span = document.querySelector(".bookmark-btn span");
+if (window.localStorage.getItem("bookmarked")) {
+    bookmarkBtn.classList.add("bookmarked");
+    span.innerText = "Bookmarked";
+}
+
+bookmarkBtn.addEventListener("click", function () {
+    if (window.localStorage.getItem("bookmarked")) {
+        window.localStorage.removeItem("bookmarked");
+        bookmarkBtn.classList.remove("bookmarked");
+        span.innerText = "Bookmark";
+    } else {
+        window.localStorage.setItem("bookmarked", true);
+        bookmarkBtn.classList.add("bookmarked");
+        span.innerText = "Bookmarked";
+    }
+});
