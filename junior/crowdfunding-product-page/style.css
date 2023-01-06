@@ -9,6 +9,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+    --color: hsla(0, 0%, 0%, 0.25);
+}
+
 html {
     font-family: 'Commissioner', sans-serif;
     font-size: 62.5%;
@@ -251,8 +255,6 @@ main {
     margin: 2.4rem 0;
 }
 
-
-
 .pledge-header {
     display: flex;
     justify-content: space-between;
@@ -356,6 +358,7 @@ main {
 }
 
 .modal-pledge.active {
+    border: none;
     box-shadow: 0 0 0 2px hsla(176, 50%, 47%, 1);
 }
 
@@ -490,6 +493,11 @@ input[type="radio"]:hover+label {
     max-width: 10rem;
 }
 
+.amount.error {
+    border: 1px solid hsla(13, 70%, 61%, 1);
+    color: hsla(13, 70%, 61%, 1);
+}
+
 .continue {
     border-radius: 3.35rem;
     border: none;
@@ -532,14 +540,14 @@ input:focus::placeholder {
 
 .right-side::before {
     position: absolute;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     left: 2.4rem;
     content: "$";
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 17.rem;
-    color: hsla(0, 0%, 0%, 0.25)
+    color: var(--color);
 }
 
 .enter-pledge.hidden {
