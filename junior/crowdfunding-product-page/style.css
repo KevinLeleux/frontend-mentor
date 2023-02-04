@@ -1175,7 +1175,9 @@ input:focus::placeholder {
         margin-left: 0;
     }
 
-
+    .mt {
+        margin-top: 0.9rem;
+    }
 
     input[type="radio"] {
         background-color: white;
