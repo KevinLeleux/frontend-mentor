@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 3.2rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+}
+
+main {
+display: flex;
+min-height: 100vh;
+background-image: url(images/pattern-curve.svg);
+background-repeat: no-repeat;
+background-position: bottom left;
+}
+
+.slides {
+    min-height: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.slide2 {
+    display: none;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    max-width: 63.5rem;
+}
+
+.people p {
+    color: #202047;
+    font-weight: 300;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    z-index: 1;
+    position: relative;
+}
+
+.people p::before {
+    content: url(images/pattern-quotes.svg);
+    position: absolute;
+    z-index: -1;
+    top: -6.4rem;
+    left: 9.5rem;
+}
+
+.who {
+    display: flex;
+    gap: 1rem;
+}
+
+.name {
+    color: #202047;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.8rem;
+}
+
+.job {
+    color: #B9B9CE;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3.8rem;
+}
+
+.portrait {
+    margin-left: -6.5rem;
+    max-width: 54rem;
+    max-height: 54rem;
+    position: relative;
+    box-shadow: 0px 40px 50px -30px #2424717E;
+}
+
+.portrait::before {
+    content: url(images/pattern-bg.svg);
+    position: absolute;
+    z-index: -1;
+    top: -6.3rem;
+    right: -9.3rem;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 11.2rem;
+    padding: 2rem 2.4rem;
+    background-color: #FFFFFF;
+    border-radius: 2.8rem;
+    position: absolute;
+    bottom: -2.8rem;
+    left: 6.2rem;
+}
+
+.arrows img {
+    cursor: pointer;
+}
