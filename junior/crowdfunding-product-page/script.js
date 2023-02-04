@@ -13,8 +13,37 @@ const closeModal = document.querySelector(".close-modal");
 const leftSpan = document.querySelectorAll(".pledge-left");
 const pledgeInactive = document.querySelectorAll(".pledge");
 const number = document.querySelectorAll(".number");
+const hamburger = document.querySelector(".hamburger");
+const hamburgerClose = document.querySelector(".hamburger-close");
+const navbar = document.querySelector(".nav-bar");
+const aHref = document.querySelectorAll(".nav-bar a");
 
 let left = [101, 64, 0];
+
+/* Hamburger Menu management */
+hamburger.addEventListener("click", function () {
+    overlay.classList.remove("hidden");
+    navbar.classList.add("visible");
+    hamburger.classList.add("hidden");
+    hamburgerClose.classList.add("visible");
+});
+
+hamburgerClose.addEventListener("click", function () {
+    overlay.classList.add("hidden");
+    navbar.classList.remove("visible");
+    hamburger.classList.remove("hidden");
+    hamburgerClose.classList.remove("visible");
+});
+
+for (let index = 0; index < aHref.length; index++) {
+    aHref[index].addEventListener("click", function () {
+        overlay.classList.add("hidden");
+        navbar.classList.remove("visible");
+        hamburger.classList.remove("hidden");
+        hamburgerClose.classList.remove("visible");
+    });
+}
+
 
 backBtn.addEventListener("click", function () {
     overlay.classList.remove("hidden");
@@ -33,6 +62,9 @@ overlay.addEventListener("click", function () {
     overlay.classList.add("hidden");
     projectModal.classList.add("hidden");
     thanksModal.classList.add("hidden");
+    navbar.classList.remove("visible");
+    hamburger.classList.remove("hidden");
+    hamburgerClose.classList.remove("visible");
     for (let j = 0; j < enterPledge.length; j++) {
         enterPledge[j].classList.add("hidden");
         pledges[j].classList.remove("active");

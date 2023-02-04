@@ -32,11 +32,24 @@ header {
     min-height: 40rem;
 }
 
+.icons {
+    width: 1.6rem;
+    height: 1.5rem;
+    display: none;
+    cursor: pointer;
+    z-index: 8;
+}
+
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 4.8rem 16.5rem 0 16.5rem;
+    align-items: center;
+    padding: 4.8rem 2rem 0 2rem;
+    max-width: 110.8rem;
+    width: 100%;
+    margin: 0 auto;
+
 }
 
 ul {
@@ -55,12 +68,13 @@ nav a {
 
 main {
     margin: 0 auto;
-    max-width: 73rem;
+    max-width: 77rem;
     margin-top: -9.2rem;
     margin-bottom: 12.4rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    padding: 0 2rem;
 }
 
 .project-header {
@@ -292,11 +306,17 @@ main {
     line-height: 3.9rem;
 }
 
+.left {
+    display: flex;
+    gap: 0.8rem;
+}
+
 .left span:nth-child(2) {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.8rem;
     color: hsla(0, 0%, 48%, 1);
+    margin: auto 0;
 }
 
 .reward {
@@ -409,7 +429,12 @@ main {
 
 .modal-radio {
     display: flex;
+}
 
+.modal-radio>div {
+    display: flex;
+    margin-bottom: 1.7rem;
+    width: 100%;
 }
 
 .modal-pledge p {
@@ -425,6 +450,7 @@ main {
 input[type="radio"] {
     background-color: white;
     border: 1px solid hsla(0, 0%, 0%, 0.15);
+    min-width: 2.4rem;
     max-width: 2.4rem;
     width: 100%;
     height: 2.4rem;
@@ -624,6 +650,7 @@ input:focus::placeholder {
     font-size: 1.6rem;
     line-height: 3rem;
     margin: 1.6rem 0;
+    color: hsla(0, 0%, 48%, 1);
 }
 
 .got-it {
@@ -635,4 +662,755 @@ input:focus::placeholder {
 
 .got-it:hover {
     background-color: hsla(176, 72%, 28%, 1);
+}
+
+@media screen and (max-width: 535px) {
+    html {
+        font-family: 'Commissioner', sans-serif;
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 1.6rem;
+        background-color: hsla(0, 0%, 98%, 1);
+        position: relative;
+        min-width: 32.5rem;
+    }
+
+    header {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(images/image-hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 30rem;
+        height: 100%;
+    }
+
+    .nav-bar {
+        display: none;
+        background-color: hsla(0, 0%, 100%, 1);
+        max-width: 32.7rem;
+        width: 100%;
+        min-height: 21.2rem;
+        border-radius: 0.8rem;
+        border: 1px solid hsla(0, 0%, 0%, 0.05);
+        position: absolute;
+        top: 8.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .logo {
+        z-index: 8;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .icons:hover {
+        opacity: 0.5;
+    }
+
+    .hamburger.hidden {
+        display: none;
+    }
+
+    .hamburger-close.visible {
+        display: block;
+    }
+
+    .nav-bar.visible {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 3.2rem 2.4rem 0 2.4rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    ul li:nth-child(2) {
+        border-top: 1px solid hsla(0, 0%, 18%, 0.1);
+        border-bottom: 1px solid hsla(0, 0%, 18%, 0.1);
+    }
+
+    nav a {
+        text-decoration: none;
+        color: hsla(0, 0%, 0%, 1);
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        padding: 2.4rem;
+        display: inline-block;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 36.7rem;
+        margin-top: -5.6rem;
+        margin-bottom: 12.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .project-header {
+        position: relative;
+        background-color: hsla(0, 0%, 100%, 1);
+        border-radius: 0.8rem;
+        border: 1px solid rgba(0, 0, 0, 0.0497193);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5.2rem 2.4rem 4rem 2.4rem;
+    }
+
+    .project-header-logo {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+    }
+
+    .project-header h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.6rem;
+        text-align: center;
+        max-width: 20rem;
+    }
+
+    .project-header p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: hsla(0, 0%, 48%, 1);
+        margin-bottom: 2.4rem;
+        text-align: center;
+    }
+
+    .project-header-btns {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.9rem;
+        width: 100%;
+    }
+
+    .btn {
+        border-radius: 3.35rem;
+        border: none;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        height: 5.6rem;
+        cursor: pointer;
+    }
+
+    .back-btn {
+        background-color: hsla(176, 50%, 47%, 1);
+        color: white;
+        width: 21.4rem;
+    }
+
+    .back-btn:hover {
+        background-color: hsla(176, 72%, 28%, 1);
+    }
+
+    .bookmark-btn {
+        background-color: hsla(0, 0%, 98%, 1);
+        color: hsla(0, 0%, 48%, 1);
+        min-width: 5.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 0;
+    }
+
+    .bookmark-btn span {
+        margin-left: 1.5rem;
+        display: none;
+    }
+
+    .bookmark-btn.bookmarked {
+        background-color: hsla(176, 72%, 28%, 0.05);
+        color: hsla(176, 72%, 28%, 1);
+    }
+
+    .bookmark-btn.bookmarked .circle {
+        fill: hsla(176, 72%, 28%, 1);
+    }
+
+    .bookmark-btn.bookmarked .book {
+        fill: hsla(0, 0%, 100%, 1);
+    }
+
+    .bookmark-btn.bookmarked:hover .circle {
+        fill: hsla(176, 72%, 28%, 1);
+    }
+
+    .circle {
+        fill: #2F2F2F;
+    }
+
+    .bookmark-btn:hover .circle {
+        fill: hsla(0, 0%, 44%, 1);
+    }
+
+    .book {
+        fill: #B1B1B1;
+    }
+
+    .backers {
+        padding: 3.3rem 2.5rem;
+        background-color: hsla(0, 0%, 100%, 1);
+        border: 1px solid hsla(0, 0%, 0%, 0.05);
+        border-radius: 0.8rem;
+    }
+
+    .backers-results {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3.7rem;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0rem;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .backed {
+        max-width: 17.9rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .total-backers {
+        border-left: none;
+        border-right: none;
+        padding-left: 0;
+        max-width: 22.7rem;
+        width: 100%;
+        position: relative;
+        align-items: center;
+        margin: 5rem 0;
+    }
+
+    .total-backers::before {
+        background-color: hsla(0, 0%, 0%, 0.15);
+        top: -2.4rem;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0);
+        width: 8rem;
+    }
+
+    .total-backers::after {
+        background-color: hsla(0, 0%, 0%, 0.15);
+        bottom: -2.4rem;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0);
+        width: 8rem;
+    }
+
+    .days-left {
+        padding-left: 0;
+    }
+
+    .backers div span:nth-child(1) {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+    }
+
+    .backers div span:nth-child(2) {
+        color: hsla(0, 0%, 48%, 1);
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 1.2rem;
+        background-color: hsla(0, 0%, 18%, 0.05);
+        border-radius: 3.35rem;
+    }
+
+    .progress-green-bar {
+        background-color: hsla(176, 50%, 47%, 1);
+        height: 1.2rem;
+        border-radius: 3.35rem;
+    }
+
+    .about {
+        background-color: hsla(0, 0%, 100%, 1);
+        border-radius: 0.8rem;
+        border: 1px solid rgba(0, 0, 0, 0.0497193);
+        padding: 4rem 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .about h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .about p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: hsla(0, 0%, 48%, 1);
+    }
+
+    .pledges {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .pledges>div {
+        border-radius: 0.8rem;
+        border: 1px solid rgba(0, 0, 0, 0.0497193);
+    }
+
+    .pledge {
+        padding: 2.4rem;
+    }
+
+    .pledge-header h3 {
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+
+    .pledge-header span {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: hsla(176, 50%, 47%, 1);
+    }
+
+    .pledge p {
+        margin: 2.4rem 0;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+    .pledge-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        justify-content: space-between;
+    }
+
+    .pledge-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        justify-content: space-between;
+    }
+
+    .pledge-left {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+    }
+
+    .left span:nth-child(2) {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: hsla(0, 0%, 48%, 1);
+    }
+
+    .reward {
+        border-radius: 3.35rem;
+        border: none;
+        color: white;
+        background-color: hsla(176, 50%, 47%, 1);
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        max-width: 15.7rem;
+        min-height: 4.8rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .reward:hover {
+        background-color: hsla(176, 72%, 28%, 1);
+    }
+
+    .pledge.inactive {
+        opacity: 0.5;
+    }
+
+    .reward.out {
+        background-color: hsla(0, 0%, 18%, 0.5);
+        cursor: default;
+    }
+
+    .overlay {
+        background-color: hsla(0, 0%, 0%, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        background-color: white;
+        border-radius: 0.8rem;
+    }
+
+    .back-this-project {
+        padding: 3.2rem 2.4rem;
+        max-width: 32.7rem;
+    }
+
+    .back-this-project h4 {
+        margin-bottom: 2.4rem;
+    }
+
+    .back-this-project p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: hsla(0, 0%, 48%, 1);
+    }
+
+    .mgb {
+        margin-bottom: 2.4rem;
+    }
+
+    .pledge-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        position: relative;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: -10rem;
+        right: 0;
+        cursor: pointer;
+        fill: #000;
+        opacity: 0.4;
+    }
+
+    .close-modal:hover {
+        opacity: 1;
+    }
+
+    .modal-pledge {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.0497193);
+        border-radius: 0.8rem;
+    }
+
+    .modal-pledge.active {
+        border: none;
+        box-shadow: 0 0 0 2px hsla(176, 50%, 47%, 1);
+    }
+
+    .modal-pledge.out {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .modal-header {
+        display: flex;
+        flex-direction: column;
+        padding: 3.6rem 2.4rem 7rem 2.4rem;
+        position: relative;
+    }
+
+    .modal-radio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-radio>div {
+        display: flex;
+        margin-bottom: 3.5rem;
+    }
+
+    .modal-pledge p {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        color: hsla(0, 0%, 48%, 1);
+        margin-left: 0;
+    }
+
+
+
+    input[type="radio"] {
+        background-color: white;
+        border: 1px solid hsla(0, 0%, 0%, 0.15);
+        max-width: 2.4rem;
+        width: 100%;
+        height: 2.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        -webkit-appearance: none;
+        display: inline-block;
+        margin-top: 0.9rem;
+    }
+
+    input[type="radio"]+label {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-left: 1.6rem;
+        cursor: pointer;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    input[type="radio"]:after {
+        border-radius: 50%;
+        content: '';
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        display: block;
+        height: 1.2rem;
+        position: relative;
+        width: 1.2rem;
+    }
+
+    input[type="radio"]:hover {
+        border: 1px solid hsla(176, 50%, 47%, 1);
+    }
+
+    input[type="radio"]:checked:after {
+        background-color: hsla(176, 50%, 47%, 1);
+    }
+
+    input[type="radio"]:hover {
+        border: 1px solid hsla(176, 50%, 47%, 1);
+    }
+
+    input[type="radio"]:hover+label {
+        color: hsla(176, 50%, 47%, 1);
+    }
+
+
+
+    .modal-header-right {
+        position: absolute;
+        top: 6rem;
+        margin-left: 4rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .title {
+        color: hsla(176, 50%, 47%, 1);
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .number {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-right: 0.8rem;
+    }
+
+    .modal-header-right div span:nth-child(2) {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: hsla(0, 0%, 48%, 1);
+    }
+
+    .modal-header-right>div {
+        position: absolute;
+        top: 20rem;
+        left: -4rem;
+    }
+
+    .enter-pledge {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top: 1px solid hsla(0, 0%, 0%, 0.05);
+        padding: 2.4rem 2.8rem;
+    }
+
+    .enter-pledge span {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        color: hsla(0, 0%, 48%, 1);
+    }
+
+    .left-side {
+        text-align: center;
+        margin-bottom: 1.6rem;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+
+    }
+
+    .right-side {
+        display: flex;
+        gap: 1.6rem;
+    }
+
+    .amount {
+        border: 1px solid hsla(0, 0%, 0%, 0.15);
+        border-radius: 3.35rem;
+        max-width: 10rem;
+    }
+
+    .amount.error {
+        border: 1px solid hsla(13, 70%, 61%, 1);
+        color: hsla(13, 70%, 61%, 1);
+    }
+
+    .continue {
+        border-radius: 3.35rem;
+        border: none;
+        color: white;
+        background-color: hsla(176, 50%, 47%, 1);
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        min-width: 10.7rem;
+        width: 100%;
+        height: 4.8rem;
+        cursor: pointer;
+    }
+
+    .continue:hover {
+        background-color: hsla(176, 72%, 28%, 1);
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+        border: 1px solid hsla(176, 50%, 47%, 1);
+    }
+
+    input[type="text"] {
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding-left: 3.8rem;
+        padding-right: 1rem;
+        caret-color: hsla(176, 50%, 47%, 1);
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    .right-side {
+        position: relative;
+    }
+
+    .right-side::before {
+        position: absolute;
+        top: 47%;
+        transform: translateY(-50%);
+        left: 2.4rem;
+        content: "$";
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 17.rem;
+        color: var(--color);
+    }
+
+    .enter-pledge.hidden {
+        display: none;
+    }
+
+    .modal.hidden {
+        display: none;
+    }
+
+    .overlay.hidden {
+        display: none;
+    }
+
+    .thanks-modal {
+        max-width: 32.7rem;
+        min-height: 38.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3.2rem 2.4rem;
+    }
+
+    .thanks-modal img {
+        height: 6.4rem;
+        width: 6.4rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .thanks-modal h5 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .thanks-modal p {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        margin: 2.4rem 0;
+    }
+
+    .got-it {
+        margin-top: 0.7rem;
+        width: 10.7rem;
+        background-color: hsla(176, 50%, 47%, 1);
+        color: white;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+
+    .got-it:hover {
+        background-color: hsla(176, 72%, 28%, 1);
+    }
 }
