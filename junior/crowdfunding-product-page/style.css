@@ -70,6 +70,10 @@ nav a {
     line-height: 1.6rem;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     margin: 0 auto;
     max-width: 77rem;
@@ -755,6 +759,10 @@ input:focus::placeholder {
         line-height: 2.2rem;
         padding: 2.4rem;
         display: inline-block;
+    }
+
+    nav a:hover {
+        text-decoration: none;
     }
 
     main {
