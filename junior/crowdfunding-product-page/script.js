@@ -26,6 +26,7 @@ hamburger.addEventListener("click", function () {
     navbar.classList.add("visible");
     hamburger.classList.add("hidden");
     hamburgerClose.classList.add("visible");
+    document.querySelector("body").classList.add("scroll-lock");
 });
 
 hamburgerClose.addEventListener("click", function () {
@@ -33,6 +34,7 @@ hamburgerClose.addEventListener("click", function () {
     navbar.classList.remove("visible");
     hamburger.classList.remove("hidden");
     hamburgerClose.classList.remove("visible");
+    document.querySelector("body").classList.remove("scroll-lock");
 });
 
 for (let index = 0; index < aHref.length; index++) {
@@ -41,9 +43,9 @@ for (let index = 0; index < aHref.length; index++) {
         navbar.classList.remove("visible");
         hamburger.classList.remove("hidden");
         hamburgerClose.classList.remove("visible");
+        document.querySelector("body").classList.remove("scroll-lock");
     });
 }
-
 
 backBtn.addEventListener("click", function () {
     overlay.classList.remove("hidden");
@@ -52,8 +54,8 @@ backBtn.addEventListener("click", function () {
         enterPledge[j].classList.add("hidden");
         pledges[j].classList.remove("active");
     }
-    console.log(radio[0]);
     radio[0].click();
+    pledges[0].scrollIntoView({ block: "center", behavior: "smooth" });
     enterPledge[0].classList.remove("hidden");
     pledges[0].classList.add("active");
 });
@@ -65,6 +67,7 @@ overlay.addEventListener("click", function () {
     navbar.classList.remove("visible");
     hamburger.classList.remove("hidden");
     hamburgerClose.classList.remove("visible");
+    document.querySelector("body").classList.remove("scroll-lock");
     for (let j = 0; j < enterPledge.length; j++) {
         enterPledge[j].classList.add("hidden");
         pledges[j].classList.remove("active");
@@ -103,6 +106,10 @@ for (let i = 0; i < rewardBtns.length; i++) {
             pledges[rewardBtns[i].value].classList.add("active");
             overlay.classList.remove("hidden");
             projectModal.classList.remove("hidden");
+            pledges[rewardBtns[i].value].scrollIntoView({
+                block: "center",
+                behavior: "smooth",
+            });
         }
     });
 }
