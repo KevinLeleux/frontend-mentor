@@ -136,6 +136,11 @@ for (let index = 0; index < continueBtn.length; index++) {
             price();
             backers();
             width();
+            thanksModal.scrollIntoView({
+                block: "center",
+                behavior: "smooth",
+            });
+
             if (continueId > 0) {
                 let leftArray = JSON.parse(window.localStorage.getItem("left"));
                 leftArray[continueId - 1] = leftArray[continueId - 1] - 1;
