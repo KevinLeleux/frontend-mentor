@@ -14,7 +14,7 @@ const leftSpan = document.querySelectorAll(".pledge-left");
 const pledgeInactive = document.querySelectorAll(".pledge");
 const number = document.querySelectorAll(".number");
 
-let left = [1, 4, 0];
+let left = [101, 64, 0];
 
 backBtn.addEventListener("click", function () {
     overlay.classList.remove("hidden");
@@ -24,7 +24,7 @@ backBtn.addEventListener("click", function () {
         pledges[j].classList.remove("active");
     }
     console.log(radio[0]);
-    radio[0].setAttribute("checked", "checked");
+    radio[0].click();
     enterPledge[0].classList.remove("hidden");
     pledges[0].classList.add("active");
 });
@@ -36,7 +36,6 @@ overlay.addEventListener("click", function () {
     for (let j = 0; j < enterPledge.length; j++) {
         enterPledge[j].classList.add("hidden");
         pledges[j].classList.remove("active");
-        radio[j].removeAttribute("checked", "checked");
     }
 });
 
@@ -46,7 +45,6 @@ closeModal.addEventListener("click", function () {
     for (let j = 0; j < enterPledge.length; j++) {
         enterPledge[j].classList.add("hidden");
         pledges[j].classList.remove("active");
-        radio[j].removeAttribute("checked", "checked");
     }
 });
 
@@ -66,10 +64,9 @@ for (let i = 0; i < rewardBtns.length; i++) {
         for (let j = 0; j < enterPledge.length; j++) {
             enterPledge[j].classList.add("hidden");
             pledges[j].classList.remove("active");
-            radio[j].removeAttribute("checked", "checked");
         }
         if (!rewardBtns[i].classList.contains("out")) {
-            radio[rewardBtns[i].value].setAttribute("checked", "checked");
+            radio[rewardBtns[i].value].click();
             enterPledge[rewardBtns[i].value].classList.remove("hidden");
             pledges[rewardBtns[i].value].classList.add("active");
             overlay.classList.remove("hidden");
