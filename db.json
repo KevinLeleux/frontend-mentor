@@ -251,6 +251,13 @@
             "image": "crowdfunding.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Testimonials slider",
+            "url": "testimonials-slider/",
+            "image": "testimonials-slider.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
         }
     ]
 }
