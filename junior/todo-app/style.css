@@ -21,7 +21,8 @@ header {
 }
 
 main {
-margin: -14.2rem 0;
+    margin: -14.2rem auto 0 auto;
+    max-width: 540px;
 }
 
 .input {
