@@ -12,6 +12,7 @@
 html,
 body {
     overflow-x: hidden;
+    height: 100%;
 }
 
 html {
@@ -30,6 +31,7 @@ main {
     background-image: url(images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position: bottom left;
+    height: 100%;
 }
 
 .slides {
