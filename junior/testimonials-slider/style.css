@@ -25,11 +25,11 @@ body {
 }
 
 main {
-display: flex;
-min-height: 100vh;
-background-image: url(images/pattern-curve.svg);
-background-repeat: no-repeat;
-background-position: bottom left;
+    display: flex;
+    min-height: 100vh;
+    background-image: url(images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
 }
 
 .slides {
@@ -41,7 +41,7 @@ background-position: bottom left;
     margin: 0 auto;
 }
 
-.slide2 {
+.slides.hidden {
     display: none;
 }
 
@@ -97,17 +97,23 @@ background-position: bottom left;
 }
 
 .portrait::before {
-    content: url(images/pattern-bg.svg);
+    background-image: url(images/pattern-bg.svg);
     position: absolute;
     z-index: -1;
     top: -6.3rem;
     right: -9.3rem;
+    background-size: 69.7rem 65.7rem;
+    background-repeat: no-repeat;
+    width: 69.7rem;
+    height: 65.7rem;
+    content: '';
 }
 
 .arrows {
     display: flex;
     justify-content: space-between;
     width: 11.2rem;
+    max-height: 5.6rem;
     padding: 2rem 2.4rem;
     background-color: #FFFFFF;
     border-radius: 2.8rem;
@@ -118,4 +124,284 @@ background-position: bottom left;
 
 .arrows img {
     cursor: pointer;
+}
+
+@media screen and (max-width: 920px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 3.2rem;
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFFFF;
+    }
+
+    main {
+        display: flex;
+        min-height: 100vh;
+        background-image: url(images/pattern-curve.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
+    .slides {
+        min-height: 80rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        margin: 5rem auto;
+        gap: 13rem;
+    }
+
+    .slides.hidden {
+        display: none;
+    }
+
+    .people {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        max-width: 63.5rem;
+    }
+
+    .people p {
+        color: #202047;
+        font-weight: 300;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        max-width: 80rem;
+        margin: 0 3.2rem;
+    }
+
+    .people p::before {
+        content: '';
+        background: url(images/pattern-quotes.svg) center top / contain no-repeat;
+        position: absolute;
+        z-index: -1;
+        top: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 7rem;
+    }
+
+    .who {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name {
+        color: #202047;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 3.8rem;
+    }
+
+    .job {
+        color: #B9B9CE;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 3.8rem;
+    }
+
+    .portrait {
+        margin-left: 0rem;
+        max-width: 54rem;
+        max-height: 54rem;
+        position: relative;
+        box-shadow: 0px 40px 50px -30px #2424717E;
+    }
+
+    .portrait img:nth-child(1) {
+        max-width: 54rem;
+        max-height: 54rem;
+    }
+
+    .portrait::before {
+        background-image: url(images/pattern-bg.svg);
+        position: absolute;
+        z-index: -1;
+        top: -3rem;
+        right: -3.55rem;
+        background-size: 69.7rem 65.7rem;
+        background-repeat: no-repeat;
+        width: 69.7rem;
+        height: 65.7rem;
+        content: '';
+    }
+
+    .arrows {
+        display: flex;
+        justify-content: space-between;
+        width: 11.2rem;
+        max-height: 5.6rem;
+        padding: 2rem 2.4rem;
+        background-color: #FFFFFF;
+        border-radius: 2.8rem;
+        position: absolute;
+        bottom: -2.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .arrows img {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 3.2rem;
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFFFF;
+    }
+
+    main {
+        display: flex;
+        min-height: 100vh;
+        background-image: url(images/pattern-curve.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: contain;
+    }
+
+    .slides {
+        min-height: 80rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        margin: 0 auto;
+        gap: 8.1rem;
+    }
+
+    .slides.hidden {
+        display: none;
+    }
+
+    .people {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        max-width: 63.5rem;
+    }
+
+    .people p {
+        color: #202047;
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        max-width: 40rem;
+        margin: 0 3.2rem;
+    }
+
+    .people p::before {
+        content: '';
+        background: url(images/pattern-quotes.svg) center top / contain no-repeat;
+        position: absolute;
+        z-index: -1;
+        top: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 5rem;
+    }
+
+    .who {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name {
+        color: #202047;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .job {
+        color: #B9B9CE;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .portrait {
+        margin-left: 0rem;
+        max-width: 25.4rem;
+        max-height: 25.4rem;
+        position: relative;
+        box-shadow: 0px 40px 50px -30px #2424717E;
+    }
+
+    .portrait img:nth-child(1) {
+        max-width: 25.4rem;
+        max-height: 25.4rem;
+    }
+
+    .portrait::before {
+        background-image: url(images/pattern-bg.svg);
+        position: absolute;
+        z-index: -1;
+        top: -3rem;
+        right: -3.55rem;
+        background-size: 32.7rem 30.8rem;
+        background-repeat: no-repeat;
+        width: 32.7rem;
+        height: 30.8rem;
+        content: '';
+    }
+
+    .arrows {
+        display: flex;
+        justify-content: space-between;
+        width: 8rem;
+        min-height: 4rem;
+        max-height: 4rem;
+        padding: 1.4rem 1.7rem;
+        background-color: #FFFFFF;
+        border-radius: 2.8rem;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .arrows img {
+        cursor: pointer;
+        height: 1.15rem;
+
+    }
 }
