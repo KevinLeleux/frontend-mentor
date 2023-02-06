@@ -258,6 +258,13 @@
             "image": "testimonials-slider.webp",
             "level": "2",
             "languages": ["html", "css", "js"]
+        },
+        {
+            "name": "Todo app",
+            "url": "todo-app/",
+            "image": "todo.webp",
+            "level": "3",
+            "languages": ["html", "css", "js"]
         }
     ]
 }

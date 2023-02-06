@@ -40,6 +40,7 @@ function getDragAfterElements(y) {
     const draggableElements = [
         ...document.querySelectorAll(".draggable:not(.dragging)"),
     ];
+    console.log(draggableElements)
     return draggableElements.reduce(
         (closest, child) => {
             const box = child.getBoundingClientRect();
