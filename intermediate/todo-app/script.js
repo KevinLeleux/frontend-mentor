@@ -1,6 +1,6 @@
 /* Drag and drop */
-const draggables = document.getElementsByClassName("draggable");
-const containers = document.querySelectorAll(".list");
+let draggables = document.getElementsByClassName("draggable");
+let containers = document.querySelectorAll(".list");
 
 /* LocalStorage init */
 let myTasks = [
@@ -40,60 +40,57 @@ let prevId = "";
 let nextId = "";
 
 function renderTasksList() {
-    const listContainer = document.querySelector(".list");
+    let listContainer = document.querySelector(".list");
     listContainer.innerHTML = "";
     for (let index = 0; index < myTasks.length; index++) {
-        const li = document.createElement("li");
+        let li = document.createElement("li");
         li.setAttribute("class", "draggable");
         li.setAttribute("draggable", "true");
         li.setAttribute("id", myTasks[index].id);
         listContainer.appendChild(li);
-        const circleDiv = document.createElement("div");
+        let circleDiv = document.createElement("div");
         circleDiv.setAttribute("class", "circle");
         li.appendChild(circleDiv);
-        const span = document.createElement("span");
+        let span = document.createElement("span");
         span.insertAdjacentText("beforeend", myTasks[index].name);
         li.appendChild(span);
-        const img = document.createElement("img");
+        let img = document.createElement("img");
         img.setAttribute("src", "images/icon-cross.svg");
         img.setAttribute("class", "delete-icon visible");
         li.appendChild(img);
     }
+    draggables = document.getElementsByClassName("draggable");
 }
 
 renderTasksList();
 
-for (let index = 0; index < draggables.length; index++) {
-    draggables[index].addEventListener("dragstart", function () {
-        draggables[index].classList.add("dragging");
-    });
-    draggables[index].addEventListener("dragend", function () {
-        for (let index = 0; index < draggables.length; index++) {
-            draggables[index].classList.remove("dragging");
-            /*             renderTasksList();
-             */
-        }
-        moveTask();
-    });
-}
-
 function moveTask() {
     let prevIndex = myTasks.findIndex((p) => p.id == prevId);
     let nextIndex = myTasks.findIndex((p) => p.id == nextId);
-    const element = myTasks.splice(prevIndex, 1)[0];
+    let element = myTasks.splice(prevIndex, 1)[0];
     myTasks.splice(nextIndex, 0, element);
-    console.log(myTasks);
 }
 
-containers.forEach((container) => {
-    container.addEventListener("dragover", dragOver);
-});
+for (let index = 0; index < draggables.length; index++) {
+    draggables[index].addEventListener("dragstart", function () {
+        draggables[index].classList.add("dragging");
+        prevId = draggables[index].id;
+    });
+    draggables[index].addEventListener("dragend", function () {
+        moveTask();
+        renderTasksList();
+    });
+}
+
+for (let index = 0; index < containers.length; index++) {
+    containers[index].addEventListener("dragover", dragOver);
+}
 
 function dragOver(e) {
     e.preventDefault();
-    const draggable = document.querySelector(".dragging");
-    const afterElement = getDragAfterElements(e.clientY);
-    prevId = draggable.id;
+    let draggable = document.querySelector(".dragging");
+    let afterElement = getDragAfterElements(e.clientY);
+    console.log(draggable);
     if (afterElement == null) {
         this.appendChild(draggable);
     } else {
@@ -140,6 +137,7 @@ function createTask(name) {
     let id = myTasks.length + 1;
     let newTask = { id: id.toString(), name: name, completed: false };
     myTasks.push(newTask);
+    renderTasksList();
 }
 
 /* Filters management*/
