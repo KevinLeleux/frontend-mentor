@@ -90,6 +90,7 @@ input.addEventListener("keypress", function (e) {
     if (e.key == "Enter" && input.value) {
         createTask(input.value);
         input.value = "";
+        /* Hide keyboard on mobile */
         document.activeElement.blur();
     }
 });
