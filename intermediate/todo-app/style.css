@@ -128,6 +128,10 @@ main {
     display: flex;
 }
 
+.draggable.completed.hidden {
+    display: none;
+}
+
 .draggable.dragging {
     opacity: .5;
     border: 1px solid #E3E4F1;
@@ -212,4 +216,30 @@ main {
 .clear:hover {
     cursor: pointer;
     color: #494C6B;
+}
+
+.checkbox-round {
+    min-width: 2.4rem;
+    min-height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 2.4rem;
+}
+
+.checkbox-round:checked {
+    background: url(images/icon-check.svg),
+        linear-gradient(135deg, #55DDFF, #C058F3);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox-round:hover:not(.draggable.completed .checkbox-round) {
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #55DDFF, #C058F3) border-box;
+    border-radius: 50%;
+    border: 1px solid transparent;
 }

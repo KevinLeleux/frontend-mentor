@@ -4,7 +4,7 @@ const list = document.querySelector(".list");
 new Sortable(list, {
     animation: 150,
     ghostClass: "dragging",
-    filter: ".delete-icon",
+    filter: ".delete-icon, .checkbox-round",
 });
 
 /* LocalStorage init */
@@ -35,6 +35,7 @@ let myTasks = [
     },
 ];
 
+/* Filters */
 function renderTasksList() {
     list.innerHTML = "";
     if (window.localStorage.getItem("List")) {
@@ -42,16 +43,18 @@ function renderTasksList() {
     }
     for (let index = 0; index < myTasks.length; index++) {
         const li = document.createElement("li");
+        const checkbox = document.createElement("input");
         if (myTasks[index].completed === true) {
             li.setAttribute("class", " draggable completed");
+            checkbox.checked = "checked";
         } else {
             li.setAttribute("class", "draggable");
         }
         li.setAttribute("draggable", "true");
         list.appendChild(li);
-        const circleDiv = document.createElement("div");
-        circleDiv.setAttribute("class", "circle");
-        li.appendChild(circleDiv);
+        checkbox.type = "checkbox";
+        checkbox.classList = "checkbox-round";
+        li.appendChild(checkbox);
         const span = document.createElement("span");
         span.insertAdjacentText("beforeend", myTasks[index].name);
         li.appendChild(span);
@@ -62,19 +65,30 @@ function renderTasksList() {
     }
 
     /* Delete Task */
-    let closeIcon = document.getElementsByClassName("delete-icon");
+    let closeIcon = document.querySelectorAll(".delete-icon");
     for (let index = 0; index < closeIcon.length; index++) {
         closeIcon[index].addEventListener("click", () => {
             deleteTask(closeIcon[index].parentNode);
             renderTasksList();
         });
     }
+
+    /* Delete Completed Tasks */
+    let clearButton = document.querySelector(".clear");
+    clearButton.addEventListener("click", () => {
+        deleteCompleteTask();
+    });
+
+    completeTask();
+    tasksLeft();
 }
 
-list.addEventListener("dragend", () => {
+list.addEventListener("dragend", dragEnd, false);
+
+function dragEnd() {
     save();
     renderTasksList();
-});
+}
 
 list.addEventListener(
     "dragover",
@@ -92,15 +106,36 @@ input.addEventListener("keypress", function (e) {
         input.value = "";
         /* Hide keyboard on mobile */
         document.activeElement.blur();
+        save();
     }
 });
 
 function createTask(name) {
+    myTasks = JSON.parse(window.localStorage.getItem("List"));
     let newTask = { name: name, completed: false };
     myTasks.push(newTask);
     window.localStorage.setItem("List", JSON.stringify(myTasks));
     renderTasksList();
-    save();
+}
+
+function completeTask() {
+    const checkboxCheck = document.querySelectorAll(".checkbox-round");
+    const draggable = document.querySelectorAll(".draggable");
+    for (let index = 0; index < checkboxCheck.length; index++) {
+        checkboxCheck[index].addEventListener("click", function () {
+            if (checkboxCheck[index].checked) {
+                draggable[index].classList.add("completed");
+                myTasks[index].completed = "True";
+                save();
+                renderTasksList();
+            } else {
+                draggable[index].classList.remove("completed");
+                myTasks[index].completed = "False";
+                save();
+                renderTasksList();
+            }
+        });
+    }
 }
 
 function deleteTask(task) {
@@ -108,6 +143,27 @@ function deleteTask(task) {
     save();
 }
 
+function deleteCompleteTask() {
+    let completed = document.querySelectorAll(".completed");
+    for (let index = 0; index < completed.length; index++) {
+        list.removeChild(completed[index]);
+    }
+    save();
+}
+
+function tasksLeft() {
+    let left = 0;
+    for (let index = 0; index < myTasks.length; index++) {
+        if (!myTasks[index].completed) {
+            left += 1;
+        }
+    }
+    const itemsLeft = document.querySelector(".list-footer span");
+    itemsLeft.innerHTML = "";
+    itemsLeft.insertAdjacentText("afterbegin", left + " items left");
+}
+
+/* Save to Local Storage */
 function save() {
     let myTasksTemp = [];
     let tasksTemp = "";
@@ -122,8 +178,11 @@ function save() {
         myTasksTemp.push(tasksTemp);
     });
     window.localStorage.setItem("List", JSON.stringify(myTasksTemp));
+    console.log(window.localStorage.getItem("List"));
 }
 
 window.addEventListener("beforeunload", save);
 
 renderTasksList();
+
+console.log(window.localStorage.getItem("List"));
