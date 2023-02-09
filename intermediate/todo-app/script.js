@@ -79,9 +79,7 @@ function renderTasksList() {
             renderTasksList();
         });
     }
-
     draggable = document.querySelectorAll(".draggable");
-    console.log(draggable);
 
     completeTask();
     tasksLeft();
