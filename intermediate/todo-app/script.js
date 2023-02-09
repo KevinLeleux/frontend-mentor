@@ -75,10 +75,6 @@ function renderTasksList() {
         });
     }
 
-    /*     let clearButton = document.querySelector(".clear");
-    clearButton.addEventListener("click", () => {
-        deleteCompleteTask();
-    }); */
     completeTask();
     tasksLeft();
 }
@@ -132,13 +128,18 @@ function deleteTask(task) {
     save();
 }
 
+let clearButton = document.querySelector(".clear");
+clearButton.addEventListener("click", () => {
+    deleteCompleteTask();
+});
+
 function deleteCompleteTask() {
     let completed = document.querySelectorAll(".completed");
     for (let index = 0; index < completed.length; index++) {
         list.removeChild(completed[index]);
     }
-    console.log("saved");
     save();
+    renderTasksList();
 }
 
 function tasksLeft() {
