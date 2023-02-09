@@ -5,6 +5,7 @@ new Sortable(list, {
     animation: 150,
     ghostClass: "dragging",
     filter: ".delete-icon, .checkbox-round",
+    onEnd: dragEnd,
 });
 
 /* LocalStorage init */
@@ -41,6 +42,7 @@ function renderTasksList() {
     if (window.localStorage.getItem("List")) {
         myTasks = JSON.parse(window.localStorage.getItem("List"));
     }
+    save();
     for (let index = 0; index < myTasks.length; index++) {
         const li = document.createElement("li");
         const checkbox = document.createElement("input");
@@ -73,45 +75,31 @@ function renderTasksList() {
         });
     }
 
-    /* Delete Completed Tasks */
-    let clearButton = document.querySelector(".clear");
+    /*     let clearButton = document.querySelector(".clear");
     clearButton.addEventListener("click", () => {
         deleteCompleteTask();
-    });
-
+    }); */
     completeTask();
     tasksLeft();
 }
-
-list.addEventListener("dragend", dragEnd, false);
 
 function dragEnd() {
     save();
     renderTasksList();
 }
 
-list.addEventListener(
-    "dragover",
-    function (event) {
-        event.preventDefault();
-    },
-    false
-);
-
 /* Create Tasks */
 const input = document.querySelector(".input");
 input.addEventListener("keypress", function (e) {
-    if (e.key == "Enter" && input.value) {
+    if (e.keyCode == "13" && input.value) {
         createTask(input.value);
         input.value = "";
         /* Hide keyboard on mobile */
         document.activeElement.blur();
-        save();
     }
 });
 
 function createTask(name) {
-    myTasks = JSON.parse(window.localStorage.getItem("List"));
     let newTask = { name: name, completed: false };
     myTasks.push(newTask);
     window.localStorage.setItem("List", JSON.stringify(myTasks));
@@ -119,6 +107,7 @@ function createTask(name) {
 }
 
 function completeTask() {
+    /* Complete Tasks */
     const checkboxCheck = document.querySelectorAll(".checkbox-round");
     const draggable = document.querySelectorAll(".draggable");
     for (let index = 0; index < checkboxCheck.length; index++) {
@@ -148,6 +137,7 @@ function deleteCompleteTask() {
     for (let index = 0; index < completed.length; index++) {
         list.removeChild(completed[index]);
     }
+    console.log("saved");
     save();
 }
 
@@ -163,7 +153,6 @@ function tasksLeft() {
     itemsLeft.insertAdjacentText("afterbegin", left + " items left");
 }
 
-/* Save to Local Storage */
 function save() {
     let myTasksTemp = [];
     let tasksTemp = "";
@@ -178,11 +167,7 @@ function save() {
         myTasksTemp.push(tasksTemp);
     });
     window.localStorage.setItem("List", JSON.stringify(myTasksTemp));
-    console.log(window.localStorage.getItem("List"));
 }
-
 window.addEventListener("beforeunload", save);
 
 renderTasksList();
-
-console.log(window.localStorage.getItem("List"));
