@@ -138,6 +138,10 @@ main {
     background-color: #eff0f7;
 }
 
+.draggable.hidden {
+    display: none;
+}
+
 .circle {
     min-width: 2.4rem;
     min-height: 2.4rem;

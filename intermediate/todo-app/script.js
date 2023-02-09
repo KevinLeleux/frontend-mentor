@@ -37,7 +37,12 @@ let myTasks = [
 ];
 
 /* Filters */
+let draggable;
 function renderTasksList() {
+    filters.forEach((element) => {
+        element.classList.remove("selected");
+    });
+    filters[0].classList.add("selected");
     list.innerHTML = "";
     if (window.localStorage.getItem("List")) {
         myTasks = JSON.parse(window.localStorage.getItem("List"));
@@ -74,6 +79,9 @@ function renderTasksList() {
             renderTasksList();
         });
     }
+
+    draggable = document.querySelectorAll(".draggable");
+    console.log(draggable);
 
     completeTask();
     tasksLeft();
@@ -154,6 +162,35 @@ function tasksLeft() {
     itemsLeft.insertAdjacentText("afterbegin", left + " items left");
 }
 
+const filters = document.querySelectorAll(".filters span");
+filters.forEach((element) => {
+    element.addEventListener("click", function () {
+        filters.forEach((element) => {
+            element.classList.remove("selected");
+        });
+        element.classList.add("selected");
+        if (element.innerText == "Active") {
+            for (let index = 0; index < draggable.length; index++) {
+                draggable[index].classList.remove("hidden");
+                if (draggable[index].classList.contains("completed")) {
+                    draggable[index].classList.add("hidden");
+                }
+            }
+        } else if (element.innerText == "Completed") {
+            for (let index = 0; index < draggable.length; index++) {
+                draggable[index].classList.remove("hidden");
+                if (!draggable[index].classList.contains("completed")) {
+                    draggable[index].classList.add("hidden");
+                }
+            }
+        } else {
+            for (let index = 0; index < draggable.length; index++) {
+                draggable[index].classList.remove("hidden");
+            }
+        }
+    });
+});
+
 function save() {
     let myTasksTemp = [];
     let tasksTemp = "";
@@ -169,6 +206,7 @@ function save() {
     });
     window.localStorage.setItem("List", JSON.stringify(myTasksTemp));
 }
+
 window.addEventListener("beforeunload", save);
 
 renderTasksList();
