@@ -48,6 +48,7 @@ function renderTasksList() {
     save();
     if (myTasks.length <= 0) {
         const li = document.createElement("li");
+        li.setAttribute("class", "error");
         li.insertAdjacentText("beforeend", "There is no todo yet");
         list.appendChild(li);
     } else {
@@ -177,10 +178,7 @@ function tasksLeft() {
             left += 1;
         }
     }
-    let items = " items";
-    if (left <= 1) {
-        items = " item";
-    }
+    left <= 1 ? (items = " item") : (items = " items");
     const itemsLeft = document.querySelector(".list-footer span");
     itemsLeft.innerHTML = "";
     itemsLeft.insertAdjacentText("afterbegin", left + items + " left");

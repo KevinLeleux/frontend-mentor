@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Todo app</title>
 
 </head>
@@ -18,7 +18,8 @@
       <h1>
         TODO
       </h1>
-      <img src="images/icon-moon.svg" alt="moon icon">
+      <img src="images/icon-sun.svg" alt="moon icon" class="theme theme-light" value="light">
+      <img src="images/icon-moon.svg" alt="moon icon" class="theme theme-dark" value="dark">
     </div>
   </header>
   <main>
@@ -26,8 +27,8 @@
       <input type="text" class="input" placeholder="Create a new todo...">
       <div class="input-circle"></div>
     </div>
-<ul class="list">
-</ul>
+    <ul class="list">
+    </ul>
     <div class="list-footer"><span> items left</span>
       <div class="filters">
         <span class="all-filter">All</span>
@@ -41,7 +42,9 @@
     <p class="infos">Drag and drop to reorder list</p>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/theme.js"></script>
+
 </body>
 
 </html>

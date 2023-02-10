@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root,
+:root.light {
+    --header-img: url(../images/bg-desktop-light.jpg);
+    --background-color: #F2F2F2;
+    --input-background-color: #FFF;
+    --input-box-shadow: 0px 35px 50px -15px hsla(235, 19%, 80%, 0.5);
+    --border: 1px solid #E3E4F1;
+    --placeholder-color: #9495A5;
+    --input-color: #393A4B;
+    --completed-task-color: #D1D2DA;
+    --footer-color: #9495A5;
+    --footer-hover: #494C6B;
+    --infos: #9495A5;
+
+}
+
+:root.dark {
+    --header-img: url(../images/bg-desktop-dark.jpg);
+    --background-color: #171823;
+    --input-background-color: #25273D;
+    --input-box-shadow: 0px 35px 50px -15px hsla(0, 0%, 0%, 0.5);
+    --border: 1px solid #393A4B;
+    --input-color: #C8CBE7;
+    --placeholder-color: #767992;
+    --completed-task-color: #4D5067;
+    --footer-color: #5B5E7E;
+    --footer-hover: #E3E4F1;
+    --infos: #5B5E7E;
+}
+
+html {
+    background-color: var(--background-color);
+    font-size: 62.5%;
+    min-width: 32rem;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #393A4B;
+}
+
+header {
+    height: 30rem;
+    background-image: var(--header-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    max-width: 58.8rem;
+    padding: 0 2.4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    margin-top: 7rem;
+}
+
+.header-container h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    color: white;
+}
+
+.header-container img {
+    height: 2.6rem;
+    margin-top: auto;
+}
+
+main {
+    margin: -14.2rem auto 0 auto;
+    max-width: 58.8rem;
+    padding: 0 2.4rem;
+}
+
+.input-container {
+    position: relative;
+    margin: 0 0 2.4rem 0;
+}
+
+.input {
+    background: var(--input-background-color);
+    max-width: 54rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: var(--input-box-shadow);
+    border: none;
+    min-height: 6.4rem;
+    padding: 2rem 2.4rem 2rem 7.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: var(--input-color);
+    letter-spacing: -0.25px;
+    caret-color: #3A7CFD;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: var(--placeholder-color);
+    letter-spacing: -0.25px;
+}
+
+.input-circle {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: var(--border);
+    margin-right: 2.4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2.4rem;
+}
+
+.theme {
+    cursor: pointer;
+}
+
+html.light .theme-light {
+    display: none;
+}
+
+html.dark .theme-dark {
+    display: none;
+}
+
+.list {
+    background: var(--input-background-color);
+    max-width: 54rem;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: var(--input-box-shadow);
+}
+
+.list li {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    padding: 2rem 2.4rem;
+    min-height: 6.4rem;
+    border-bottom: var(--border);
+    display: flex;
+    align-items: center;
+    color: var(--input-color);
+}
+
+.list li img {
+    display: none;
+    margin-left: auto;
+    padding-left: 2.4rem;
+}
+
+.error.hidden {
+    display: none;
+}
+
+.error {
+    color: var(--input-color);
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+}
+
+.draggable.completed.hidden {
+    display: none;
+}
+
+.draggable.dragging {
+    opacity: .5;
+    background-color: var(--background-color);
+}
+
+.draggable.hidden {
+    display: none;
+}
+
+.checkbox-round {
+    min-width: 2.4rem;
+    min-height: 2.4rem;
+    border-radius: 50%;
+    border: var(--border);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 2.4rem;
+}
+
+.checkbox-round:checked {
+    background: url(../images/icon-check.svg),
+        linear-gradient(135deg, #55DDFF, #C058F3);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox-round:hover:not(.draggable.completed .checkbox-round) {
+    background: linear-gradient(var(--input-background-color), var(--input-background-color)) padding-box,
+        linear-gradient(135deg, #55DDFF, #C058F3) border-box;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.draggable.completed>span {
+    text-decoration: line-through;
+    color: var(--completed-task-color);
+}
+
+.delete-icon {
+    opacity: 0;
+}
+
+li img.visible {
+    display: block;
+}
+
+.draggable:hover .delete-icon {
+    opacity: 1;
+}
+
+.draggable:active .delete-icon {
+    opacity: 0;
+}
+
+.list-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.194444px;
+    padding: 2rem 2.4rem;
+    min-height: 6rem;
+    background: var(--input-background-color);
+    max-width: 54rem;
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    position: relative;
+}
+
+.list-footer>span {
+    color: var(--footer-color);
+}
+
+.filters {
+    max-width: 16.6rem;
+    width: 100%;
+    font-weight: 700;
+    color: var(--footer-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters span.selected {
+    color: #3A7CFD;
+}
+
+.filters span:hover {
+    cursor: pointer;
+    color: var(--footer-hover);
+}
+
+.clear:hover {
+    cursor: pointer;
+    color: var(--footer-hover);
+}
+
+.infos {
+    margin-top: 4.9rem;
+    text-align: center;
+    color: var(--infos);
+    letter-spacing: -0.194444px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 530px) {
+    html {
+        background-color: var(--background-color);
+        font-size: 62.5%;
+        min-width: 32rem;
+    }
+
+    body {
+        font-family: 'Josefin Sans', sans-serif;
+        color: #393A4B;
+    }
+
+    header {
+        height: 20rem;
+        background-image: var(--header-img);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-container {
+        max-width: 58.8rem;
+        padding: 0 2.4rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 2rem;
+        margin-top: 4.8rem;
+    }
+
+    .header-container h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        color: white;
+    }
+
+    .header-container img {
+        height: 2rem;
+        margin-top: auto;
+    }
+
+    main {
+        margin: -9.2rem auto 0 auto;
+        max-width: 58.8rem;
+        padding: 0 2.4rem;
+    }
+
+    .input-container {
+        position: relative;
+        margin: 0 0 1.6rem 0;
+    }
+
+    .input {
+        background: var(--input-background-color);
+        max-width: 54rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: var(--input-box-shadow);
+        border: none;
+        min-height: 4.8rem;
+        padding: 1.4rem 2rem 1.4rem 5.2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+        color: var(--input-color);
+        letter-spacing: -0.166667px;
+        caret-color: #3A7CFD;
+    }
+
+    .input:focus {
+        outline: none;
+    }
+
+    .input::placeholder {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+        color: var(--placeholder-color);
+        letter-spacing: -0.166666px;
+    }
+
+    .input-circle {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: var(--border);
+        margin-right: 1.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2rem;
+    }
+
+    .theme {
+        cursor: pointer;
+    }
+
+    html.light .theme-light {
+        display: none;
+    }
+
+    html.dark .theme-dark {
+        display: none;
+    }
+
+    .list {
+        background: var(--input-background-color);
+        max-width: 54rem;
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+        box-shadow: var(--input-box-shadow);
+    }
+
+    .list li {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        padding: 1.6rem 2rem;
+        min-height: 4.8rem;
+        border-bottom: var(--border);
+        display: flex;
+        align-items: center;
+        color: var(--input-color);
+    }
+
+    .list li img {
+        display: none;
+        margin-left: auto;
+        padding-left: 2rem;
+    }
+
+    .error.hidden {
+        display: none;
+    }
+
+    .error {
+        color: var(--input-color);
+    }
+
+    .draggable {
+        cursor: pointer;
+        display: flex;
+    }
+
+    .draggable.completed.hidden {
+        display: none;
+    }
+
+    .draggable.dragging {
+        opacity: .5;
+        background-color: var(--background-color);
+    }
+
+    .draggable.hidden {
+        display: none;
+    }
+
+    .checkbox-round {
+        min-width: 2rem;
+        min-height: 2rem;
+        border-radius: 50%;
+        border: var(--border);
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        margin-right: 1.2rem;
+    }
+
+    .checkbox-round:checked {
+        background: url(../images/icon-check.svg),
+            linear-gradient(135deg, #55DDFF, #C058F3);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .checkbox-round:hover:not(.draggable.completed .checkbox-round) {
+        background: linear-gradient(var(--input-background-color), var(--input-background-color)) padding-box,
+            linear-gradient(135deg, #55DDFF, #C058F3) border-box;
+        border-radius: 50%;
+        border: 1px solid transparent;
+    }
+
+    .draggable.completed>span {
+        text-decoration: line-through;
+        color: var(--completed-task-color);
+    }
+
+    .delete-icon {
+        opacity: 1;
+        height: 1.2rem;
+    }
+
+    li img.visible {
+        display: block;
+    }
+
+    .draggable:hover .delete-icon {
+        opacity: 1;
+    }
+
+    .draggable:active .delete-icon {
+        opacity: 0;
+    }
+
+    .list-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        letter-spacing: -0.16666px;
+        padding: 2rem 1.6rem;
+        min-height: 6rem;
+        background: var(--input-background-color);
+        max-width: 54rem;
+        width: 100%;
+        border-radius: 0 0 0.5rem 0.5rem;
+        position: relative;
+    }
+
+    .list-footer>span {
+        color: var(--footer-color);
+    }
+
+    .filters {
+        position: absolute;
+        background-color: var(--input-background-color);
+        height: 100%;
+        width: 100%;
+        margin-top: 1.6rem;
+        top: 100%;
+        left: 0;
+        padding: 0 20%;
+        gap: 1.8rem;
+        border-radius: 0.8rem;
+        max-width: none;
+        box-shadow: var(--input-box-shadow);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        font-weight: 700;
+    }
+
+    .filters span.selected {
+        color: #3A7CFD;
+    }
+
+    .filters span:hover {
+        cursor: pointer;
+        color: var(--footer-hover);
+    }
+
+    .clear:hover {
+        cursor: pointer;
+        color: var(--footer-hover);
+    }
+
+    .infos {
+        margin-top: 10.4rem;
+        text-align: center;
+        letter-spacing: -0.194444px;
+        font-size: 1.4rem;
+    }
+}
