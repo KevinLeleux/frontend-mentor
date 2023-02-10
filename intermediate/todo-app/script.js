@@ -36,8 +36,6 @@ let myTasks = [
     },
 ];
 
-/* Filters */
-let draggable;
 function renderTasksList() {
     filters.forEach((element) => {
         element.classList.remove("selected");
@@ -48,27 +46,36 @@ function renderTasksList() {
         myTasks = JSON.parse(window.localStorage.getItem("List"));
     }
     save();
-    for (let index = 0; index < myTasks.length; index++) {
+    const completedSelector = !!myTasks.find((task) => {
+        return task.completed === true;
+    });
+    if (myTasks.length <= 0) {
         const li = document.createElement("li");
-        const checkbox = document.createElement("input");
-        if (myTasks[index].completed === true) {
-            li.setAttribute("class", " draggable completed");
-            checkbox.checked = "checked";
-        } else {
-            li.setAttribute("class", "draggable");
-        }
-        li.setAttribute("draggable", "true");
+        li.insertAdjacentText("beforeend", "There is no todo yet");
         list.appendChild(li);
-        checkbox.type = "checkbox";
-        checkbox.classList = "checkbox-round";
-        li.appendChild(checkbox);
-        const span = document.createElement("span");
-        span.insertAdjacentText("beforeend", myTasks[index].name);
-        li.appendChild(span);
-        const img = document.createElement("img");
-        img.setAttribute("src", "images/icon-cross.svg");
-        img.setAttribute("class", "delete-icon visible");
-        li.appendChild(img);
+    } else {
+        for (let index = 0; index < myTasks.length; index++) {
+            const li = document.createElement("li");
+            const checkbox = document.createElement("input");
+            if (myTasks[index].completed === true) {
+                li.setAttribute("class", " draggable completed");
+                checkbox.checked = "checked";
+            } else {
+                li.setAttribute("class", "draggable");
+            }
+            li.setAttribute("draggable", "true");
+            list.appendChild(li);
+            checkbox.type = "checkbox";
+            checkbox.classList = "checkbox-round";
+            li.appendChild(checkbox);
+            const span = document.createElement("span");
+            span.insertAdjacentText("beforeend", myTasks[index].name);
+            li.appendChild(span);
+            const img = document.createElement("img");
+            img.setAttribute("src", "images/icon-cross.svg");
+            img.setAttribute("class", "delete-icon visible");
+            li.appendChild(img);
+        }
     }
 
     /* Delete Task */
@@ -101,22 +108,18 @@ function dragEnd() {
 const input = document.querySelector(".input");
 input.addEventListener("keypress", function (e) {
     if (e.keyCode == "13" && input.value) {
-        createTask(input.value);
+        let newTask = { name: input.value, completed: false };
+        myTasks.push(newTask);
+        window.localStorage.setItem("List", JSON.stringify(myTasks));
+        renderTasksList();
         input.value = "";
         /* Hide keyboard on mobile */
         document.activeElement.blur();
     }
 });
 
-function createTask(name) {
-    let newTask = { name: name, completed: false };
-    myTasks.push(newTask);
-    window.localStorage.setItem("List", JSON.stringify(myTasks));
-    renderTasksList();
-}
-
+/* Complete Tasks */
 function completeTask() {
-    /* Complete Tasks */
     const checkboxCheck = document.querySelectorAll(".checkbox-round");
     const draggable = document.querySelectorAll(".draggable");
     for (let index = 0; index < checkboxCheck.length; index++) {
@@ -143,10 +146,10 @@ function deleteTask(task) {
 
 let clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", () => {
-    deleteCompleteTask();
+    deleteCompletedTask();
 });
 
-function deleteCompleteTask() {
+function deleteCompletedTask() {
     let completed = document.querySelectorAll(".completed");
     for (let index = 0; index < completed.length; index++) {
         list.removeChild(completed[index]);
@@ -167,6 +170,8 @@ function tasksLeft() {
     itemsLeft.insertAdjacentText("afterbegin", left + " items left");
 }
 
+/* Filters */
+let draggable;
 const filters = document.querySelectorAll(".filters span");
 filters.forEach((element) => {
     element.addEventListener("click", function () {
