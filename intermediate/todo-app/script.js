@@ -177,9 +177,13 @@ function tasksLeft() {
             left += 1;
         }
     }
+    let items = " items";
+    if (left <= 1) {
+        items = " item";
+    }
     const itemsLeft = document.querySelector(".list-footer span");
     itemsLeft.innerHTML = "";
-    itemsLeft.insertAdjacentText("afterbegin", left + " items left");
+    itemsLeft.insertAdjacentText("afterbegin", left + items + " left");
 }
 
 /* Filters */
