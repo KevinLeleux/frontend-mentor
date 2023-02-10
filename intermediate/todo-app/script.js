@@ -85,6 +85,13 @@ function renderTasksList() {
     tasksLeft();
 }
 
+list.addEventListener("dragstart", function () {
+    const deleteIcon = document.querySelectorAll(".delete-icon");
+    deleteIcon.forEach((element) => {
+        element.style.display = "none";
+    });
+});
+
 function dragEnd() {
     save();
     renderTasksList();

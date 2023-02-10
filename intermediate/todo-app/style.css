@@ -12,6 +12,7 @@
 html {
     background-color: #F2F2F2;
     font-size: 62.5%;
+    min-width: 32rem;
 }
 
 body {
@@ -30,7 +31,8 @@ header {
 }
 
 .header-container {
-    max-width: 54rem;
+    max-width: 58.8rem;
+    padding: 0 2.4rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -118,10 +120,6 @@ main {
     padding-left: 2.4rem;
 }
 
-.list li img.visible {
-    display: block;
-}
-
 
 .draggable {
     cursor: pointer;
@@ -181,6 +179,22 @@ main {
     left: 2.4rem;
 }
 
+.delete-icon {
+    opacity: 0;
+}
+
+li img.visible {
+    display: block;
+}
+
+.draggable:hover .delete-icon {
+    opacity: 1;
+}
+
+.draggable:active .delete-icon {
+    opacity: 0;
+}
+
 .list-footer {
     display: flex;
     justify-content: space-between;
@@ -193,6 +207,7 @@ main {
     max-width: 54rem;
     width: 100%;
     border-radius: 0 0 0.5rem 0.5rem;
+    position: relative;
 }
 
 .list-footer>span {
@@ -246,4 +261,47 @@ main {
         linear-gradient(135deg, #55DDFF, #C058F3) border-box;
     border-radius: 50%;
     border: 1px solid transparent;
+}
+
+.infos {
+    margin-top: 4.9rem;
+    text-align: center;
+    color: #9495A5;
+    letter-spacing: -0.194444px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 530px) {
+    .filters {
+        position: absolute;
+        background-color: #FFFFFF;
+        height: 100%;
+        width: 100%;
+        margin-top: 1.6rem;
+        top: 100%;
+        left: 0;
+        padding: 0 20%;
+        gap: 1.8rem;
+        border-radius: 0.8rem;
+        max-width: none;
+        box-shadow: 0px 35px 50px -15px #C2C3D680;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .infos {
+        margin-top: 10.4rem;
+        text-align: center;
+        color: #9495A5;
+        letter-spacing: -0.194444px;
+    }
+
+    .delete-icon {
+        opacity: 1;
+    }
+
 }
