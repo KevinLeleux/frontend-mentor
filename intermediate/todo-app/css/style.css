@@ -521,7 +521,7 @@ li img.visible {
         line-height: 1.2rem;
         letter-spacing: -0.16666px;
         padding: 2rem 1.6rem;
-        min-height: 6rem;
+        min-height: 4.8rem;
         background: var(--input-background-color);
         max-width: 54rem;
         width: 100%;
