@@ -191,39 +191,45 @@ let draggable;
 const filters = document.querySelectorAll(".filters span");
 filters.forEach((element) => {
     element.addEventListener("click", function () {
-        const checkComplete = myTasks.some((check) => check.completed === true);
-        const checkActive = myTasks.some((check) => check.completed === false);
-        const errorMsg = document.querySelectorAll(".error");
-        errorMsg.forEach((element) => {
-            element.classList.add("hidden");
-        });
-        filters.forEach((element) => {
-            element.classList.remove("selected");
-        });
-        element.classList.add("selected");
-        if (element.innerText == "Active") {
-            if (!checkActive) {
-                errorMsg[1].classList.remove("hidden");
-            }
-            for (let index = 0; index < draggable.length; index++) {
-                draggable[index].classList.remove("hidden");
-                if (draggable[index].classList.contains("completed")) {
-                    draggable[index].classList.add("hidden");
+        if (myTasks.length > 0) {
+            const checkComplete = myTasks.some(
+                (check) => check.completed === true
+            );
+            const checkActive = myTasks.some(
+                (check) => check.completed === false
+            );
+            const errorMsg = document.querySelectorAll(".error");
+            errorMsg.forEach((element) => {
+                element.classList.add("hidden");
+            });
+            filters.forEach((element) => {
+                element.classList.remove("selected");
+            });
+            element.classList.add("selected");
+            if (element.innerText == "Active") {
+                if (!checkActive) {
+                    errorMsg[1].classList.remove("hidden");
                 }
-            }
-        } else if (element.innerText == "Completed") {
-            if (!checkComplete) {
-                errorMsg[0].classList.remove("hidden");
-            }
-            for (let index = 0; index < draggable.length; index++) {
-                draggable[index].classList.remove("hidden");
-                if (!draggable[index].classList.contains("completed")) {
-                    draggable[index].classList.add("hidden");
+                for (let index = 0; index < draggable.length; index++) {
+                    draggable[index].classList.remove("hidden");
+                    if (draggable[index].classList.contains("completed")) {
+                        draggable[index].classList.add("hidden");
+                    }
                 }
-            }
-        } else {
-            for (let index = 0; index < draggable.length; index++) {
-                draggable[index].classList.remove("hidden");
+            } else if (element.innerText == "Completed") {
+                if (!checkComplete) {
+                    errorMsg[0].classList.remove("hidden");
+                }
+                for (let index = 0; index < draggable.length; index++) {
+                    draggable[index].classList.remove("hidden");
+                    if (!draggable[index].classList.contains("completed")) {
+                        draggable[index].classList.add("hidden");
+                    }
+                }
+            } else {
+                for (let index = 0; index < draggable.length; index++) {
+                    draggable[index].classList.remove("hidden");
+                }
             }
         }
     });
