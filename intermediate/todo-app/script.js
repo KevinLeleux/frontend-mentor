@@ -46,14 +46,26 @@ function renderTasksList() {
         myTasks = JSON.parse(window.localStorage.getItem("List"));
     }
     save();
-    const completedSelector = !!myTasks.find((task) => {
-        return task.completed === true;
-    });
     if (myTasks.length <= 0) {
         const li = document.createElement("li");
         li.insertAdjacentText("beforeend", "There is no todo yet");
         list.appendChild(li);
     } else {
+        const liCompletedError = document.createElement("li");
+        const liActiveError = document.createElement("li");
+        liCompletedError.setAttribute("class", "error hidden");
+        liCompletedError.insertAdjacentText(
+            "beforeend",
+            "There is no completed todo"
+        );
+        list.appendChild(liCompletedError);
+        liActiveError.setAttribute("class", "error hidden");
+
+        liActiveError.insertAdjacentText(
+            "beforeend",
+            "There is no active todo"
+        );
+        list.appendChild(liActiveError);
         for (let index = 0; index < myTasks.length; index++) {
             const li = document.createElement("li");
             const checkbox = document.createElement("input");
@@ -175,11 +187,20 @@ let draggable;
 const filters = document.querySelectorAll(".filters span");
 filters.forEach((element) => {
     element.addEventListener("click", function () {
+        const checkComplete = myTasks.some((check) => check.completed === true);
+        const checkActive = myTasks.some((check) => check.completed === false);
+        const errorMsg = document.querySelectorAll(".error");
+        errorMsg.forEach((element) => {
+            element.classList.add("hidden");
+        });
         filters.forEach((element) => {
             element.classList.remove("selected");
         });
         element.classList.add("selected");
         if (element.innerText == "Active") {
+            if (!checkActive) {
+                errorMsg[1].classList.remove("hidden");
+            }
             for (let index = 0; index < draggable.length; index++) {
                 draggable[index].classList.remove("hidden");
                 if (draggable[index].classList.contains("completed")) {
@@ -187,6 +208,9 @@ filters.forEach((element) => {
                 }
             }
         } else if (element.innerText == "Completed") {
+            if (!checkComplete) {
+                errorMsg[0].classList.remove("hidden");
+            }
             for (let index = 0; index < draggable.length; index++) {
                 draggable[index].classList.remove("hidden");
                 if (!draggable[index].classList.contains("completed")) {

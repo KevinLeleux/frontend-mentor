@@ -273,6 +273,10 @@ li img.visible {
     font-weight: 400;
 }
 
+.error.hidden {
+    display: none;
+}
+
 
 @media screen and (max-width: 530px) {
     .filters {
