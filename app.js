@@ -1,4 +1,4 @@
-const github = "https://github.com/BeholderGit/frontend-mentor/tree/master/";
+const github = "https://github.com/KevinLeleux/frontend-mentor/tree/master/";
 const main = document.getElementById("main");
 const checkbox = document.getElementsByName("level");
 const arrows = document.querySelectorAll(".arrow");
@@ -8,6 +8,18 @@ const levels = [];
 for (let index = 0; index < checkbox.length; index++) {
     levels.push(checkbox[index].id);
 }
+
+/* Filters mobile */
+const filterBtn = document.querySelector(".filter-btn");
+filterBtn.addEventListener("click", function () {
+    document.querySelector(".filters").classList.add("visible");
+    document.body.style.overflowY = "hidden";
+});
+const crossBtn = document.querySelector(".cross-icon");
+crossBtn.addEventListener("click", function () {
+    document.querySelector(".filters").classList.remove("visible");
+    document.body.style.overflowY = "";
+});
 
 /* Check if order change */
 let order = "asc";
@@ -23,7 +35,6 @@ for (let index = 0; index < arrows.length; index++) {
         } else {
             order = "asc";
         }
-        console.log(levels);
         updateData(levels);
     });
 }

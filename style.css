@@ -25,6 +25,15 @@ header {
 .filters {
     display: flex;
     gap: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.filter-btn {
+    display: none;
+}
+
+.cross-icon {
+    display: none;
 }
 
 .level-filter {
@@ -261,6 +270,42 @@ ul {
 @media screen and (max-width: 730px) {
     .filters {
         flex-direction: column;
+        position: absolute;
+        background-color: white;
+        border: 1px solid rgb(219, 229, 230);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 20px 80px 20px 20px;
+        z-index: 1;
+        display: none;
+    }
+
+    .cross-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        height: 15px;
+        width: 15px;
+        cursor: pointer;
+    }
+
+    .filters.visible {
+        display: flex;
+    }
+
+
+    .sort-by {
+        margin-left: auto;
+    }
+
+    .filter-btn {
+        border: 1px solid rgb(219, 229, 230);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: block;
+        letter-spacing: 0.5px;
     }
 
 }
