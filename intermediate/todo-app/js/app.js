@@ -16,7 +16,7 @@ let myTasks = [
     },
     {
         name: "Jog around the park 3x",
-        completed: true,
+        completed: false,
     },
     {
         name: "10 minutes meditation",
