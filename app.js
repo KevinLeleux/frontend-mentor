@@ -15,8 +15,23 @@ filterBtn.addEventListener("click", function () {
     document.querySelector(".filters").classList.add("visible");
     document.body.style.overflowY = "hidden";
 });
+
 const crossBtn = document.querySelector(".cross-icon");
 crossBtn.addEventListener("click", function () {
+    document.querySelector(".filters").classList.remove("visible");
+    document.body.style.overflowY = "";
+});
+
+/* Check if click is outside the filter menu dropdown */
+document.addEventListener("click", (event) => {
+    const filters = document.querySelector(".filters");
+    let targetElement = event.target;
+    do {
+        if (targetElement == filters || targetElement == filterBtn) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
     document.querySelector(".filters").classList.remove("visible");
     document.body.style.overflowY = "";
 });
