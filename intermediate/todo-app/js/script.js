@@ -87,6 +87,7 @@ function renderTasksList() {
             const img = document.createElement("img");
             img.setAttribute("src", "images/icon-cross.svg");
             img.setAttribute("class", "delete-icon visible");
+            img.setAttribute("alt", "delete icon");
             li.appendChild(img);
         }
     }
