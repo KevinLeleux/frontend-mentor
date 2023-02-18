@@ -98,6 +98,7 @@ body {
 
 .main-container__summary-section {
     padding: 3.8rem 4rem 4.6rem;
+    background-color: #FFFFFF;
 }
 
 .summary-section__list {
@@ -266,6 +267,7 @@ body {
 
     .main-container__summary-section {
         padding: 2.4rem 3rem 3rem;
+        background-color: #FFFFFF;
     }
 
     .summary-section__list {
