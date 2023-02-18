@@ -148,7 +148,7 @@
             "languages": ["html", "css", "js"]
         },
         {
-            "name": "Results summary component",
+            "name": "Results summary",
             "url": "results-summary-component/",
             "image": "result-summary.webp",
             "level": "1",
