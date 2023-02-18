@@ -148,6 +148,13 @@
             "languages": ["html", "css", "js"]
         },
         {
+            "name": "Results summary component",
+            "url": "results-summary-componennt/",
+            "image": "result-summary.webp",
+            "level": "1",
+            "languages": ["html", "css"]
+        },
+        {
             "name": "Testimonial grid section",
             "url": "testimonials-grid/",
             "image": "testimonial.webp",
