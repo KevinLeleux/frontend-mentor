@@ -187,6 +187,7 @@ body {
         display: flex;
         font-family: 'Hanken Grotesk', sans-serif;
         font-size: 1.8rem;
+        min-width: 32rem;
     }
 
     .main-container {
