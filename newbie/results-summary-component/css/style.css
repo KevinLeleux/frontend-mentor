@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
+* {
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -173,7 +180,7 @@ body {
 
     body {
         background-color: hsla(220, 100%, 96%, 1);
-        height: 100vh;
+        height: calc(100vh - calc(100vh - 100%));
         display: flex;
         font-family: 'Hanken Grotesk', sans-serif;
         font-size: 1.8rem;
