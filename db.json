@@ -149,7 +149,7 @@
         },
         {
             "name": "Results summary component",
-            "url": "results-summary-componennt/",
+            "url": "results-summary-component/",
             "image": "result-summary.webp",
             "level": "1",
             "languages": ["html", "css"]
