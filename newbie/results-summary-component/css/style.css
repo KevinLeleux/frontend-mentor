@@ -180,7 +180,7 @@ body {
 
     body {
         background-color: hsla(220, 100%, 96%, 1);
-        height: calc(100vh - calc(100vh - 100%));
+        max-height: 100vh;
         display: flex;
         font-family: 'Hanken Grotesk', sans-serif;
         font-size: 1.8rem;
