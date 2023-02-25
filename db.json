@@ -267,6 +267,13 @@
             "languages": ["html", "css", "js"]
         },
         {
+            "name": "Design portfolio",
+            "url": "single-page-design-portfolio/",
+            "image": "design-portfolio.webp",
+            "level": "2",
+            "languages": ["html", "css", "js"]
+        },
+        {
             "name": "Todo app",
             "url": "todo-app/",
             "image": "todo.webp",
