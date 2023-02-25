@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <title>Frontend Mentor | Single-page design portfolio</title>
@@ -79,6 +80,25 @@
       <h3 class="my-work__title">
         My Work
       </h3>
+      <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="assets/image-slide-1.jpg" alt=""></li>
+            <li class="splide__slide"><img src="assets/image-slide-2.jpg" alt=""></li>
+            <li class="splide__slide"><img src="assets/image-slide-3.jpg" alt=""></li>
+            <li class="splide__slide"><img src="assets/image-slide-4.jpg" alt=""></li>
+            <li class="splide__slide"><img src="assets/image-slide-5.jpg" alt=""></li>
+          </ul>
+        </div>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="assets/icon-arrow-left.svg" alt="icon left">
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="assets/icon-arrow-right.svg" alt="icon right">
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -102,7 +122,8 @@
       <a href="#" class="consultation-btn">Free Consultation</a>
     </nav>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

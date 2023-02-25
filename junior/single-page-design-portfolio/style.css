@@ -21,13 +21,14 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--light-cream);
     color: var(--black);
-    padding: 3.4rem 0 6.4rem;
+    padding: 3.4rem 2rem 6.4rem;
 }
 
 header,
@@ -177,14 +178,49 @@ footer,
 }
 
 .my-work {
+    margin: 0 -2rem;
     padding: 8.8rem 0;
     text-align: center;
+    /* max-width: 144rem;
+    margin: 0 auto; */
 }
 
 .my-work__title {
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 4rem;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+/* SLIDER  */
+
+.splide {
+    margin: 0 auto;
+    padding: 5.6rem 0 0;
+}
+
+.splide__slide img {
+    width: 54rem;
+    border-radius: 1rem;
+}
+
+.splide__arrows {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.splide__arrow {
+    position: inherit;
+    background: var(--black);
+    height: 6.4rem;
+    width: 6.4rem;
+    opacity: 1;
+    transform: none;
+    margin-top: 5.6rem;
+}
+
+.splide__arrow:hover {
+    background-color: var(--galactic-blue);
 }
 
 .footer__content-container {
@@ -215,3 +251,4 @@ footer,
     font-size: 1.8rem;
     line-height: 2.8rem;
 }
+
