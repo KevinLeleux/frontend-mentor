@@ -19,6 +19,199 @@
     --light-cream: hsla(30, 100%, 97%, 1);
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--light-cream);
+    color: var(--black);
+    padding: 3.4rem 0 6.4rem;
+}
+
+header,
+footer,
+.skills,
+.who {
+    max-width: 111rem;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.consultation-btn {
+    background-color: var(--black);
+    color: var(--light-cream);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    padding: 1.4rem 4.5rem;
+    border-radius: 2.8rem;
+    display: inline-block;
+}
+
+.consultation-btn:hover {
+    background-color: var(--galactic-blue);
+    transition: all 0.3s ease;
+}
+
+.consultation-btn--alternative {
+    background-color: var(--light-red);
+}
+
+.consultation-btn--alternative:hover {
+    background-color: var(--summer-yellow);
+}
+
+.header__title,
+.header__content {
+    text-align: center;
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 7.1rem;
+    margin: 6.6rem 0 2.3rem;
+}
+
+.header__content {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: var(--medium-brown);
+    max-width: 73rem;
+    margin: 0 auto 8rem;
+}
+
+.skills {
+    color: white;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 18.2rem 15.8rem;
+    grid-template-areas:
+        'graphic graphic ui apps photography photography'
+        'graphic graphic illustrations illustrations motion motion';
+    gap: 2.4rem;
+    margin-bottom: 13.6rem;
+}
+
+.skills__article {
+    border-radius: 8px;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skills__article-image {
+    margin-left: auto;
+}
+
+.skills__article--graphic-design {
+    background-color: var(--galactic-blue);
+    grid-area: graphic;
+}
+
+.skills__article--ui-ux {
+    background-color: var(--summer-yellow);
+    grid-area: ui;
+}
+
+.skills__article--apps {
+    background-color: var(--salmon);
+    grid-area: apps;
+}
+
+.skills__article--photography {
+    background-color: var(--cyan);
+    grid-area: photography;
+}
+
+.skills__article--illustrations {
+    background-color: var(--light-red);
+    grid-area: illustrations;
+}
+
+.skills__article--motion-graphics {
+    background-color: var(--purple);
+    grid-area: motion;
+}
+
+.who {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.who__image {
+    max-width: 44.5rem;
+}
+
+.who__content-container {
+    max-width: 54rem;
+}
+
+.who__content-title {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.who__content {
+    color: var(--medium-brown);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin: 3.4rem 0 3.2rem;
+}
+
+.my-work {
+    padding: 8.8rem 0;
+    text-align: center;
+}
+
+.my-work__title {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+
+.footer__content-container {
+    background-color: var(--black);
+    color: var(--light-cream);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 8rem 9.5rem 8rem 6.5rem;
+    margin-bottom: 5.6rem;
+}
+
+.footer__content-left {
+    max-width: 54rem;
+}
+
+.footer__content-title {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer__content {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
 }
