@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
         perMove: 1,
         focus: 'center',
         autoWidth: true,
-        // gap: '3rem',
+        gap: '3rem',
+        breakpoints: {
+            610: {
+                gap: '1.5rem',
+            },
+        },
     });
     splide.mount();
 });
